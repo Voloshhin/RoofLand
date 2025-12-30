@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка</title>
+    <link rel="stylesheet" href="delivery/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__main">
+                <div class="container header__content">
+                    <div class="header__info">
+                        <div class="info__content">
+                            <a class="logo" href="#">
+                                <img src="delivery/img/icons/logo.svg" alt="logo" class="img">
+                            </a>
+                            <div class="header__contact">
+                                <div class="contact__info">
+                                    <div class="header__phone" id="header__phone">
+                                        <img src="delivery/img/icons/phone.svg" alt="icon">
+                                        <span class="header__number">+375 29 628 20 09</span>
+                                        <span class="arrow__down" id="arrow__down"></span>
+                                    </div>
+                                    <a class="header__ring" href="#">Заказать звонок</a>
+                                </div>
+                                <div id="modal__overlay"></div>
+                                <div class="header__modal" id="header__modal">
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="delivery/img/icons/phone.svg" alt="icon">
+                                            <a class="header__number" href="tel:+375296282009">+375 29 628 20 09</a>
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="delivery/img/icons/home.svg" alt="icon">
+                                            <span>Офис-склад в Минске</span>
+                                        </div>
+                                        <div class="item__text">
+                                            г.Минск ул. Ваупшасова 22
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="delivery/img/icons/time.svg" alt="icon">
+                                            <span>Время работы</span>
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Пн-пт:</span> С 9:00 до 18:00
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Сб-вс:</span> по согласованию
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__media">
+                                <a href="#">
+                                    <img src="delivery/img/icons/yt.svg" alt="youtube">
+                                </a>
+                                <a href="#">
+                                    <img src="delivery/img/icons/tg.svg" alt="telegram">
+                                </a>
+                                <a href="#">
+                                    <img src="delivery/img/icons/tt.svg" alt="tik_tok">
+                                </a>
+                            </div>
+                        </div>
+                        <button class="burger__but" id="burger__but">
+                        </button>
+                    </div>
+                    <div class="header__actions">
+                        <div class="header__search">
+                            <button class="but__search">
+                                <img src="delivery/img/icons/lens.svg" alt="icon">
+                            </button>
+                            <input class="search__input" type="text" placeholder="Найти в катологе">
+                        </div>
+                        </input>
+                        <button class="but__market">
+                            Интернет-магазин
+                        </button>
+                        <button class="but__cost but__main__active">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+                <div class="header__actions__mobile container">
+                    <div class="actions__link">
+                        <a href="#">
+                            <img src="delivery/img/icons/viber-logo.svg" class="img" alt="viber">
+                        </a>
+                        <a href="#">
+                            <img src="delivery/img/icons/telegram-logo.svg" class="img" alt="telegram">
+                        </a>
+                        <a href="#">
+                            <img src="delivery/img/icons/whatsapp.svg" class="img" alt="whatsapp">
+                        </a>
+                    </div>
+                    <button class="actions-mobile__but but__main__active">
+                        <img src="delivery/img/icons/calculator.svg" alt="icon">
+                        Рассчитать стоимость
+                    </button>
+                </div>
+
+            </div>
+            <div class="header__menu" id="header__menu">
+                <div class="menu__inner container">
+                    <div class="menu__item">
+                        Каталог
+                    </div>
+                    <div class="menu__item">
+                        Интернет-магазин
+                    </div>
+                    <div class="menu__item">
+                        Кровельные работы
+                    </div>
+                    <div class="menu__item">
+                        Портфолио
+                    </div>
+                    <div class="menu__item">
+                        О компании
+                    </div>
+                    <div class="menu__item">
+                        Отзывы
+                    </div>
+                    <div class="menu__item">
+                        Клиенту
+                    </div>
+                    <div class="menu__item">
+                        Контакты
+                    </div>
+                    <div class="menu__item">
+                        Блог
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__nav">
+            <div class="container nav__inner">
+                <span class="nav__item">
+                    Каталог
+                </span>
+                <span class="nav__item">
+                    Кровельные работы
+                </span>
+                <span class="nav__item">
+                    Портфолио
+                </span>
+                <span class="nav__item">
+                    О Компании
+                </span>
+                <span class="nav__item">
+                    Отзывы
+                </span>
+                <span class="nav__item">
+                    Оплата
+                </span>
+                <span class="nav__item nav__item__active">
+                    Доставка и возврат
+                </span>
+                <span class="nav__item">
+                    Контакты
+                </span>
+                <span class="nav__item">
+                    Блог
+                </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="roof-delivery container">
+            <nav class="breadcrumbs">
+                <a href="/" class="breadcrumbs__item">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__item breadcrumbs__item--current">Доставка и возврат</span>
+            </nav>
+            <h1 class="main-title">доставка и возврат</h1>
+        </section>
+
+        <section class="delivery container">
+            <h2 class="delivery__title">Доставка материалов</h2>
+            <p class="delivery__subtitle">
+                Мы заботимся о вашем комфорте от покупки до получения. Здесь вы найдете всю информацию об условиях
+                доставки материалов в Минске и по регионам, а также о порядке возврата товара
+            </p>
+
+            <div class="delivery__grid">
+                <!-- card 1 -->
+                <article class="delivery-card">
+                    <div class="delivery-card__icon" aria-hidden="true">
+                        <img src="delivery/img/pin-icon.svg" alt="icon">
+                    </div>
+
+                    <h3 class="delivery-card__title">По городу Минску</h3>
+                    <ul class="delivery-card__list">
+                        <li>Бесплатная доставка до адреса в пределах Минска</li>
+                        <li>Согласование точного времени с менеджером</li>
+                    </ul>
+                </article>
+
+                <!-- card 2 -->
+                <article class="delivery-card">
+                    <div class="delivery-card__icon" aria-hidden="true">
+                        <img src="delivery/img/map-icon.svg" alt="icon">
+                    </div>
+
+                    <h3 class="delivery-card__title">По регионам Республики Беларусь</h3>
+                    <p class="delivery-card__text">
+                        Стоимость и условия доставки обсуждаются индивидуально в зависимости от объема, адреса и
+                        срочности
+                    </p>
+                </article>
+
+                <!-- card 3 -->
+                <article class="delivery-card">
+                    <div class="delivery-card__icon delivery-card__icon--accent" aria-hidden="true">
+                        <img src="delivery/img/courier-icon.svg" alt="icon">
+                    </div>
+
+                    <h3 class="delivery-card__title">
+                        Курьерская служба <a class="delivery-card__link" href="#" target="_blank"
+                            rel="noopener">DADOMA.BY</a>
+                    </h3>
+                    <p class="delivery-card__text">
+                        Для вашего удобства сотрудничаем с надежной курьерской службой DADOMA.BY
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="return container">
+                <h2 class="return__title">Возврат товара</h2>
+
+                <p class="return__text">
+                    Мы соблюдаем права потребителей и готовы рассмотреть ваше обращение о возврате товара в соответствии
+                    с законодательством Республики Беларусь.
+                </p>
+
+                <div class="return__block">
+                    <h3 class="return__subtitle">
+                        Возврат товара <span class="return__span">надлежащего качества (если товар не подошел)</span>
+                    </h3>
+
+                    <p class="return__text">
+                        Вы можете вернуть неиспользованный товар в течение 14 дней со дня покупки при соблюдении
+                        следующих условий:
+                    </p>
+
+                    <ul class="return__list">
+                        <li>Товар не был в употреблении, сохранены его товарный вид и потребительские свойства.</li>
+                        <li>Сохранены все фабричные бирки, пломбы и оригинальная упаковка.</li>
+                        <li>Имеется документ, подтверждающий покупку (товарный или кассовый чек, накладная).</li>
+                    </ul>
+                </div>
+
+                <div class="return__block">
+                    <h3 class="return__subtitle">
+                        Возврат товара <span class="return__span">ненадлежащего качества (брак, дефекты)</span>
+                    </h3>
+
+                    <p class="return__text">
+                        Если вы обнаружили в товаре недостатки, вы вправе предъявить требования в течение всего
+                        установленного
+                        гарантийного срока.
+                    </p>
+
+                    <p class="return__text return__text--bold">Ваши права:</p>
+                    <ul class="return__list">
+                        <li>Потребовать замены на товар этой же или другой марки (с перерасчетом цены).</li>
+                        <li>Потребовать соразмерного уменьшения покупной цены.</li>
+                        <li>Потребовать безвозмездного устранения недостатков или возмещения расходов на их исправление.
+                        </li>
+                        <li>Вернуть товар и получить уплаченную за него сумму в полном объеме.</li>
+                    </ul>
+                </div>
+
+                <div class="return__block">
+                    <h3 class="return__subtitle">Важно знать:</h3>
+                    <ul class="return__list">
+                        <li>Срок в 14 дней исчисляется со следующего дня после приобретения товара.</li>
+                        <li>Если последний день срока выпадает на выходной или праздничный день, он переносится на
+                            следующий рабочий день.</li>
+                        <li>
+                            Некоторые виды товаров (согласно законодательству) не подлежат обмену и возврату, если они
+                            надлежащего качества.
+                            Уточняйте у менеджеров.
+                        </li>
+                        <li>При возврате качественного товара, купленного дистанционно (онлайн), расходы на пересылку
+                            несет покупатель.</li>
+                    </ul>
+                </div>
+        </section>
+
+
+        <section class="price-list--bg">
+            <div class="container price-list">
+                <div class="price-list__content-wrap">
+                    <h2 class="price-list__title">Остались вопросы <br>по возврату товара?</h2>
+                    <p class="price-list__text">Оставьте свою заявку и&nbsp;мы проконсультируем вас по&nbsp;всем
+                        вопросам</p>
+                </div>
+                <div class="price-form-wrapper">
+                    <form class="price-form" action="#" method="POST" autocomplete="off" novalidate>
+
+                        <h3 class="price-form__title">Остались вопросы?<br>Напишите нам и мы свяжемся с вами</h3>
+
+                        <label class="price-form__label" for="phone">Ваше имя</label>
+
+                        <input class="price-form__input" type="text" id="name" name="name" placeholder="Ваше имя"
+                            required>
+                        <label class="price-form__label" for="phone">Введите номер телефона</label>
+
+                        <input class="price-form__input" type="tel" id="phone" name="phone" placeholder="Номер телефона"
+                            pattern="^[0-9+\-\s()]{6,20}$" required>
+
+                        <label class="price-form__label" for="message">Сообщение</label>
+                        <textarea class="price-form__input price-form__textarea" id="message" name="message"
+                            placeholder="Введите ваше сообщение" rows="4"></textarea>
+                        <label class="contact-form__checkbox">
+                            <input type="checkbox" required>
+                            <span>
+                                Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+                            </span>
+                        </label>
+
+                        <button class="feedback__but but__main__active" type="submit">Отправить</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer container">
+            <div class="contact-form">
+                <img class="contact-form__logo" src="delivery/img/icons/logo.svg" alt="Land Group Company">
+
+                <h3 class="contact-form__title">Остались вопросы?</h3>
+                <p class="contact-form__subtitle">
+                    Оставьте свои контактные данные и мы
+                    свяжемся с&nbsp;вами в&nbsp;ближайшее время
+                </p>
+
+                <form action="/send-question" method="POST" class="contact-form__body">
+
+                    <input type="tel" name="phone" class="contact-form__input" placeholder="+375 (__) ___-__-__"
+                        required pattern="^[0-9+\-\s()]{6,20}$">
+
+                    <label class="contact-form__checkbox">
+                        <input type="checkbox" required>
+                        <span>
+                            Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+                        </span>
+                    </label>
+
+                    <button type="submit" class="feedback__but but__main__active">Отправить</button>
+
+                    <p class="contact-form__note">
+                        Ваши контакты используются исключительно для связи
+                        с&nbsp;вами и не будут переданы третьим лицам
+                    </p>
+
+                </form>
+            </div>
+
+            <div class="footer__inner">
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Страницы</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Интернет-магазин</a></li>
+                        <li><a href="#">Кровельные работы</a></li>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Клиенту</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Каталог</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Материалы для кровли</a></li>
+                        <li><a href="#">Материалы для фасада</a></li>
+                        <li><a href="#">Заборы и ограждения</a></li>
+                        <li><a href="#">Кровельные аксессуары</a></li>
+                        <li><a href="#">Водосточные системы</a></li>
+                        <li><a href="#">Услуги монтажа</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+
+                    <p class="footer__text">
+                        <strong>Офис-склад в Минске</strong><br>
+                        г.Минск ул. Вауличасова 22
+                    </p>
+
+                    <h5 class="footer__subtitle">Соцсети</h5>
+                    <div class="footer__socials">
+                        <a href="#" target="_blank"><img src="delivery/img/icons/yt.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="delivery/img/icons/inst.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="delivery/img/icons/tg.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="delivery/img/icons/viber.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="delivery/img/icons/wap.svg" alt="icon"></a>
+                    </div>
+
+                    <h5 class="footer__subtitle">Контакты для связи</h5>
+                    <ul class="footer__list">
+                        <li><img src="delivery/img/icons/phone.svg" alt="icon"><a href="tel:+375296280209">+375 29 628 20
+                                09</a></li>
+                        <li><img src="delivery/img/icons/phone.svg" alt="icon"><a href="tel:+375295380209">+375 29 538 20
+                                09</a></li>
+                        <li><img src="delivery/img/icons/mail.svg" alt="icon"><a
+                                href="mailto:zakaz@roofland.by">zakaz@roofland.by</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Время работы</h4>
+
+                    <p class="footer__text">
+                        Пн–пт:<br>
+                        <strong>С 9:00 до 18:00</strong><br><br>
+                        Сб–вс:<br>
+                        <strong>По согласованию</strong>
+                    </p>
+
+                    <p class="footer__small">
+                        УНП: 691776269<br>
+                        Номер в Торговом реестре/Реестре бытовых услуг:<br>
+                        691776269<br><br>
+                        <a href="#">Политика конфиденциальности</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="delivery/script.js"></script>
+</body>
+
+</html>

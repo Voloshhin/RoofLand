@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья</title>
+    <link rel="stylesheet" href="article/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__main">
+                <div class="container header__content">
+                    <div class="header__info">
+                        <div class="info__content">
+                            <a class="logo" href="#">
+                                <img src="article/img/icons/logo.svg" alt="logo" class="img">
+                            </a>
+                            <div class="header__contact">
+                                <div class="contact__info">
+                                    <div class="header__phone" id="header__phone">
+                                        <img src="article/img/icons/phone.svg" alt="icon">
+                                        <span class="header__number">+375 29 628 20 09</span>
+                                        <span class="arrow__down" id="arrow__down"></span>
+                                    </div>
+                                    <a class="header__ring" href="#">Заказать звонок</a>
+                                </div>
+                                <div id="modal__overlay"></div>
+                                <div class="header__modal" id="header__modal">
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="article/img/icons/phone.svg" alt="icon">
+                                            <a class="header__number" href="tel:+375296282009">+375 29 628 20 09</a>
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="article/img/icons/home.svg" alt="icon">
+                                            <span>Офис-склад в Минске</span>
+                                        </div>
+                                        <div class="item__text">
+                                            г.Минск ул. Ваупшасова 22
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="article/img/icons/time.svg" alt="icon">
+                                            <span>Время работы</span>
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Пн-пт:</span> С 9:00 до 18:00
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Сб-вс:</span> по согласованию
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__media">
+                                <a href="#">
+                                    <img src="article/img/icons/yt.svg" alt="youtube">
+                                </a>
+                                <a href="#">
+                                    <img src="article/img/icons/tg.svg" alt="telegram">
+                                </a>
+                                <a href="#">
+                                    <img src="article/img/icons/tt.svg" alt="tik_tok">
+                                </a>
+                            </div>
+                        </div>
+                        <button class="burger__but" id="burger__but">
+                        </button>
+                    </div>
+                    <div class="header__actions">
+                        <div class="header__search">
+                            <button class="but__search">
+                                <img src="article/img/icons/lens.svg" alt="icon">
+                            </button>
+                            <input class="search__input" type="text" placeholder="Найти в катологе">
+                        </div>
+                        </input>
+                        <button class="but__market">
+                            Интернет-магазин
+                        </button>
+                        <button class="but__cost but__main__active">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+                <div class="header__actions__mobile container">
+                    <div class="actions__link">
+                        <a href="#">
+                            <img src="article/img/icons/viber-logo.svg" class="img" alt="viber">
+                        </a>
+                        <a href="#">
+                            <img src="article/img/icons/telegram-logo.svg" class="img" alt="telegram">
+                        </a>
+                        <a href="#">
+                            <img src="article/img/icons/whatsapp.svg" class="img" alt="whatsapp">
+                        </a>
+                    </div>
+                    <button class="actions-mobile__but but__main__active">
+                        <img src="article/img/icons/calculator.svg" alt="icon">
+                        Рассчитать стоимость
+                    </button>
+                </div>
+
+            </div>
+            <div class="header__menu" id="header__menu">
+                <div class="menu__inner container">
+                    <div class="menu__item">
+                        Каталог
+                    </div>
+                    <div class="menu__item">
+                        Интернет-магазин
+                    </div>
+                    <div class="menu__item">
+                        Кровельные работы
+                    </div>
+                    <div class="menu__item">
+                        Портфолио
+                    </div>
+                    <div class="menu__item">
+                        О компании
+                    </div>
+                    <div class="menu__item">
+                        Отзывы
+                    </div>
+                    <div class="menu__item">
+                        Клиенту
+                    </div>
+                    <div class="menu__item">
+                        Контакты
+                    </div>
+                    <div class="menu__item">
+                        Блог
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__nav">
+            <div class="container nav__inner">
+                <span class="nav__item">
+                    Каталог
+                </span>
+                <span class="nav__item">
+                    Кровельные работы
+                </span>
+                <span class="nav__item">
+                    Портфолио
+                </span>
+                <span class="nav__item">
+                    О Компании
+                </span>
+                <span class="nav__item">
+                    Отзывы
+                </span>
+                <span class="nav__item nav__item__active">
+                    Оплата
+                </span>
+                <span class="nav__item">
+                    Доставка и возврат
+                </span>
+                <span class="nav__item">
+                    Контакты
+                </span>
+                <span class="nav__item">
+                    Блог
+                </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="roof-article container">
+            <nav class="breadcrumbs">
+                <a href="/" class="breadcrumbs__item">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <a href="/" class="breadcrumbs__item">Блог</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__item breadcrumbs__item--current">Акция апрель-май на ограждения</span>
+            </nav>
+
+            <div class="roof-article__wrapper">
+                <aside class="roof-article__related">
+                    <h2 class="related-title">Вам может быть интересно:</h2>
+
+                    <a href="#" class="related-card">
+                        <img src="article/img/art1.webp" alt="article-image">
+                        <div class="related-content">
+                            <span class="related-label">Акции</span>
+                            <h3 class="related-title">Акция апрель–май на ограждения</h3>
+                            <div class="related-text">
+                                Акция на штакетник ТРАПЕЦИЯ–УСИЛЕННАЯ – 5%, во всех доступных цветах и покрытиях! Акция
+                                действует с 24.04.2023 до 31.05.2024 включительно.
+                            </div>
+                            <div class="related-date">24.10.2023</div>
+                        </div>
+                    </a>
+                    <a href="#" class="related-card">
+                        <img src="article/img/art2.webp" alt="article-image">
+                        <div class="related-content">
+                            <span class="related-label">Акции</span>
+                            <h3 class="related-title">Акция апрель–май на ограждения</h3>
+                            <div class="related-text">
+                                Акция на штакетник ТРАПЕЦИЯ–УСИЛЕННАЯ – 5%, во всех доступных цветах и покрытиях! Акция
+                                действует с 24.04.2023 до 31.05.2024 включительно.
+                            </div>
+                            <div class="related-date">24.10.2023</div>
+                        </div>
+                    </a>
+                    <a href="#" class="related-card">
+                        <img src="article/img/art3.webp" alt="article-image">
+                        <div class="related-content">
+                            <span class="related-label">Акции</span>
+                            <h3 class="related-title">Акция апрель–май на ограждения</h3>
+                            <div class="related-text">
+                                Акция на штакетник ТРАПЕЦИЯ–УСИЛЕННАЯ – 5%, во всех доступных цветах и покрытиях! Акция
+                                действует с 24.04.2023 до 31.05.2024 включительно.
+                            </div>
+                            <div class="related-date">24.10.2023</div>
+                        </div>
+                    </a>
+                </aside>
+
+                <article class="article">
+                    <div class="article__meta">
+                        <div><span>АКЦИИ</span> | 24.10.2023 | 9 мин чтения | <img src="article/img/icons/eye.svg" alt="icon">
+                            1.6
+                            тыс просмотров | <img src="article/img/icons/reply.svg" alt="icon"> 3 | <img
+                                src="article/img/icons/star2.svg" alt="icon"> 4.8</div>
+                        <button class="article__share-btn" type="button"><img src="article/img/icons/share.svg" alt="icon">
+                            Поделиться</button>
+                    </div>
+
+                    <h2 class="article__title">Акция апрель–май на ограждения</h2>
+
+                    <figure>
+                        <img class="article__image" alt="скидка" src="article/img/action.webp">
+                    </figure>
+
+                    <p>Акция на штакетник ТРАПЕЦИЯ – УСИЛЕННАЯ – 5% во всех доступных цветах и
+                        покрытиях.
+                    </p>
+
+                    <p>Акция действует с 24.04.2023 до 31.05.2024 включительно.</p>
+
+                    <p>На заборы-жалюзи ROUND и ALFA действует акция на цены в покрытиях:</p>
+                    <ul>
+                        <li>🔸 Античный Дуб золотой</li>
+                        <li>🔸 Античный Дуб светло-серый</li>
+                        <li>🔸 Античный Дуб тёмно-серый</li>
+                    </ul>
+
+                    <p>Акция действует с 24.04.2023 до 31.05.2024 включительно.</p>
+
+                    <h3>Подзаголовок 1</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+                    <figure>
+                        <img src="article/img/art.webp" alt="image" />
+                        <figcaption>Описание картинки если есть</figcaption>
+                    </figure>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+                    <div class="article__img-wrapper">
+                        <figure>
+                            <img src="article/img/art.webp" alt="image" />
+                            <figcaption>Описание картинки если есть</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="article/img/art.webp" alt="image" />
+                            <figcaption>Описание картинки если есть</figcaption>
+                        </figure>
+                    </div>
+
+                    <h3>Подзаголовок 2</h3>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+                    <div class="swiper article__swiper">
+                        <div class="swiper-wrapper">
+                            <figure class="swiper-slide">
+                                <img src="article/img/art.webp" alt="image" />
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="article/img/art.webp" alt="image" />
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="article/img/art.webp" alt="image" />
+                            </figure>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s.</p>
+
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+                    <figure class="article__video-frame">
+                        <video controls poster="article/img/video.webp">
+                            <source src="article/assets/movie.mp4" type="video/mp4">
+                        </video>
+                        <figcaption>
+                            Краткое описание к видео, если есть
+                        </figcaption>
+                    </figure>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+                    <div class="article__footer">
+                        <div>
+                            <p><b>Автор:</b> Владимир Вашкалай</p>
+                            <p><b>Рецензент:</b> Владимир Вашкалай</p>
+                        </div>
+                        <button class="article__share-btn" type="button"><img src="article/img/icons/share.svg" alt="icon">
+                            Поделиться</button>
+                    </div>
+
+                    <div class="comments">
+
+                        <div class="comments-header">
+                            <h3>Комментарии</h3>
+                            <button class="btn-toggle but__market">Оставить комментарий </button>
+                        </div>
+
+                        <form action="post" class="comment-form hidden">
+                            <div class="comment-form__header">
+                                <h3 class="comment-form__title">Оставьте свой комментарий</h3>
+
+                                <button type="button" class="comment-form__close" aria-label="Закрыть">
+                                    ✕
+                                </button>
+                            </div>
+                            <div class="comment-form__input-wrap">
+                                <input type="text" placeholder="Ваше имя">
+                                <input type="email" placeholder="Электронный адрес">
+                            </div>
+                            <div class="comment-form__textarea-wrap">
+                                <textarea placeholder="Ваш комментарий" maxlength="2500"></textarea>
+                                <div class="comment-form__rating">☆☆☆☆☆</div>
+                            </div>
+
+                            <button type="submit" class="comment-form__btn-send but__cost"><img
+                                    src="article/img/icons/send-comment.svg" alt="icon">&nbsp;&nbsp;Отправить
+                                комментарий</button>
+                        </form>
+
+                        <div class="comments-list" id="commentsList">
+                            <div class="comment">
+                                <div class="comment__top">
+                                    <div>
+                                        <div>
+                                            <img src="article/img/avatar.png" alt="avatar">
+                                            <span class="comment__name">Amyrobson</span>
+                                        </div>
+                                        <span class="comment__time">1 month ago</span>
+                                    </div>
+                                    <span class="comment__stars">★★★★☆</span>
+                                </div>
+                                <p>
+                                    Impressive! Though it seems the drag feature could be improved.
+                                    But overall it looks incredible.
+                                </p>
+                                <div class="comment__actions">
+                                    <button>♡ 12 like</button>
+                                    <button class="comment__reply">&#128488; Reply </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment is-hidden">
+
+                            <div class="comment__top">
+                                <div>
+                                    <div>
+                                        <img src="article/img/avatar.png" alt="avatar">
+                                        <span class="comment__name">Amyrobson</span>
+                                    </div>
+                                    <span class="comment__time">1 month ago</span>
+                                </div>
+                                <span class="comment__stars">★★★★☆</span>
+                            </div>
+
+                            <p>
+                                Impressive! Though it seems the drag feature could be improved.
+                                But overall it looks incredible.
+                            </p>
+
+                            <div class="comment__actions">
+                                <button>♡ 12 like</button>
+                                <button class="comment__reply">&#128488; Reply</button>
+                            </div>
+
+                            <!-- ВЛОЖЕННЫЕ КОММЕНТАРИИ -->
+                            <div class="comment__replies">
+
+                                <div class="comment">
+                                    <div class="comment__top">
+                                        <div>
+                                            <div>
+                                                <img src="article/img/avatar.png" alt="avatar">
+                                                <span class="comment__name">John Doe</span>
+                                            </div>
+                                            <span class="comment__time">yesterday</span>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                        Impressive! Though it seems the drag feature could be improved.
+                                        But overall it looks incredible.
+                                    </p>
+
+                                    <div class="comment__actions">
+                                        <button>♡ 12 like</button>
+                                        <button class="comment__reply">&#128488; Reply</button>
+                                    </div>
+
+                                    <div class="comment__replies">
+
+                                        <div class="comment">
+                                            <div class="comment__top">
+                                                <div>
+                                                    <div>
+                                                        <img src="article/img/avatar.png" alt="avatar">
+                                                        <span class="comment__name">Margo</span>
+                                                    </div>
+                                                    <span class="comment__time">4 hours</span>
+                                                </div>
+                                            </div>
+
+                                            <p>
+                                                Impressive! Though it seems the drag feature could be improved.
+                                                But overall it looks incredible.
+                                            </p>
+
+                                            <div class="comment__actions">
+                                                <button>♡ 12 like</button>
+                                                <button class="comment__reply">&#128488; Reply</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment is-hidden">
+                            <div class="comment__top">
+                                <div>
+                                    <div>
+                                        <img src="article/img/avatar.png" alt="avatar">
+                                        <span class="comment__name">Amyrobson</span>
+                                    </div>
+                                    <span class="comment__time">1 month ago</span>
+                                </div>
+                                <span class="comment__stars">★★★★☆</span>
+                            </div>
+                            <p>
+                                Impressive! Though it seems the drag feature could be improved.
+                                But overall it looks incredible.
+                            </p>
+                            <div class="comment__actions">
+                                <button>♡ 12 like</button>
+                                <button class="comment__reply">&#128488; Reply</button>
+                            </div>
+                        </div>
+                        <div class="comment is-hidden">
+                            <div class="comment__top">
+                                <div>
+                                    <div>
+                                        <img src="article/img/avatar.png" alt="avatar">
+                                        <span class="comment__name">Amyrobson</span>
+                                    </div>
+                                    <span class="comment__time">1 month ago</span>
+                                </div>
+                                <span class="comment__stars">★★★★☆</span>
+                            </div>
+                            <p>
+                                Impressive! Though it seems the drag feature could be improved.
+                                But overall it looks incredible.
+                            </p>
+                            <div class="comment__actions">
+                                <button>♡ 12 like</button>
+                                <button class="comment__reply">&#128488; Reply</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="show-more" id="showMore">
+                        Посмотреть все комментарии (3)
+                    </a>
+
+                </article>
+
+            </div>
+        </section>
+
+        <section class="price-list--bg">
+            <div class="container price-list">
+                <div class="price-list__content-wrap">
+                    <h2 class="price-list__title">Прайс-лист на&nbsp;материалы</h2>
+                    <p class="price-list__text">Не тратьте время на долгие поиски.<br>
+                        Скачайте прайс с&nbsp;описанием и&nbsp;актуальными ценами</p>
+                </div>
+                <div class="price-form-wrapper">
+                    <div class="price-form-wrapper">
+                        <form class="price-form" action="#" method="POST" autocomplete="off" novalidate>
+
+                            <h3 class="price-form__title">Куда отправить прайс-лист?</h3>
+
+                            <div class="price-form__radios">
+                                <label class="radio">
+                                    <input type="radio" name="send_to" value="telegram" required checked>
+                                    <span>Telegram</span>
+                                </label>
+
+                                <label class="radio">
+                                    <input type="radio" name="send_to" value="viber" required>
+                                    <span>Viber</span>
+                                </label>
+
+                                <label class="radio">
+                                    <input type="radio" name="send_to" value="email" required>
+                                    <span>E-mail</span>
+                                </label>
+                            </div>
+
+                            <label class="price-form__label" for="phone">Введите номер телефона</label>
+
+                            <input class="price-form__input" type="tel" id="phone" name="phone"
+                                placeholder="Номер телефона" pattern="^[0-9+\-\s()]{6,20}$" required>
+                            <label class="contact-form__checkbox">
+                                <input type="checkbox" required>
+                                <span>
+                                    Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных
+                                        данных</a>
+                                </span>
+                            </label>
+
+                            <button class="feedback__but but__main__active" type="submit">Получить прайс</button>
+
+                            <div class="price-form__update">Прайс обновлен 20.04.2025</div>
+                        </form>
+
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer container">
+            <div class="contact-form">
+                <img class="contact-form__logo" src="article/img/icons/logo.svg" alt="Land Group Company">
+
+                <h3 class="contact-form__title">Остались вопросы?</h3>
+                <p class="contact-form__subtitle">
+                    Оставьте свои контактные данные и мы
+                    свяжемся с&nbsp;вами в&nbsp;ближайшее время
+                </p>
+
+                <form action="/send-question" method="POST" class="contact-form__body">
+
+                    <input type="tel" name="phone" class="contact-form__input" placeholder="+375 (__) ___-__-__"
+                        required pattern="^[0-9+\-\s()]{6,20}$">
+
+                    <label class="contact-form__checkbox">
+                        <input type="checkbox" required>
+                        <span>
+                            Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+                        </span>
+                    </label>
+
+                    <button type="submit" class="feedback__but but__main__active">Отправить</button>
+
+                    <p class="contact-form__note">
+                        Ваши контакты используются исключительно для связи
+                        с&nbsp;вами и не будут переданы третьим лицам
+                    </p>
+
+                </form>
+            </div>
+
+            <div class="footer__inner">
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Страницы</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Интернет-магазин</a></li>
+                        <li><a href="#">Кровельные работы</a></li>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Клиенту</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Каталог</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Материалы для кровли</a></li>
+                        <li><a href="#">Материалы для фасада</a></li>
+                        <li><a href="#">Заборы и ограждения</a></li>
+                        <li><a href="#">Кровельные аксессуары</a></li>
+                        <li><a href="#">Водосточные системы</a></li>
+                        <li><a href="#">Услуги монтажа</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+
+                    <p class="footer__text">
+                        <strong>Офис-склад в Минске</strong><br>
+                        г.Минск ул. Вауличасова 22
+                    </p>
+
+                    <h5 class="footer__subtitle">Соцсети</h5>
+                    <div class="footer__socials">
+                        <a href="#" target="_blank"><img src="article/img/icons/yt.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="article/img/icons/inst.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="article/img/icons/tg.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="article/img/icons/viber.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="article/img/icons/wap.svg" alt="icon"></a>
+                    </div>
+
+                    <h5 class="footer__subtitle">Контакты для связи</h5>
+                    <ul class="footer__list">
+                        <li><img src="article/img/icons/phone.svg" alt="icon"><a href="tel:+375296280209">+375 29 628 20
+                                09</a></li>
+                        <li><img src="article/img/icons/phone.svg" alt="icon"><a href="tel:+375295380209">+375 29 538 20
+                                09</a></li>
+                        <li><img src="article/img/icons/mail.svg" alt="icon"><a
+                                href="mailto:zakaz@roofland.by">zakaz@roofland.by</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Время работы</h4>
+
+                    <p class="footer__text">
+                        Пн–пт:<br>
+                        <strong>С 9:00 до 18:00</strong><br><br>
+                        Сб–вс:<br>
+                        <strong>По согласованию</strong>
+                    </p>
+
+                    <p class="footer__small">
+                        УНП: 691776269<br>
+                        Номер в Торговом реестре/Реестре бытовых услуг:<br>
+                        691776269<br><br>
+                        <a href="#">Политика конфиденциальности</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="article/script.js"></script>
+</body>
+
+</html>

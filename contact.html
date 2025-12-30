@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рауф</title>
+    <link rel="stylesheet" href="contact/assets/styles/style.css">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=a8233ca6-e6bb-4e60-8dfc-25a93d06f32c&lang=en_US"
+        type="text/javascript"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__main">
+                <div class="container header__content">
+                    <div class="header__info">
+                        <div class="info__content">
+                            <a class="logo" href="#">
+                                <img src="contact/assets/img/logo.svg" alt="Рауфленд" class="img">
+                            </a>
+                            <div class="header__contact">
+                                <div class="contact__info">
+                                    <div class="header__phone" id="header__phone">
+                                        <img src="contact/assets/img/phones.svg" alt="">
+                                        <span class="header__number">+375 29 628 20 09</span>
+                                        <span class="arrow__down" id="arrow__down"></span>
+                                    </div>
+                                    <a class="header__ring" href="#">Заказать звонок</a>
+                                </div>
+                                <div id="modal__overlay"></div>
+                                <div class="header__modal" id="header__modal">
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="contact/assets/img/phones.svg" alt="">
+                                            <a class="header__number" href="tel:+375296282009">+375 29 628 20 09</a>
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="contact/assets/img/home-modern-pin.svg" alt="">
+                                            <span>Офис-склад в Минске</span>
+                                        </div>
+                                        <div class="item__text">
+                                            г.Минск ул. Ваупшасова 22
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="contact/assets/img/time-clock.svg" alt="">
+                                            <span>Время работы</span>
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Пн-пт:</span> С 9:00 до 18:00
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Сб-вс:</span> по согласованию
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__media">
+                                <a href="#">
+                                    <img src="contact/assets/img/youtube.svg" alt="youtube">
+                                </a>
+                                <a href="#">
+                                    <img src="contact/assets/img/instagram.svg" alt="telegram">
+                                </a>
+                                <a href="#">
+                                    <img src="contact/assets/img/tik_tok.svg" alt="tik_tok">
+                                </a>
+                            </div>
+                        </div>
+                        <button class="burger__but" id="burger__but">
+                        </button>
+                    </div>
+                    <div class="header__actions">
+                        <div class="header__search">
+                            <button class="but__search">
+                                <img src="contact/assets/img/search-loap.svg" alt="">
+                            </button>
+                            <input class="search__input" type="text" placeholder="Найти в катологе">
+                        </div>
+                        </input>
+                        <button class="but__market">
+                            Интернет-магазин
+                        </button>
+                        <button class="but__cost but__main__active">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+                <div class="header__actions__mobile container">
+                    <div class="actions__link">
+                        <a href="#">
+                            <img src="contact/assets/img/viber-logo.svg" class="img" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="contact/assets/img/telegram-logo.svg" class="img" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="contact/assets/img/whatsapp.svg" class="img" alt="">
+                        </a>
+                    </div>
+                    <button class="actions-mobile__but but__main__active">
+                        <img src="contact/assets/img/calculator.svg" alt="">
+                        Рассчитать стоимость
+                    </button>
+                </div>
+                <!-- <div class="header__search__mobile container">
+                    <button class="but__search__mobile">
+                        <img src="./assets/img/search-loap.svg" alt="">
+                    </button>
+                    <input class="search__input__mobile" type="text" placeholder="Найти в катологе">
+                </div> -->
+            </div>
+            <div class="header__menu" id="header__menu">
+                <div class="menu__inner container">
+                    <div class="menu__item">
+                        Каталог
+                    </div>
+                    <div class="menu__item">
+                        Интернет-магазин
+                    </div>
+                    <div class="menu__item">
+                        Кровельные работы
+                    </div>
+                    <div class="menu__item">
+                        Портфолио
+                    </div>
+                    <div class="menu__item">
+                        О компании
+                    </div>
+                    <div class="menu__item">
+                        Отзывы
+                    </div>
+                    <div class="menu__item">
+                        Клиенту
+                    </div>
+                    <div class="menu__item">
+                        Контакты
+                    </div>
+                    <div class="menu__item">
+                        Блог
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__nav">
+            <div class="container nav__inner">
+                <span class="nav__item">
+                    Каталог
+                </span>
+                <span class="nav__item">
+                    Кровельные работы
+                </span>
+                <span class="nav__item">
+                    Портфолио
+                </span>
+                <span class="nav__item">
+                    О Компании
+                </span>
+                <span class="nav__item">
+                    Отзывы
+                </span>
+                <span class="nav__item">
+                    Оплата
+                </span>
+                <span class="nav__item">
+                    Доставка и возврат
+                </span>
+                <span class="nav__item nav__item__active">
+                    Контакты
+                </span>
+                <span class="nav__item">
+                    Блог
+                </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contact__block">
+            <div class="title__block container">
+                <div class="title__bread_crumbs">
+                    <span class="">
+                        Главная /
+                    </span>
+                    <span class="">
+                        Контакты
+                    </span>
+                </div>
+                <div class="title__name">
+                    <h1>
+                        Контакты
+                    </h1>
+                </div>
+            </div>
+            <div class="contact__content container">
+                <div class="contact__inner">
+                    <div class="contact__item">
+                        <h4 class="contact__title">
+                            Адрес офиса и склада
+                        </h4>
+                        <div class="contact__text">
+                            <img class="img" src="contact/assets/img/pin-location-direction-plus.svg" alt="pin-location">
+                            <span>г. Минск ул. Ваупшасова 22</span>
+                        </div>
+                        <div class="contact__text">
+                            <img class="img" src="contact/assets/img/pin-location.svg" alt="pin-location">
+                            <a class="contact__map" href="https://yandex.ru/maps/-/CLsJbF93">53.899888, 27.658415</a>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <h4 class="contact__title">
+                            Телефоны
+                        </h4>
+                        <div class="contact__text">
+                            <img class="img" src="contact/assets/img/phones.svg" alt="pin-location">
+                            <a class="contact__tel" href="tel:+375296163708">+375 29 616 37 08</a>
+                        </div>
+                        <div class="contact__text">
+                            <img class="img" src="contact/assets/img/phones.svg" alt="pin-location">
+                            <a class="contact__tel" href="tel:+375296163708" target="_blank">+375 29 616 37 08</a>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <h4 class="contact__title">
+                            Email
+                        </h4>
+                        <div class="contact__text">
+                            <img class="img" src="contact/assets/img/email.svg" alt="pin-location">
+                            <a href="mailto:rlandmontaz@gmail.com">rlandmontaz@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <h4 class="contact__title">
+                            Реквизиты
+                        </h4>
+                        <div class="contact__text">
+                            <span>
+                                УНП: 691776269 <br> p/c BY15 PJCB 30120575961000000933 БИК PJCBBY2X <br> «ПРИОРБАНК» ОАО
+                                ЦБУ
+                                119
+                                220116,<br>
+                                г.Минск пр-т Дзержинского 104
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__illustration">
+                    <div class="illustration__map">
+                        <div class="first__map">
+                            <script type="text/javascript" charset="utf-8" async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78df6574045e21018ad5e158d256f6dade37fc8318a901bf4096529c0ad5c96c&amp;width=100&amp;height=225&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+                    </div>
+                    <div class="illustration__text">
+                        <div class="border__left">
+                        </div>
+                        <div class="illustration__content">
+                            <h4>
+                                Как к нам добраться?
+                            </h4>
+                            <span>
+                                Смотри в коротком ролике.
+                                <br>
+                                Ждем вас!
+                            </span>
+                        </div>
+                        <div class="illustration__arrow">
+                            <img src="contact/assets/img/kursiv.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="illustration__action">
+                        <button class="illustration__but but__main__active">Напишите нам</button>
+                        <span>Напишите нам, если остались вопросы</span>
+                    </div>
+                    <div class="illustration__phone">
+                        <div class="phone__block">
+                            <a href="#">
+                                <img src="contact/assets/img/play.svg" class="play__img" alt="">
+                            </a>
+                            <img src="contact/assets/img/reels.jpg" class="img" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block__actions">
+            <div class="actions__inner container">
+                <button class="actions__but but__main__active">
+                    <img src="contact/assets/img/money-coins.svg" alt="">
+                    Условия оплаты
+                </button>
+                <button class="actions__but but__main__active">
+                    <img src="contact/assets/img/delivery-truck-fast.svg" alt="">
+                    Доставка
+                </button>
+                <button class="actions__but but__main__active">
+                    <img src="contact/assets/img/calculator.svg" alt="">
+                    Калькулятор
+                </button>
+            </div>
+        </div>
+        <div class="block__media">
+            <div class="container media__content">
+                <div class="media__inner">
+                    <div class="media__title">
+                        <h2>
+                            Подписывайся на наш Instagram-канал
+                        </h2>
+                        <span class="media__subtitle">
+                            И в live-режиме следи за процессом строительства
+                        </span>
+                    </div>
+                    <div class="media__videoreview">
+                        <img src="contact/assets/img/video-player.svg" alt="">
+                        <span>Видеообзоры металлочерепицы и других товаров</span>
+                    </div>
+                    <div class="media__comment">
+                        <img src="contact/assets/img/message-text.svg" alt="">
+                        <span>Живые отзывы клиентов о качестве выполненных работ</span>
+                    </div>
+                    <div class="media__proccess">
+                        <img src="contact/assets/img/home-notification-square.svg" alt="">
+                        <span>Показываем процесс строительства вашего дома в live-режиме</span>
+                    </div>
+                    <div class="media__mockup">
+                        <img src="contact/assets/img/mok_up.png" class="img" alt="">
+                    </div>
+                    <div class="media__actions">
+                        <button class="media__but but__blue__active">
+                            <img src="contact/assets/img/instagram.png" alt="">
+                            Наш Instagram
+                        </button>
+                        <button class="media__but but__blue__active">
+                            <img src="contact/assets/img/youtube.png" alt="">
+                            Наш YouTube канал
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__main container">
+            <div class="feedback__card">
+                <div class="feedback__logo">
+                    <img src="contact/assets/img/logo.svg" alt="">
+                </div>
+                <div class="feedback__text">
+                    <div class="feedback__title">
+                        <h5>Остались вопросы?</h5>
+                    </div>
+                    <div class="feedback__subtitle">
+                        <span>
+                            Оставьте свои контактные данные и мы свяжемся с вами в ближайшее время
+                        </span>
+                    </div>
+                </div>
+                <form action="" class="feedback__form">
+                    <input type="text" placeholder="+375 (_) __-__-_">
+                    <div class="feedback__checkbox">
+                        <input type="checkbox">
+                        <div> <span>Я соглашаюсь с <a href="#" class="feedback__text__active">условиями обработки
+                                    персональных
+                                    данных</a></span></div>
+                    </div>
+                    <button class="feedback__but but__main__active">
+                        Отправить
+                    </button>
+                    <span class="feedback__juridical">
+                        Ваши контакты используются исключительно для связи с Вами и не будут переданы третьим лицам
+                    </span>
+                </form>
+            </div>
+            <div class="footer__inner">
+                <div class="footer__pages drop-down-list">
+                    <h5>
+                        Страницы
+                        <span class="footer-arrow-down"></span>
+                    </h5>
+                    <div class="item__content">
+                        <span>
+                            Каталог
+                        </span>
+                        <span>
+                            Интернет-магазин
+                        </span>
+                        <span>
+                            Кровельные работы
+                        </span>
+                        <span>
+                            Портфолио
+                        </span>
+                        <span>
+                            О компании
+                        </span>
+                        <span>
+                            Отзывы
+                        </span>
+                        <span>
+                            Клиенту
+                        </span>
+                        <span>
+                            Контакты
+                        </span>
+                        <span>
+                            Блог
+                        </span>
+                    </div>
+                </div>
+                <div class="footer__catalog drop-down-list">
+                    <h5>
+                        Каталог
+                        <span class="footer-arrow-down"></span>
+                    </h5>
+                    <div class="item__content">
+                        <span>
+                            Материалы для кровли
+                        </span>
+                        <span>
+                            Материалы для фасада
+                        </span>
+                        <span>
+                            Заборы и ограждения
+                        </span>
+                        <span>
+                            Кровельные аксессуары
+                        </span>
+                        <span>
+                            Водосточные системы
+                        </span>
+                        <span>
+                            Услуги монтажа
+                        </span>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <h5>
+                        Контакты
+                    </h5>
+                    <div class="footer__subtitle">
+                        <span>
+                            Офис-склад в Минске
+                        </span>
+                        <span>
+                            г.Минск ул. Ваупшасова 22
+                        </span>
+                    </div>
+                    <div class="footer__subtitle">
+                        <span>
+                            Соцсети
+                        </span>
+                        <div class="subtitle__img">
+                            <a href="#">
+                                <img src="contact/assets/img/youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="contact/assets/img/instagram.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="contact/assets/img/telegram.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__subtitle">
+                        <span>
+                            Контакты для связи
+                        </span>
+                        <div class="subtitle__contact">
+                            <img src="contact/assets/img/phones.svg" alt="">
+                            <a href="tel:+375296282009">+375 29 628 20 09</a>
+                        </div>
+                        <div class="subtitle__contact">
+                            <img src="contact/assets/img/phones.svg" alt="">
+                            <a href="tel:+375296282009">+375 29 628 20 09</a>
+                        </div>
+                        <div class="subtitle__contact">
+                            <img src="contact/assets/img/email.svg" alt="">
+                            <a href="mailto:zakaz@roofland.by">zakaz@roofland.by</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__worktime">
+                    <h5>
+                        Время работы
+                    </h5>
+                    <div class="footer__subtitle">
+                        <span>
+                            Пн-пт:
+                        </span>
+                        <span>
+                            С 9:00 до 18:00
+                        </span>
+                    </div>
+                    <div class="footer__subtitle">
+                        <span>
+                            Сб-вс:
+                        </span>
+                        <span>
+                            По согласованию
+                        </span>
+                    </div>
+                    <div class="footer__juridical">
+                        <span>
+                            УНП: 691776269
+                        </span>
+                        <span>Номер в Торговом реестре/Реестре бытовых услуг/Регистре производителей товаров:
+                            691776269</span>
+                        <a href="#">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__content">
+            </div>
+        </div>
+    </footer>
+    <script src="contact/assets/scripts/script.js"></script>
+</body>
+
+</html>

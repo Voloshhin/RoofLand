@@ -1,0 +1,177 @@
+<link rel="stylesheet" href="style.css">
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* общий лэйаут */
+.layout{
+  min-height: 100vh;
+  display: flex;
+  background: #ffffff
+}
+
+.hide-mobile {
+  display: block;
+}
+
+.only-mobile {
+  display: none;
+}
+/* левая часть (чёрная) */
+.left{
+  flex: 1;
+  background: #ffffff;
+  position: relative;
+}
+.left-text{
+font-family: Inter;
+position: absolute;
+text-align: start;
+color: #000000;
+margin-top: 30%;
+margin-bottom: 30%;
+margin-left: 20%;
+}
+.left-caps{
+font-weight: 700;
+font-style: Bold;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+.left-stroce{
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+/* кнопка как в макете — снизу слева */
+.btn{
+max-width: 226;
+max-height: 43;
+padding-top: 16px;
+padding-right: 24px;
+padding-bottom: 16px;
+padding-left: 24px;
+gap: 10px;
+border-radius: 12px;
+position: absolute;
+display: inline-flex;
+align-items: start;
+justify-content: start;
+height: 10%;
+min-width: 20%;
+border-radius: 10px;
+background: #4153E4;
+
+text-decoration: none;
+font-weight: 600;
+font-size: 16px;
+line-height: 1;
+}
+
+.btn-text{
+color: #ffffff;
+font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+.btn:hover{
+background: #fafafa;
+}
+
+.btn-text:hover{ 
+color: #4153E4;
+}
+
+.btn:active{ transform: translateY(1px); }
+
+/* правая часть (светлая) */
+.right{
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* контейнер для картинки */
+.img-wrap{
+  width: min(720px, 100%);
+}
+
+.img-wrap img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* адаптив: на мобилке складываем в колонку */
+@media (max-width: 900px){
+  .layout{
+    flex-direction: column-reverse;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .only-mobile {
+    display: block;
+}
+
+  .left{
+    min-height: 140px;
+  }
+
+  .btn{
+    position: static;
+  }
+
+  .right{
+    min-height: calc(100vh - 140px);
+  }
+
+  .left-caps{
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color:  #000000;
+    align-items: start;
+  }
+
+  .left-stroce{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color:  #000000;
+    align-items: start;
+    }
+
+  .btn-mobail{
+    max-width: 226;
+    max-height: 43;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    gap: 10px;
+    border-radius: 12px;
+    align-items: start;
+    }  
+}

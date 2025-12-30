@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="pay/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__main">
+                <div class="container header__content">
+                    <div class="header__info">
+                        <div class="info__content">
+                            <a class="logo" href="#">
+                                <img src="pay/img/icons/logo.svg" alt="logo" class="img">
+                            </a>
+                            <div class="header__contact">
+                                <div class="contact__info">
+                                    <div class="header__phone" id="header__phone">
+                                        <img src="pay/img/icons/phone.svg" alt="icon">
+                                        <span class="header__number">+375 29 628 20 09</span>
+                                        <span class="arrow__down" id="arrow__down"></span>
+                                    </div>
+                                    <a class="header__ring" href="#">Заказать звонок</a>
+                                </div>
+                                <div id="modal__overlay"></div>
+                                <div class="header__modal" id="header__modal">
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="pay/img/icons/phone.svg" alt="icon">
+                                            <a class="header__number" href="tel:+375296282009">+375 29 628 20 09</a>
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="pay/img/icons/home.svg" alt="icon">
+                                            <span>Офис-склад в Минске</span>
+                                        </div>
+                                        <div class="item__text">
+                                            г.Минск ул. Ваупшасова 22
+                                        </div>
+                                    </div>
+                                    <div class="modal__item">
+                                        <div class="item__title">
+                                            <img src="pay/img/icons/time.svg" alt="icon">
+                                            <span>Время работы</span>
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Пн-пт:</span> С 9:00 до 18:00
+                                        </div>
+                                        <div class="item__text">
+                                            <span class="item__bold">Сб-вс:</span> по согласованию
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__media">
+                                <a href="#">
+                                    <img src="pay/img/icons/yt.svg" alt="youtube">
+                                </a>
+                                <a href="#">
+                                    <img src="pay/img/icons/tg.svg" alt="telegram">
+                                </a>
+                                <a href="#">
+                                    <img src="pay/img/icons/tt.svg" alt="tik_tok">
+                                </a>
+                            </div>
+                        </div>
+                        <button class="burger__but" id="burger__but">
+                        </button>
+                    </div>
+                    <div class="header__actions">
+                        <div class="header__search">
+                            <button class="but__search">
+                                <img src="pay/img/icons/lens.svg" alt="icon">
+                            </button>
+                            <input class="search__input" type="text" placeholder="Найти в катологе">
+                        </div>
+                        </input>
+                        <button class="but__market">
+                            Интернет-магазин
+                        </button>
+                        <button class="but__cost but__main__active">
+                            Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+                <div class="header__actions__mobile container">
+                    <div class="actions__link">
+                        <a href="#">
+                            <img src="pay/img/icons/viber-logo.svg" class="img" alt="viber">
+                        </a>
+                        <a href="#">
+                            <img src="pay/img/icons/telegram-logo.svg" class="img" alt="telegram">
+                        </a>
+                        <a href="#">
+                            <img src="pay/img/icons/whatsapp.svg" class="img" alt="whatsapp">
+                        </a>
+                    </div>
+                    <button class="actions-mobile__but but__main__active">
+                        <img src="pay/img/icons/calculator.svg" alt="icon">
+                        Рассчитать стоимость
+                    </button>
+                </div>
+
+            </div>
+            <div class="header__menu" id="header__menu">
+                <div class="menu__inner container">
+                    <div class="menu__item">
+                        Каталог
+                    </div>
+                    <div class="menu__item">
+                        Интернет-магазин
+                    </div>
+                    <div class="menu__item">
+                        Кровельные работы
+                    </div>
+                    <div class="menu__item">
+                        Портфолио
+                    </div>
+                    <div class="menu__item">
+                        О компании
+                    </div>
+                    <div class="menu__item">
+                        Отзывы
+                    </div>
+                    <div class="menu__item">
+                        Клиенту
+                    </div>
+                    <div class="menu__item">
+                        Контакты
+                    </div>
+                    <div class="menu__item">
+                        Блог
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__nav">
+            <div class="container nav__inner">
+                <span class="nav__item">
+                    Каталог
+                </span>
+                <span class="nav__item">
+                    Кровельные работы
+                </span>
+                <span class="nav__item">
+                    Портфолио
+                </span>
+                <span class="nav__item">
+                    О Компании
+                </span>
+                <span class="nav__item">
+                    Отзывы
+                </span>
+                <span class="nav__item nav__item__active">
+                    Оплата
+                </span>
+                <span class="nav__item">
+                    Доставка и возврат
+                </span>
+                <span class="nav__item">
+                    Контакты
+                </span>
+                <span class="nav__item">
+                    Блог
+                </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="roof-delivery container">
+            <nav class="breadcrumbs">
+                <a href="/" class="breadcrumbs__item">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__item breadcrumbs__item--current">Оплата</span>
+            </nav>
+            <h1 class="main-title">Оплата</h1>
+        </section>
+
+        <section class="delivery container">
+            <h2 class="delivery__title">Способы оплаты и рассрочка </h2>
+            <p class="delivery__subtitle">
+                На этой странице вы найдёте все доступные способы оплаты наших услуг и материалов. Мы сотрудничаем с
+                ведущими банками, чтобы предложить вам гибкие финансовые решения, включая кредиты и беспроцентную
+                рассрочку
+            </p>
+
+            <div class="delivery__grid">
+                <!-- card 1 -->
+                <article class="delivery-card">
+                    <div class="delivery-card__icon" aria-hidden="true">
+                        <img src="pay/img/icons/pay1.svg" alt="icon">
+                    </div>
+                    <h3 class="delivery-card__title">Система платежа ЕРИП </h3>
+
+                </article>
+
+                <!-- card 2 -->
+                <article class="delivery-card">
+                    <div class="delivery-card__icon" aria-hidden="true">
+                        <img src="pay/img/icons/pay2.svg" alt="icon">
+                    </div>
+                    <h3 class="delivery-card__title">Перевод денежных средств на&nbsp;р/с продавца </h3>
+
+                </article>
+
+                <!-- card 3 -->
+                <article class="delivery-card">
+                    <div class="delivery-card__icon delivery-card__icon--accent" aria-hidden="true">
+                        <img src="pay/img/icons/pay3.svg" alt="icon">
+                    </div>
+
+                    <h3 class="delivery-card__title">
+                        Наличный / безналичный расчет
+                    </h3>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="cards container">
+            <h2 class="delivery__title">Рассрочка и кредитование от банков-партнёров</h2>
+            <p class="delivery__subtitle">
+                Оформите рассрочку прямо в&nbsp;нашем офисе или удалённо. Решение по&nbsp;заявке&nbsp;—
+                от&nbsp;2&nbsp;минут
+            </p>
+
+            <ul class="pay__grid">
+                <li class="pay__grid-item">
+                    <a class="pay__card" data-modal="credit1">
+                        <img src="pay/img/card1.webp" alt="payment card">
+                        <h3 class="pay__card-title">Кредит и рассрочка от Альфа банка</h3>
+                    </a>
+                </li>
+                <li class="pay__grid-item">
+                    <a class="pay__card" data-modal="credit2">
+                        <img src="pay/img/card2.webp" alt="payment card">
+                        <h3 class="pay__card-title">«Красная карта» от Альфа-Банка</h3>
+                    </a>
+                </li>
+                <li class="pay__grid-item">
+                    <a class="pay__card" data-modal="credit3">
+                        <img src="pay/img/card3.webp" alt="payment card">
+                        <h3 class="pay__card-title">Кредитный продукт «Рассрочка» от ОАО «Технобанк»</h3>
+                    </a>
+                </li>
+                <li class="pay__grid-item">
+                    <a class="pay__card" data-modal="credit4">
+                        <img src="pay/img/card4.webp" alt="payment card">
+                        <h3 class="pay__card-title"> МТ-БАНК Халва</h3>
+                    </a>
+                </li>
+                <li class="pay__grid-item">
+                    <a class="pay__card" data-modal="credit5">
+                        <img src="pay/img/card5.webp" alt="payment card">
+                        <h3 class="pay__card-title">Карта рассрочки «Черепаха» от ВТБ банка</h3>
+                    </a>
+                </li>
+                <li class="pay__grid-item">
+                    <a class="pay__card" data-modal="credit6">
+                        <img src="pay/img/card6.webp" alt="payment card">
+                        <h3 class="pay__card-title">Карта покупок» от Белгазпромбанка</h3>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="price-list--bg">
+            <div class="container price-list">
+                <div class="price-list__content-wrap">
+                    <h2 class="price-list__title">Остались вопросы <br>по возврату товара?</h2>
+                    <p class="price-list__text">Оставьте свою заявку и&nbsp;мы проконсультируем вас по&nbsp;всем
+                        вопросам</p>
+                </div>
+                <div class="price-form-wrapper">
+                    <form class="price-form" action="#" method="POST" autocomplete="off" novalidate>
+
+                        <h3 class="price-form__title">Остались вопросы?<br>Напишите нам и мы свяжемся с вами</h3>
+
+                        <label class="price-form__label" for="phone">Ваше имя</label>
+
+                        <input class="price-form__input" type="text" id="name" name="name" placeholder="Ваше имя"
+                            required>
+                        <label class="price-form__label" for="phone">Введите номер телефона</label>
+
+                        <input class="price-form__input" type="tel" id="phone" name="phone" placeholder="Номер телефона"
+                            pattern="^[0-9+\-\s()]{6,20}$" required>
+
+                        <label class="price-form__label" for="message">Сообщение</label>
+                        <textarea class="price-form__input price-form__textarea" id="message" name="message"
+                            placeholder="Введите ваше сообщение" rows="4"></textarea>
+                        <label class="contact-form__checkbox">
+                            <input type="checkbox" required>
+                            <span>
+                                Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+                            </span>
+                        </label>
+
+                        <button class="feedback__but but__main__active" type="submit">Отправить</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer container">
+            <div class="contact-form">
+                <img class="contact-form__logo" src="pay/img/icons/logo.svg" alt="Land Group Company">
+
+                <h3 class="contact-form__title">Остались вопросы?</h3>
+                <p class="contact-form__subtitle">
+                    Оставьте свои контактные данные и мы
+                    свяжемся с&nbsp;вами в&nbsp;ближайшее время
+                </p>
+
+                <form action="/send-question" method="POST" class="contact-form__body">
+
+                    <input type="tel" name="phone" class="contact-form__input" placeholder="+375 (__) ___-__-__"
+                        required pattern="^[0-9+\-\s()]{6,20}$">
+
+                    <label class="contact-form__checkbox">
+                        <input type="checkbox" required>
+                        <span>
+                            Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+                        </span>
+                    </label>
+
+                    <button type="submit" class="feedback__but but__main__active">Отправить</button>
+
+                    <p class="contact-form__note">
+                        Ваши контакты используются исключительно для связи
+                        с&nbsp;вами и не будут переданы третьим лицам
+                    </p>
+
+                </form>
+            </div>
+
+            <div class="footer__inner">
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Страницы</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Интернет-магазин</a></li>
+                        <li><a href="#">Кровельные работы</a></li>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Клиенту</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Каталог</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Материалы для кровли</a></li>
+                        <li><a href="#">Материалы для фасада</a></li>
+                        <li><a href="#">Заборы и ограждения</a></li>
+                        <li><a href="#">Кровельные аксессуары</a></li>
+                        <li><a href="#">Водосточные системы</a></li>
+                        <li><a href="#">Услуги монтажа</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+
+                    <p class="footer__text">
+                        <strong>Офис-склад в Минске</strong><br>
+                        г.Минск ул. Вауличасова 22
+                    </p>
+
+                    <h5 class="footer__subtitle">Соцсети</h5>
+                    <div class="footer__socials">
+                        <a href="#" target="_blank"><img src="pay/img/icons/yt.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="pay/img/icons/inst.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="pay/img/icons/tg.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="pay/img/icons/viber.svg" alt="icon"></a>
+                        <a href="#" target="_blank"><img src="pay/img/icons/wap.svg" alt="icon"></a>
+                    </div>
+
+                    <h5 class="footer__subtitle">Контакты для связи</h5>
+                    <ul class="footer__list">
+                        <li><img src="pay/img/icons/phone.svg" alt="icon"><a href="tel:+375296280209">+375 29 628 20
+                                09</a></li>
+                        <li><img src="pay/img/icons/phone.svg" alt="icon"><a href="tel:+375295380209">+375 29 538 20
+                                09</a></li>
+                        <li><img src="pay/img/icons/mail.svg" alt="icon"><a
+                                href="mailto:zakaz@roofland.by">zakaz@roofland.by</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Время работы</h4>
+
+                    <p class="footer__text">
+                        Пн–пт:<br>
+                        <strong>С 9:00 до 18:00</strong><br><br>
+                        Сб–вс:<br>
+                        <strong>По согласованию</strong>
+                    </p>
+
+                    <p class="footer__small">
+                        УНП: 691776269<br>
+                        Номер в Торговом реестре/Реестре бытовых услуг:<br>
+                        691776269<br><br>
+                        <a href="#">Политика конфиденциальности</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!--Попапы-->
+    <div class="popup" data-modal="credit1">
+        <button class="popup-close" aria-label="Закрыть">×</button>
+
+        <div class="popup-header">
+            <img src="pay/img/card1.webp" alt="payment card" class="popup-logo">
+            <h2 class="popup-title">Кредит и рассрочка от Альфа банка</h2>
+        </div>
+
+        <div class="popup-content">
+            <ul class="popup-list">
+                <li>Оформление кредитов и рассрочек происходит как на месте так и удаленно по ссылке из смс.
+                </li>
+                <li>Оформление кредитов/рассрочек понедельник–суббота с 09:00 до 21:00, в воскресенье и
+                    праздничные дни с 10:00 до 20:30 7 дней в неделю.</li>
+                <li>Принятие решения по заявке — от 2 минут.</li>
+            </ul>
+
+            <h3 class="popup-subtitle">Требования к кредитополучателям:</h3>
+
+            <ul class="popup-list">
+                <li>Оформление по паспорту РБ или ВНЖ</li>
+                <li>Возраст от 18 года до 69 лет включительно на момент погашения кредита</li>
+                <li>Сумма кредита до 15 000 BYN</li>
+                <li>Срок от 2 месяцев до 36 месяцев</li>
+                <li>Стаж на последнем месте работы не менее 3-х месяцев</li>
+                <li><strong>Кредитуем ИП и сотрудников, работающих у ИП
+                        (до 10 000 BYN), самозанятых (до 5 000 BYN),
+                        пенсионеров (3 000 BYN)</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup" data-modal="credit2">
+        <button class="popup-close" aria-label="Закрыть">×</button>
+
+        <div class="popup-header">
+            <img src="pay/img/card2.webp" alt="payment card" class="popup-logo">
+            <h2 class="popup-title">«Красная карта» от Альфа-Банка</h2>
+        </div>
+
+        <div class="popup-content">
+            <p class="popup-list">
+                «Красная карта» от Альфа-Банка — это кредитная карта с возможностью беспроцентной рассрочки на покупки,
+                оформляемой в мобильном приложении. Для оформления требуется возраст от 21 до 62 лет, официальный доход
+                от 500 BYN (для минчан от 700 BYN) и стаж работы от 3 месяцев. Карта бесплатная в выпуске и
+                обслуживании, с кредитным лимитом до 10000 BYN и возможностью покупки в рассрочку товаров и услуг как в
+                Беларуси, так и за рубежом.
+            </p>
+
+            <h3 class="popup-subtitle">Основные условия:</h3>
+
+            <ul class="popup-list">
+                <li>Возраст: от 21 до 62 лет.</li>
+                <li>Доход: от 500 BYN (для Минска — от 700 BYN) в месяц, подтвержденный справкой о доходах за последние
+                    3 месяца.</li>
+                <li>Трудовой стаж: не менее 3 месяцев на текущем месте работы.</li>
+                <li>Резидентство: граждане Республики Беларусь или иностранцы с видом на жительство.</li>
+                <li>Наличие других кредитов: отсутствие других кредитов в Альфа-Банке (для некоторых категорий).</li>
+                <li>
+                    Снятие наличных: возможно, но взимается комиссия 3,5%.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup" data-modal="credit3">
+        <button class="popup-close" aria-label="Закрыть">×</button>
+
+        <div class="popup-header">
+            <img src="pay/img/card3.webp" alt="payment card" class="popup-logo">
+            <h2 class="popup-title">Кредитный продукт «Рассрочка» от ОАО «Технобанк»</h2>
+        </div>
+
+        <div class="popup-content">
+            <ul class="popup-list">
+                <li>Процентная ставка для физического лица: 3% годовых
+                </li>
+                <li>Срок кредитования: 6, 9 месяцев</li>
+                <li>Сумма кредитования: от 500 руб. до 15 000 руб. без поручителей</li>
+                <li>Без справки о доходах</li>
+                <li>Минимальный размер первого взноса – 20% от общей стоимости товаров/услуг</li>
+            </ul>
+
+            <h3 class="popup-subtitle">Перечень документов, предоставляемых покупателям для оформления рассрочки:</h3>
+
+            <ul class="popup-list">
+                <li>Паспорт гражданина Республики Беларусь или вид на жительство в Республики Беларусь</li>
+                <li>Счет-фактура на товар/услугу с указанием наименования товара/услуги и суммы/договор на оказание
+                    услуги</li>
+                <li>В процессе принятия решения о кредитовании по усмотрению банка могут быть затребованы дополнительные
+                    документы.</li>
+            </ul>
+
+            <h3 class="popup-subtitle">Требования к кредитополучателю:</h3>
+
+            <ul class="popup-list">
+                <li>Возраст 21 – 65 лет (с 20 лет возможно кредитование при непрерывном трудовом стаже на последнем
+                    месте трудоустройства не менее одного года)
+                </li>
+                <li>Стаж работы на последнем месте работы на момент оформления не менее 3-х месяцев и общий трудовой
+                    стаж не менее одного года</li>
+                <li>Кредитование недоступно для индивидуальных предпринимателей,
+                    самозанятых, лиц в декретном отпуске и лиц, оформленных по договору подряда.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup" data-modal="credit4">
+        <button class="popup-close" aria-label="Закрыть">×</button>
+
+        <div class="popup-header">
+            <img src="pay/img/card4.webp" alt="payment card" class="popup-logo">
+            <h2 class="popup-title"> МТ-БАНК Халва</h2>
+        </div>
+
+        <div class="popup-content">
+            <ul class="popup-list">
+                <li>Оформление карты online
+                </li>
+                <li>Оформите карту в мобильном банке Moby без посещения отделения и с доставкой на дом</li>
+                <li>Рассрочка до 12-ти месяцев без переплат у партнёров</li>
+                <li>Оплачивайте покупки частями до 24-х месяцев в любых магазинах</li>
+                <li>Лимит до 10 000 BYN на все покупки и оплаты по карте</li>
+                <li>Рассчитывайтесь в ЕРИП: за коммунальные услуги и покупки, делайте переводы</li>
+                <li>Возможность досрочного погашения</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="popup" data-modal="credit5">
+        <button class="popup-close" aria-label="Закрыть">×</button>
+
+        <div class="popup-header">
+            <img src="pay/img/card5.webp" alt="payment card" class="popup-logo">
+            <h2 class="popup-title">Карта рассрочки «Черепаха» от ВТБ банка</h2>
+        </div>
+
+        <div class="popup-content">
+            <p class="popup-list">
+                Карта рассрочки «Черепаха» от ВТБ (Беларусь) предлагает лимит до 5000 BYN, бесплатное оформление и
+                возможность беспроцентной рассрочки до 12 месяцев в партнерской сети. Помимо покупок в рассрочку, картой
+                можно расплачиваться и вне партнерской сети (с процентной ставкой), снимать наличные и совершать платежи
+                в ЕРИП. Для оформления требуется паспорт, а стаж на последнем месте работы должен быть не менее 3
+                месяцев.
+            </p>
+
+            <h3 class="popup-subtitle">Основные условия:</h3>
+
+            <ul class="popup-list">
+                <li>Лимит: до 5000 BYN
+                </li>
+                <li>Рассрочка: до 12 месяцев с беспроцентной ставкой (0,0001%) при покупках в магазинах-партнерах</li>
+            </ul>
+
+            <h3 class="popup-subtitle">Оформление:</h3>
+
+            <ul class="popup-list">
+                <li>Бесплатно, без поручителей и справки о доходах</li>
+                <li>Непрерывный стаж на последнем месте работы: от 3 месяцев (для мужчин до 25 лет – с учетом документа воинского учета)</li>
+                <li>Возраст: 21–75 лет</li>
+                <li>Необходимые документы: паспорт, для мужчин до 25 лет – приписное свидетельство</li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup" data-modal="credit6">
+        <button class="popup-close" aria-label="Закрыть">×</button>
+
+        <div class="popup-header">
+            <img src="pay/img/card6.webp" alt="payment card" class="popup-logo">
+            <h2 class="popup-title">Карта покупок» от Белгазпромбанка</h2>
+        </div>
+
+        <div class="popup-content">
+            <p class="popup-list">
+               «Карта покупок» — это карта рассрочки от Белгазпромбанка, позволяющая совершать покупки в рассрочку без переплат и первоначального взноса на срок до 8 месяцев в магазинах-партнёрах. Она бесплатна в выпуске и обслуживании. При оплате собственными средствами можно получить кэшбэк до 2%. Для оформления требуется паспорт, а справка о доходах может не понадобиться, если зарплата зачисляется на ваш счёт в банке. 
+            </p>
+
+            <h3 class="popup-subtitle">Основные условия:</h3>
+
+            <ul class="popup-list">
+                <li>Рассрочка: до 8 месяцев без переплат и первоначального взноса, только в сети магазинов-партнёров.
+                </li>
+                <li>Лимит: от 200 до 5000 белорусских рублей, в зависимости от условий.</li>
+                <li>Кэшбэк: до 2% за покупки за счёт собственных средств.</li>
+                <li>Стоимость: бесплатный выпуск и обслуживание карты.</li>
+            </ul>
+
+            <h3 class="popup-subtitle">Необходимые документы:</h3>
+
+            <ul class="popup-list">
+                <li>Паспорт гражданина Республики Беларусь.</li>
+                <li>Справка о доходах за последние 3 месяца (может не потребоваться, если вы зарплатный клиент банка). </li>
+            </ul>
+        </div>
+    </div>
+    <script src="pay/script.js"></script>
+</body>
+
+</html>

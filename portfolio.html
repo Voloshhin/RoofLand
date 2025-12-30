@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <title>project</title>
+</head>
+
+<body class="nr-roof">
+
+    <header class="header">
+        <div class="header__top roof-pad">
+            <div class="header__container">
+
+                <div class="header__left">
+                    <a href="/" class="header__logo">
+                        <img src="portfolio/img/logo-main.webp" alt="RoofLand">
+                    </a>
+
+                    <div class="header__phone-block">
+                        <a class="header__phone-row" id="headerPhoneToggle">
+                            <img src="portfolio/img/phone.svg" alt="icon">
+                            <p class="header__phone">+375 29 628 20 09</p>
+                            <img src="portfolio/img/arr.svg" alt="icon">
+                        </a>
+
+                        <div class="header-phone__dropdown" id="headerPhoneDropdown">
+                            <div class="header-phone__item">
+                                <img src="portfolio/img/phone.svg" alt="icon">
+                                <a href="tel:+375296282009">+375 29 628 20 09</a>
+                            </div>
+
+                            <div class="header-phone__item">
+                                <img src="portfolio/img/home.svg" alt="icon">
+                                <div>
+                                    <div class="header-phone__item-title">Офис-склад в Минске</div>
+                                    <div class="header-phone__item-text">г.Минск, ул. Вауличасова 22</div>
+                                </div>
+                            </div>
+
+                            <div class="header-phone__item">
+                                <img src="portfolio/img/time.svg" alt="icon">
+                                <div>
+                                    <div class="header-phone__item-title">Время работы</div>
+                                    <div class="header-phone__item-text">
+                                        Пн–пт: С 9:00 до 18:00<br>
+                                        Сб–вс: По согласованию
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="tel:+375296282009" class="header__callback">Заказать звонок</a>
+                    </div>
+                    <div class="header__socials">
+                        <a href="#" target="_blank" class="header__social-link">
+                            <img src="portfolio/img/yt.svg" alt="YouTube">
+                        </a>
+                        <a href="#" target="_blank" class="header__social-link">
+                            <img src="portfolio/img/inst.svg" alt="Instagram">
+                        </a>
+                        <a href="#" target="_blank" class="header__social-link">
+                            <img src="portfolio/img/tt.svg" alt="TikTok">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="header__right">
+
+                    <button class="header__search" type="button">
+                        <img src="portfolio/img/lens.svg" alt="search icon">
+                    </button>
+
+                    <a href="#" class="button button--ghost">
+                        Интернет-магазин&ensp;<img src="portfolio/img/arrow-text.svg" alt="icon">
+                    </a>
+
+                    <a href="#" class="button button--primary">
+                        Рассчитать стоимость
+                    </a>
+                </div>
+            </div>
+            <button class="header__burger" type="button" aria-label="Открыть меню" aria-controls="mobileMenu"
+                aria-expanded="false">
+                <img src="portfolio/img/burger-menu.svg" alt="icon">
+            </button>
+        </div>
+
+        <!-- мобильное меню -->
+        <aside class="mobile-menu" id="mobileMenu">
+            <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">×</button>
+
+            <nav class="mobile-menu__nav">
+                <a href="#" class="mobile-menu__link">Каталог</a>
+                <a href="#" class="mobile-menu__link">Кровельные работы</a>
+                <a href="#" class="mobile-menu__link is-active">Портфолио</a>
+                <a href="#" class="mobile-menu__link">О компании</a>
+                <a href="#" class="mobile-menu__link">Отзывы</a>
+                <a href="#" class="mobile-menu__link">Оплата</a>
+                <a href="#" class="mobile-menu__link">Доставка и возврат</a>
+                <a href="#" class="mobile-menu__link">Контакты</a>
+                <a href="#" class="mobile-menu__link">Блог</a>
+            </nav>
+        </aside>
+
+        <nav class="header__bottom roof-pad">
+            <div class="header__container">
+                <nav>
+                    <ul class="header__menu">
+                        <li class="menu-dropdown">
+                            <a class="menu-dropdown__toggle">Каталог <img src="portfolio/img/arr.svg" alt="icon">
+                            </a>
+                            <div class="menu-dropdown__popup">
+                                <a href="#">Пункт 1</a>
+                                <a href="#">Пункт 2</a>
+                                <a href="#">Пункт 3</a>
+                            </div>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a class="menu-dropdown__toggle">Кровельные работы <img src="portfolio/img/arr.svg" alt="icon">
+                            </a>
+                            <div class="menu-dropdown__popup">
+                                <a href="#">Пункт 1</a>
+                                <a href="#">Пункт 2</a>
+                                <a href="#">Пункт 3</a>
+                            </div>
+                        </li>
+                        <li class="is-active"><a href="#">Портфолио</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Доставка и возврат</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <div class="mobile-search roof-pad">
+            <form class="search-field" action="#" method="get">
+                <button class="search-field__icon" type="submit" aria-label="Поиск">
+                    <img src="portfolio/img/lens.svg" alt="icon">
+                </button>
+
+                <input class="search-field__input" type="search" name="q" placeholder="Найти в каталоге"
+                    autocomplete="off" />
+            </form>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="roof-project roof-pad">
+            <nav class="breadcrumbs">
+                <a href="/" class="breadcrumbs__item">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__item breadcrumbs__item--current">Портфолио</span>
+            </nav>
+            <h1 class="main-title"><span>Портфолио</span></h1>
+
+            <div class="roof-project-list">
+
+                <div class="project-list-filter">
+                    <form class="project-list-filter__form">
+
+                        <div class="project-list-filter__fields">
+                            <select name="type" class="project-list-filter__select">
+                                <option value="">Выберите тип покрытия</option>
+                                <option value="metal">Металлочерепица</option>
+                                <option value="soft">Мягкая кровля</option>
+                                <option value="fold">Фальцевая кровля</option>
+                            </select>
+
+                            <select name="year" class="project-list-filter__select">
+                                <option value="">Выберите год</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+
+                        <button type="reset" class="project-list-filter__reset">Сбросить</button>
+                    </form>
+                </div>
+
+                <ul class="project-list">
+                    <li class="project-list__item is-visible">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+        portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+        portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                    </ul>
+                                    <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-list__item is-visible">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+        portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+        portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>…</li>
+                                    </ul>
+                                     <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-list__item is-visible">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+       portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+        portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>…</li>
+                                    </ul>
+                                     <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-list__item is-visible">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+        portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+        portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>…</li>
+                                    </ul>
+                                     <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-list__item">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+        portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+        portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>…</li>
+                                    </ul>
+                                     <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-list__item">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+        portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+       portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>…</li>
+                                    </ul>
+                                     <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-list__item">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+        portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+        portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>…</li>
+                                    </ul>
+                                     <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="project-list__item">
+                        <a>
+                            <article class="project-card" data-images="
+        portfolio/img/image-card-portfolio.webp,
+        portfolio/img/card-img1.webp,
+        portfolio/img/card-img2.webp,
+        portfolio/img/card-img3.webp,
+        portfolio/img/card-img4.webp,
+        portfolio/img/card-img5.webp,
+      ">
+                                <div class="project-card__left">
+                                    <div class="project-card__badges">
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-scad.svg" alt="icon">2025 г.
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-time.svg" alt="icon"> 14 дней
+                                        </span>
+                                        <span class="project-badge">
+                                            <img src="portfolio/img/icon-house.svg" alt="icon"> 360.00 м²
+                                        </span>
+                                    </div>
+
+                                    <h3 class="project-card__title">Монтаж круглой кровли в г.п.Мачулищи</h3>
+
+                                    <ul class="project-card__list">
+                                        <li>- Модульная металлочерепица Blachotrapez Germania Mat PLUS 9005</li>
+                                        <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                        <li>...</li>
+                                    </ul>
+                                     <p class="project-card__more-link">Подробнее</p>
+                                </div>
+
+                                <div class="project-card__right">
+                                    <img class="project-card__img" src="portfolio/img/image-card-portfolio.webp" alt="Проект">
+
+                                    <div class="project-card__view" href="#" aria-label="Смотреть проект">
+                                        <img src="portfolio/img/icon-eye.svg" alt="view">
+                                    </div>
+
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
+                <button href="#" class="button button--ghost project__more-button">
+                    Показать больше
+                </button>
+            </div>
+
+        </section>
+
+        <section class="roof-socials roof-pad">
+            <div class="socials__content-wrap">
+                <h2 class="socials__title">Подписывайся на наш Instagram-канал </h2>
+                <p class="socials__text">И в live-режиме следи за процессом строительства</p>
+                <div class="socials__cards-wrap">
+                    <div class="socials__card">
+                        <img src="portfolio/img/icon-mix.svg" alt="icon">
+                        <img src="portfolio/img/icon-video.svg" alt="icon">
+                        <p>Видеообзоры металлочерепицы и&nbsp;других товаров</p>
+                    </div>
+                    <div class="socials__card">
+                        <img src="portfolio/img/icon-mix.svg" alt="icon">
+                        <img src="portfolio/img/icon-message.svg" alt="icon">
+                        <p>Живые отзывы клиентов о&nbsp;качестве выполненных работ</p>
+                    </div>
+                    <div class="socials__card">
+                        <img src="portfolio/img/icon-home.svg" alt="icon">
+                        <p>Показываем процесс строительства вашего дома в&nbsp;live-режиме</p>
+                    </div>
+
+                </div>
+                <div class="socials__button-wrap">
+                    <a href="#" class="button button--ghost">
+                        <img src="portfolio/img/ig-colored.webp" alt="icon" width="26">&ensp;Наш Instagram&ensp;<img
+                            src="portfolio/img/arrow-text.svg" alt="icon">
+                    </a>
+                    <a href="#" class="button button--ghost">
+                        <img src="portfolio/img/yt-colored.webp" alt="icon" width="26">&ensp;Наш YouTube канал&ensp;<img
+                            src="portfolio/img/arrow-text.svg" alt="icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="price-list roof-pad">
+            <div class="price-list__content-wrap">
+                <h2 class="price-list__title">Прайс-лист на услуги</h2>
+                <p class="price-list__text">Не тратьте время на долгие поиски. Скачайте прайс с&nbsp;описанием
+                    и&nbsp;актуальными ценами</p>
+            </div>
+            <div class="price-form-wrapper">
+                <form class="price-form" action="#" method="POST" autocomplete="off" novalidate>
+
+                    <h3 class="price-form__title">Куда отправить прайс-лист?</h3>
+
+                    <div class="price-form__radios">
+                        <label class="radio">
+                            <input type="radio" name="send_to" value="telegram" required checked>
+                            <span>Telegram</span>
+                        </label>
+
+                        <label class="radio">
+                            <input type="radio" name="send_to" value="viber" required>
+                            <span>Viber</span>
+                        </label>
+
+                        <label class="radio">
+                            <input type="radio" name="send_to" value="email" required>
+                            <span>E-mail</span>
+                        </label>
+                    </div>
+
+                    <label class="price-form__label" for="phone">Введите номер телефона</label>
+
+                    <input class="price-form__input" type="tel" id="phone" name="phone" placeholder="Номер телефона"
+                        pattern="^[0-9+\-\s()]{6,20}$" required>
+                    <label class="contact-form__checkbox">
+                        <input type="checkbox" required>
+                        <span>
+                            Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+                        </span>
+                    </label>
+
+                    <button class="button button--primary" type="submit">Получить прайс</button>
+
+                    <div class="price-form__update">Прайс обновлен 20.04.2025</div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer roof-pad">
+        <div class="contact-form">
+            <img class="contact-form__logo" src="portfolio/img/logo-main.webp" alt="Land Group Company">
+
+            <h3 class="contact-form__title">Остались вопросы?</h3>
+            <p class="contact-form__subtitle">
+                Оставьте свои контактные данные и мы
+                свяжемся с&nbsp;вами в&nbsp;ближайшее время
+            </p>
+
+            <form action="/send-question" method="POST" class="contact-form__body">
+
+                <input type="tel" name="phone" class="contact-form__input" placeholder="+375 (__) ___-__-__" required
+                    pattern="^[0-9+\-\s()]{6,20}$">
+
+                <label class="contact-form__checkbox">
+                    <input type="checkbox" required>
+                    <span>
+                        Я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных данных</a>
+                    </span>
+                </label>
+
+                <button type="submit" class="button button--primary">Отправить</button>
+
+                <p class="contact-form__note">
+                    Ваши контакты используются исключительно для связи
+                    с&nbsp;вами и не будут переданы третьим лицам
+                </p>
+
+            </form>
+        </div>
+
+        <div class="footer__inner">
+
+            <div class="footer__col">
+                <h4 class="footer__title">Страницы</h4>
+                <ul class="footer__list">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Интернет-магазин</a></li>
+                    <li><a href="#">Кровельные работы</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Клиенту</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Блог</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Каталог</h4>
+                <ul class="footer__list">
+                    <li><a href="#">Материалы для кровли</a></li>
+                    <li><a href="#">Материалы для фасада</a></li>
+                    <li><a href="#">Заборы и ограждения</a></li>
+                    <li><a href="#">Кровельные аксессуары</a></li>
+                    <li><a href="#">Водосточные системы</a></li>
+                    <li><a href="#">Услуги монтажа</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Контакты</h4>
+
+                <p class="footer__text">
+                    <strong>Офис-склад в Минске</strong><br>
+                    г.Минск ул. Вауличасова 22
+                </p>
+
+                <h5 class="footer__subtitle">Соцсети</h5>
+                <div class="footer__socials">
+                    <a href="#" target="_blank"><img src="portfolio/img/yt.svg" alt="icon"></a>
+                    <a href="#" target="_blank"><img src="portfolio/img/inst.svg" alt="icon"></a>
+                    <a href="#" target="_blank"><img src="portfolio/img/tg.svg" alt="icon"></a>
+                    <a href="#" target="_blank"><img src="portfolio/img/viber.svg" alt="icon"></a>
+                    <a href="#" target="_blank"><img src="portfolio/img/wap.svg" alt="icon"></a>
+                </div>
+
+                <h5 class="footer__subtitle">Контакты для связи</h5>
+                <ul class="footer__list">
+                    <li><img src="portfolio/img/phone.svg" alt="icon"><a href="tel:+375296280209">+375 29 628 20 09</a></li>
+                    <li><img src="portfolio/img/phone.svg" alt="icon"><a href="tel:+375295380209">+375 29 538 20 09</a></li>
+                    <li><img src="portfolio/img/mail.svg" alt="icon"><a href="mailto:zakaz@roofland.by">zakaz@roofland.by</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Время работы</h4>
+
+                <p class="footer__text">
+                    Пн–пт:<br>
+                    <strong>С 9:00 до 18:00</strong><br><br>
+                    Сб–вс:<br>
+                    <strong>По согласованию</strong>
+                </p>
+
+                <p class="footer__small">
+                    УНП: 691776269<br>
+                    Номер в Торговом реестре/Реестре бытовых услуг:<br>
+                    691776269<br><br>
+                    <a href="#">Политика конфиденциальности</a>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!--Модалка для карточек-->
+    <div class="project-modal" id="projectModal">
+        <div class="project-modal__overlay"></div>
+
+        <div class="project-modal__content roof-pad">
+            <button class="project-modal__close" aria-label="Закрыть">×</button>
+
+            <div class="project-modal__slider">
+                <div class="swiper" id="projectSwiper">
+                    <div class="swiper-wrapper" id="projectSwiperWrapper">
+
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="project-modal__info" id="projectModalInfo"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="portfolio/index.js"></script>
+
+</body>
+
+</html>
