@@ -137,7 +137,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 /**
@@ -145,7 +146,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 /**
@@ -312,7 +314,8 @@ template {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/roboto-v50-cyrillic_latin-regular.woff2") format("woff2");
+  src: url("../../fonts/roboto-v50-cyrillic_latin-regular.woff2")
+    format("woff2");
 }
 /* open-sans-regular - cyrillic_latin */
 @font-face {
@@ -320,11 +323,12 @@ template {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/open-sans-v44-cyrillic_latin-regular.woff2") format("woff2");
+  src: url("../../fonts/open-sans-v44-cyrillic_latin-regular.woff2")
+    format("woff2");
 }
 :root {
-  position: relative;
-  overflow-x: hidden;
+  /* position: relative;
+  overflow-x: hidden; */
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -694,7 +698,8 @@ body:has(.mobile-menu.active) .search-bar {
   font-weight: 600;
   transition: background-color 0.2s;
 }
-.mobile-menu__link:hover, .mobile-menu__link:active {
+.mobile-menu__link:hover,
+.mobile-menu__link:active {
   color: #4153e4;
 }
 .mobile-nav-link {
@@ -715,7 +720,7 @@ body:has(.mobile-menu.active) .search-bar {
   background-color: #f8f8f8;
 }
 .mobile-nav-link.highlight {
-  color: #4A5FFF;
+  color: #4a5fff;
 }
 .hero {
   background: url("../../img/hero-bg-mobile.png") no-repeat;
@@ -921,11 +926,13 @@ body:has(.mobile-menu.active) .search-bar {
 }
 .reviews__title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   max-width: 343px;
+  padding-bottom: 0;
+  padding-right: 0;
 }
 .reviews__title span {
   color: #4153e4;
@@ -935,6 +942,24 @@ body:has(.mobile-menu.active) .search-bar {
     max-width: 900px;
     font-size: 50px;
     margin-bottom: 52px;
+  }
+}
+@media (max-width: 48em) {
+  .reviews__title {
+    font-size: 1.5rem;
+    max-width: 100%;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .reviews-form__arrow {
+    width: 8.625rem;
+    height: 11.5rem;
+    position: relative;
+    bottom: -10rem;
+    left: 8%;
+    transform: rotateZ(5deg);
   }
 }
 .reviews__accordion-toggle {
@@ -952,11 +977,11 @@ body:has(.mobile-menu.active) .search-bar {
 .reviews__accordion-toggle:focus {
   outline: none;
 }
-.reviews__accordion-toggle[aria-expanded=true] {
+.reviews__accordion-toggle[aria-expanded="true"] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.reviews__accordion-toggle[aria-expanded=true] .reviews__accordion-arrow {
+.reviews__accordion-toggle[aria-expanded="true"] .reviews__accordion-arrow {
   transform: rotate(180deg);
 }
 .reviews__accordion-text {
@@ -972,7 +997,7 @@ body:has(.mobile-menu.active) .search-bar {
   top: 100%;
   left: 0;
   right: 0;
-  background: #FFFFFF;
+  background: #ffffff;
   border-top: none;
   border-radius: 0 0 12px 12px;
   max-height: 0;
@@ -990,9 +1015,9 @@ body:has(.mobile-menu.active) .search-bar {
   width: 100%;
   display: block;
   padding: 16px 20px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: none;
-  border-bottom: 1px solid #E8ECEF;
+  border-bottom: 1px solid #e8ecef;
   font-size: 16px;
   font-weight: 600;
   color: #000000;
@@ -1008,12 +1033,12 @@ body:has(.mobile-menu.active) .search-bar {
   border-bottom: none;
 }
 .reviews__accordion-option:hover {
-  background: #F5F7FA;
-  color: #4153E4;
+  background: #f5f7fa;
+  color: #4153e4;
 }
 .reviews__accordion-option.is-active {
-  background: #F5F7FA;
-  color: #4153E4;
+  background: #f5f7fa;
+  color: #4153e4;
   font-weight: 700;
 }
 .reviews__tabs-desktop {
@@ -1155,7 +1180,7 @@ body:has(.mobile-menu.active) .search-bar {
   gap: 4px;
 }
 .reviews__star {
-  fill: #4153E4;
+  fill: #4153e4;
 }
 .reviews .reviews__content-top {
   display: flex;
@@ -1316,7 +1341,7 @@ body:has(.mobile-menu.active) .search-bar {
 @media (min-width: 900px) {
   .reviews-form__arrow {
     left: 35%;
-    z-index: 10;
+    z-index: 4;
     bottom: -192px;
   }
 }
@@ -1575,7 +1600,8 @@ body:has(.mobile-menu.active) .search-bar {
   gap: 8px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, margin-top 0.4s ease;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease,
+    margin-top 0.4s ease;
 }
 .footer__contacts {
   display: flex;

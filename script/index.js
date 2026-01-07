@@ -1,4 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const headerToggel = document.querySelector("#header__phone");
+  const arrowDown = document.querySelector("#arrow__down");
+  const headerModal = document.querySelector("#header__modal");
+  const modal = document.querySelector("#modal__overlay");
+  const burgerBut = document.querySelector("#burger__but");
+  const body = document.body;
+
+  /* ---------- HEADER MODAL ---------- */
+  if (headerToggel && modal && arrowDown && headerModal) {
+    headerToggel.addEventListener("click", () => {
+      modal.style.display = "block";
+      arrowDown.style.transform = "rotate(180deg)";
+      headerModal.classList.add("header__modal__active");
+    });
+
+    modal.addEventListener("click", () => {
+      modal.style.display = "none";
+      arrowDown.style.transform = "rotate(0deg)";
+      headerModal.classList.remove("header__modal__active");
+    });
+  }
+
+  /* ---------- BURGER ---------- */
+  if (burgerBut) {
+    burgerBut.addEventListener("click", () => {
+      const headerMenu = document.querySelector("#header__menu");
+
+      burgerBut.classList.toggle("burger__but__active");
+      headerMenu.classList.toggle("header__menu__active");
+
+      body.style.overflowY = burgerBut.classList.contains("burger__but__active")
+        ? "hidden"
+        : "";
+    });
+  }
+
   const dropdowns = document.querySelectorAll(".menu-dropdown");
 
   dropdowns.forEach((drop) => {
@@ -246,34 +282,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ================= FOOTER ACCORDION ================= */
 
-  document.querySelectorAll(".footer-accordion").forEach((acc) => {
-    const title = acc.querySelector(".footer__row-title");
-    if (!title) return;
-    title.addEventListener("click", () => acc.classList.toggle("active"));
-  });
-
-  /* ================= BURGER ================= */
-
-  const burgerBut = document.querySelector("#burger__but");
-  const body = document.body;
-  const headerMenu = document.querySelector("#header__menu");
-
-  if (burgerBut && headerMenu) {
-    burgerBut.addEventListener("click", () => {
-      burgerBut.classList.toggle("burger__but__active");
-      headerMenu.classList.toggle("header__menu__active");
-      body.style.overflowY = burgerBut.classList.contains("burger__but__active")
-        ? "hidden"
-        : "";
+  const accordions = document.querySelectorAll(".footer-accordion");
+  const mobileMQ = window.matchMedia("(max-width:48em)");
+  function initFooterAccordion() {
+    accordions.forEach((acc) => {
+      const title = acc.querySelector(".footer__row-title");
+      if (!title) return;
+      title.onclick = null;
+      if (mobileMQ.matches) {
+        acc.classList.remove("active");
+        title.onclick = () => {
+          acc.classList.toggle("active");
+        };
+      } else {
+        acc.classList.add("active");
+      }
     });
   }
+  initFooterAccordion();
+  mobileMQ.addEventListener("change", initFooterAccordion);
 
   /* ================= SWIPER ================= */
 
   if (document.querySelector(".mySwiper")) {
     new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      slidesPerGroup: 2,
+      slidesPerView: 1.2,
+      // slidesPerGroup: 2,
       spaceBetween: 22,
       allowTouchMove: true,
       breakpoints: {
@@ -331,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
         1440: { allowTouchMove: true },
         1024: { spaceBetween: 16, allowTouchMove: true },
         768: { allowTouchMove: false },
-        0: { slidesPerGroup: 1 ,allowTouchMove: false},
+        0: { slidesPerGroup: 1, allowTouchMove: false },
       },
       navigation: {
         nextEl: ".articles-button-next",
@@ -436,9 +470,6 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("scrolled");
     }
   });
-
-
-
 
   const modal = document.getElementById("projectModal");
   if (!modal) return;
@@ -562,11 +593,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".main-numbers__track");
-  if (!track) return; 
+  if (!track) return;
   const group = track.querySelector(".main-numbers__group");
   const clone = track.querySelector(".clone");
 
-  if (!group || !clone) return; 
+  if (!group || !clone) return;
   clone.innerHTML = group.innerHTML;
   const width = group.offsetWidth;
   gsap.set(track, { x: 0 });
@@ -575,7 +606,7 @@ document.addEventListener("DOMContentLoaded", () => {
     x: -width,
     duration: 30, // скорость
     ease: "none",
-    repeat: -1
+    repeat: -1,
   });
 });
 
@@ -598,9 +629,7 @@ function initTabs(container) {
     );
 
     // контент
-    contents.forEach((c) =>
-      c.classList.toggle("active", c.id === tabId)
-    );
+    contents.forEach((c) => c.classList.toggle("active", c.id === tabId));
 
     // синхронизация dropdown
     if (dropdownToggle && dropdownMenu) {
@@ -659,3 +688,79 @@ function initTabs(container) {
 
   if (initialTab) showTab(initialTab);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".menu-item.has-children");
+
+  items.forEach((item) => {
+    const toggle = item.querySelector(".menu-toggle");
+    const submenu = item.querySelector(".submenu");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      if (isOpen) {
+        item.classList.remove("open");
+        submenu.style.maxHeight = null;
+      } else {
+        item.classList.add("open");
+        submenu.style.maxHeight = submenu.scrollHeight + "px";
+      }
+    });
+  });
+
+  //Попапы карточек с платежами
+const openModal = (card) => {
+    const modalId = card.dataset.modal;
+    const modal = document.querySelector(`.popup[data-modal="${modalId}"]`);
+
+    if (!modal) return;
+
+    modal.classList.add('is-active');
+    document.body.classList.add('modal-open');
+};
+
+const closeModal = (modal) => {
+    modal.classList.remove('is-active');
+    document.body.classList.remove('modal-open');
+};
+
+document.querySelectorAll('.pay__card').forEach(card => {
+    card.addEventListener('click', () => openModal(card));
+});
+
+document.querySelectorAll('.popup-close').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const modal = e.target.closest('.popup');
+        if (modal) closeModal(modal);
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.popup.is-active').forEach(modal => {
+            closeModal(modal);
+        });
+    }
+});
+});
+function toggleDropdown(button) {
+    const dropdown = button.closest(".dropdown");
+    if (!dropdown) return;
+
+    // закрыть другие dropdown (если нужно)
+    document.querySelectorAll(".dropdown.active").forEach((d) => {
+      if (d !== dropdown) d.classList.remove("active");
+    });
+
+    dropdown.classList.toggle("active");
+  }
+
+  // закрытие по клику вне
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".dropdown")) {
+      document
+        .querySelectorAll(".dropdown.active")
+        .forEach((d) => d.classList.remove("active"));
+    }
+  });

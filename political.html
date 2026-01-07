@@ -1,157 +1,744 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Политика обработки персональных данных — Приложения</title>
-  <link rel="stylesheet" href="political/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Политика обработки персональных данных — Приложения</title>
+    <link rel="stylesheet" href="access\style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
+                </div>
+              </div>
+              <button class="burger__but" id="burger__but"></button>
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="actions__link">
+                <a href="#">
+                  <img
+                    src="access/img/viber-logo.svg"
+                    class="img"
+                    alt="viber"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="access/img/telegram-logo.svg"
+                    class="img"
+                    alt="telegram"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="access/img/whatsapp.svg"
+                    class="img"
+                    alt="whatsapp"
+                  />
+                </a>
+              </div>
+              <button class="btn btn__calcul mobal_btn">
+                <img src="access/img/calculator.svg" alt="icon" />
+                Рассчитать стоимость
+              </button>
+              <div class="header__search">
+                <button class="but__search">
+                  <img src="access/img/search-loap.svg" alt="" />
+                </button>
+                <input type="text" placeholder="Найти в каталоге" />
+                <button class="header__search-close">
+                  <img src="access/img/close.svg" alt="" />
+                </button>
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu" id="header__menu">
+          <div class="container">
+            <nav class="header__content">
+              <!-- ITEM WITH SUBMENU -->
+              <div class="menu-item has-children">
+                <button class="menu-toggle">
+                  <span class="menu-left">
+                    <img src="access/img/catalog.svg" alt="" />
+                    <span class="menu-title">Каталог</span>
+                  </span>
+                  <span class="menu-icon"></span>
+                </button>
 
-  <main class="page">
-    <section class="container">
-      <div class="stroke">
-        <p><a href="#home">Главная</a>/Политика конфеденциальности</p>
+                <div class="submenu">
+                  <!-- сюда потом вставишь ссылки -->
+                  <a href="#" class="">Материалы для кровли</a>
+                  <a href="#" class="">Материалы для фасада</a>
+                  <a href="" class="">Заборы и ограждения</a>
+                  <a href="" class="">Кровельные аксессуары</a>
+                  <a href="" class="">Водосточные системы</a>
+                  <a href="" class="">Услуги монтажа</a>
+                </div>
+              </div>
+
+              <div class="menu-item has-children">
+                <button class="menu-toggle">
+                  <span class="menu-left">
+                    <img src="access/img/hammer-screwdriver.svg" alt="" />
+                    <span class="menu-title">Кровельные работы</span>
+                  </span>
+                  <span class="menu-icon"></span>
+                </button>
+
+                <div class="submenu">
+                  <a href="#">Монтаж кровли под ключ</a>
+                  <a href="#">Реконструкция домов и дач</a>
+                  <a href="">Монтаж кровли из металлочерепицы</a>
+                  <a href="">Монтаж натуральной черепицы</a>
+                  <a href="">Монтаж фальцевой кровли</a>
+                  <a href="">Установка водосточной системы</a>
+                  <a href="">Установка мансардных окон</a>
+                  <a href="">Установка снегодержателей</a>
+                </div>
+              </div>
+
+              <!-- SIMPLE LINKS -->
+              <a href="#" class="menu-link">
+                <span class="menu-left">
+                  <span class="menu-icon-left">
+                    <img src="access/img/picture-image.svg" alt="" />
+                  </span>
+                  <span class="menu-title">Портфолио</span>
+                </span>
+              </a>
+              <a href="#" class="menu-link">
+                <span class="menu-left">
+                  <span class="menu-icon-left">
+                    <img
+                      src="access/img/work-job-pin-location-suitcase.svg"
+                      alt=""
+                    />
+                  </span>
+                  <span class="menu-title">О компании</span>
+                </span>
+              </a>
+              <a href="#" class="menu-link active">
+                <span class="menu-left">
+                  <span class="menu-icon-left">
+                    <img src="access/img/rew-icon.svg" alt="" />
+                  </span>
+                  <span class="menu-title">Отзывы</span>
+                </span>
+              </a>
+              <a href="#" class="menu-link">
+                <span class="menu-left">
+                  <span class="menu-icon-left">
+                    <img src="access/img/money-coins.1-w.svg" alt="" />
+                  </span>
+                  <span class="menu-title">Оплата</span>
+                </span>
+              </a>
+              <a href="#" class="menu-link">
+                <span class="menu-left">
+                  <span class="menu-icon-left">
+                    <img src="access/img/dosvtvozl.svg" alt="" />
+                  </span>
+                  <span class="menu-title">Доставка и возврат</span>
+                </span>
+              </a>
+              <a href="#" class="menu-link">
+                <span class="menu-left">
+                  <span class="menu-icon-left">
+                    <img src="access/img/cont.svg" alt="" />
+                  </span>
+                  <span class="menu-title">Контакты</span>
+                </span>
+              </a>
+              <a href="#" class="menu-link">
+                <span class="menu-left">
+                  <span class="menu-icon-left">
+                    <img src="access/img/bookmark-favorite.svg" alt="" />
+                  </span>
+                  <span class="menu-title">Блог</span>
+                </span>
+              </a>
+
+              <!-- SOCIALS -->
+              <div class="menu-socials">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </nav>
+            <!-- BUTTON -->
+            <div class="menu-bottom">
+              <a href="" class="btn btn__shop"
+                >Интернет-магазин <span>⬈</span></a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-    
-        <h1 class="page__title">Политика конфеденциальности</h1>
-      <!-- TABLE (как на макете — по центру) -->
-       <p>ПОЛИТИКА</p>
-       <p>в отношении обработки файлов cookie<br> 
-          (по состоянию на ___________)<br>
-          (примерная форма)</p>
-        <p>
-           1. Общие положения
-        </p>
-        <p>
-           Издание Политики в отношении обработки файлов cookie (далее – Политика) является одной из обязательных принимаемых (наименование оператора) мер по обеспечению защиты персональных данных, предусмотренных статьей 17 Закона Республики Беларусь от 7 мая 2021 г. № 99‑З ”О защите персональных данных“ (далее – Закон). 
-           Настоящая Политика разъясняет пользователям информационного ресурса (наименование информационного ресурса) (далее – интернет-сайт), собственником (владельцем) которого является (наименование оператора), как, для каких целей и на каком правовом основании их персональные данные собираются, используются или иным образом обрабатываются. 
-        </p>
-        <p>
-           1.1. Настоящая Политика применяется к обработке файлов
-        </p>
-            1.2. Для целей настоящей Политики под файлами cookie понимаются текстовые файлы, сохраняемые в интернет-браузере пользовательского устройства (компьютер, мобильный телефон и т.д.) при посещении интернет-сайтов для отражения и (или) запоминания действий пользователя.
-            Иные термины используются в настоящей Политике в значениях, определенных Законом.
-        <p>
-           2. Категории обрабатываемых файлов cookie<br>
-           Выделяют следующие категории файлов cookie:<br>
-           -в зависимости от назначения:<br>
-           -необходимые;<br>
-           -целевые (рекламные, аналитические, статистические);<br>
-           –в зависимости от срока хранения:<br>
-           -постоянные;<br>
-           -сеансовые.<br>
-        </p>
-        <p>
-           Пример 1.
-           2. На интернет-сайте обрабатываются только необходимые файлы cookie для:<br>
-           корректного функционирования интернет-сайта;<br>
-           использования специальных возможностей для пользователей с ограниченными возможностями.
-           Часть файлов cookie хранится в течение текущего сеанса и удаляется после закрытия браузера. Срок хранения остальных файлов cookie ограничен 1 годом с момента первого посещения сайта.
-        </p>
-        <p>
-           Пример 2.<br>
-           2. На интернет-сайте обрабатываются следующие категории файлов cookie:
-        </p>
-        <img class="tablet" src="political/image/92a325200537f7dd274692bdfd0c5780570617d2 (1).png" alt="">
-        <p>
-           3.Правовые основания обработки файлов cookie</p>
-        <p>
-           Пример 1.
-           3. Необходимые файлы cookie используются для обеспечения полноценного и корректного функционирования интернет-сайта и обрабатываются независимо от предоставления пользователем согласия.
-        </p>
-        <p>
-           Пример 2.
-           3.1. Необходимые файлы cookie используются для обеспечения полноценного и корректного функционирования интернет-сайта и обрабатываются независимо от предоставления пользователем согласия.
-        </p>
-          3.2. Целевые файлы cookie обрабатываются на основании согласия на обработку персональных данных.
-          При первом посещении интернет-сайта пользователю во всплывающем окне предлагается дать согласие на использование файлов cookie либо отказаться от их использования1.
-        <p>
-           Пользователь может изменить настройки использования файлов cookie, в том числе отозвать ранее предоставленное согласие на их обработку, посредством нажатия кнопки ”Настройка файлов cookie“ в нижней части главной страницы интернет-сайта.
-        </p>
-        <p>
-          4. Трансграничная передача файлов cookie 
-        </p>
-        <p>
-          Пример 1.
-          4. (Наименование оператора) не осуществляет трансграничную передачу файлов cookie.
-        </p>
-        <p>
-          Пример 2.
-        </p>
-        <P>
-          4.1. (Наименование оператора) при использовании сторонних целевых сервисов для обработки файлов cookie осуществляет трансграничную передачу файлов cookie третьим лицам, указанным в приложении к настоящей Политике.
-        </P>
-        <P>
-          4.2. Трансграничная передача персональных данных, содержащихся в файлах cookie, осуществляется в государства, на территории которых обеспечивается надлежащий уровень защиты прав субъектов персональных данных.
-        </P>
-        <p>
-         Пример 3.
-         4.1. (Наименование оператора) при использовании сторонних целевых сервисов для обработки файлов cookie осуществляет трансграничную передачу файлов cookie третьим лицам, указанным в приложении к настоящей Политике.
-        </p>
-        <p>
-         4.2. Трансграничная передача персональных данных, содержащихся в файлах cookie, осуществляется как в государства, на территории которых обеспечивается надлежащий уровень защиты прав субъектов персональных данных, так и в государства без надлежащего уровня обеспечения.
-        </p>
-        <p>
-          5. Права субъектов персональных данных
-          и механизм их реализации
-        <p> 
-          5. Перечень прав субъектов персональных данных, а также порядок их реализации определен в соответствующем разделе Политики в отношении обработки персональных данных (наименование оператора), с которой можно ознакомиться (указывается способ обеспечения доступа к Политике, избранный оператором) по адресу (путь к Политике).
-        </p>
-        <p>
-          6. Отключение файлов cookie в настройках браузера
-        </p>                          
-          6.1. Большинство браузеров изначально настроены на прием файлов cookie. Пользователь может удалить ранее сохраненные файлы сookie, выбрав соответствующую опцию в истории браузера. Кроме того, некоторые браузеры позволяют посещать сайты в режиме ”инкогнито“, чтобы ограничить хранимый на компьютере объем информации и автоматически удалять некоторые типы файлов cookie.
-         <p>
-          6.2. Пользователь также может отключить использование файлов cookie путем изменения настроек своего браузера. Подробнее с параметрами управления файлами cookie можно ознакомиться на официальных интернет-сайтах браузеров:
-        </p>
-    </section>
-
-      <!-- ICONS ROW -->
-        <ul class="browsers__list">
-          <li class="browsers__item"><img src="political/image/2094e06d3c1aa959fe0c18b2ac7766bc8f474c5f.png" alt="Firefox"></li>
-          <li class="browsers__item"><img src="political/image/c2586ec9819174d8814e9bb6cc81847951069a95.png" alt="Chrome"></li>
-          <li class="browsers__item"><img src="political/image/237a8fac1121ecd973dc5f39f5bd355170a5b87e.png" alt="Safari"></li>
-          <li class="browsers__item"><img src="political/image/18f814c437d05c846fa71cfded22212c5c69ef71.png" alt="Opera"></li>
-          <li class="browsers__item"><img src="political/image/af5e7f6097204bc802ae42db98f6fdf39f9b963d.png" alt="Edge"></li>
-          <li class="browsers__item"><img src="political/image/611822afce6c18368ce63203f3e7b2cfc9aa6f79.png" alt="Edge"></li>
-        </ul>
-      <p class="browsers__list">
-         Обозначенный раздел обязателен в случае обработки оператором целевых файлов cookie. При обработке оператором только необходимых технических файлов cookie он не подлежит включению в Политику.
-      </p>
-      <!-- FILES (3 карточки как на макете) -->
-      <section class="files">
-        <a class="file-card" href="#">
-          <div class="file-card__icon" aria-hidden="true"></div>
-          <div class="file-card__text">
-            Приложение 2.<br>
-            к Политике в<br>
-            отношении обработки<br>
-            персональных данных
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle" class="link_active"
+                >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Материалы для кровли</a>
+                <a href="#">Материалы для фасада</a>
+                <a href="#">Заборы и ограждения</a>
+                <a href="#">Кровельные аксессуары</a>
+                <a href="#">Водосточные системы</a>
+                <a href="#">Услуги монтажа</a>
+              </div>
+            </li>
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Кровельные работы
+                <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Монтаж кровли под ключ</a>
+                <a href="#">Реконструкция домов и дач</a>
+                <a href="#">Монтаж кровли из металлочерепицы</a>
+                <a href="#">Монтаж натуральной черепицы</a>
+                <a href="#">Монтаж фальцевой кровли</a>
+                <a href="#">Установка водосточной системы</a>
+                <a href="#">Установка мансардных окон</a>
+                <a href="#">Установка снегодержателей</a>
+              </div>
+            </li>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="" class="active">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
           </div>
-        </a>
-
-        <a class="file-card" href="#">
-          <div class="file-card__icon" aria-hidden="true"></div>
-          <div class="file-card__text">
-            Приложение 3.<br>
-            к Политике в<br>
-            отношении обработки<br>
-            персональных данных
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb__content">
+            <a href="" class="breadcrumb__link">
+              <h6>Главная</h6>
+            </a>
+            <span>/</span>
+            <h6 class="breadcrumb__end">Политика конфеденциальности</h6>
           </div>
-        </a>
-
-        <a class="file-card" href="#">
-          <div class="file-card__icon" aria-hidden="true"></div>
-          <div class="file-card__text">
-            Приложение 4.<br>
-            к Политике в<br>
-            отношении обработки<br>
-            персональных данных
+        </div>
+      </div>
+      <section class="political">
+        <div class="container">
+          <div class="political__content">
+            <h1 class="page__title">Политика конфеденциальности</h1>
+            <!-- TABLE (как на макете — по центру) -->
+            <p>ПОЛИТИКА</p>
+            <p>
+              в отношении обработки файлов cookie<br />
+              (по состоянию на ___________)<br />
+              (примерная форма)
+            </p>
+            <br />
+            <p>1. Общие положения</p>
+            <p>
+              Издание Политики в отношении обработки файлов cookie (далее –
+              Политика) является одной из обязательных принимаемых (наименование
+              оператора) мер по обеспечению защиты персональных данных,
+              предусмотренных статьей 17 Закона Республики Беларусь от 7 мая
+              2021 г. № 99‑З ”О защите персональных данных“ (далее – Закон).
+              Настоящая Политика разъясняет пользователям информационного
+              ресурса (наименование информационного ресурса) (далее –
+              интернет-сайт), собственником (владельцем) которого является
+              (наименование оператора), как, для каких целей и на каком правовом
+              основании их персональные данные собираются, используются или иным
+              образом обрабатываются.
+            </p>
+            <p>
+              1.1. Настоящая Политика применяется к обработке файлов 1.2. Для
+              целей настоящей Политики под файлами cookie понимаются текстовые
+              файлы, сохраняемые в интернет-браузере пользовательского
+              устройства (компьютер, мобильный телефон и т.д.) при посещении
+              интернет-сайтов для отражения и (или) запоминания действий
+              пользователя. Иные термины используются в настоящей Политике в
+              значениях, определенных Законом.
+            </p>
+            <br />
+            <p>
+              2. Категории обрабатываемых файлов cookie<br />
+              Выделяют следующие категории файлов cookie:<br />
+              -в зависимости от назначения:<br />
+              -необходимые;<br />
+              -целевые (рекламные, аналитические, статистические);<br />
+              –в зависимости от срока хранения:<br />
+              -постоянные;<br />
+              -сеансовые.<br />
+            </p>
+            <br />
+            <p>Пример 1.</p>
+            <p>
+              2. На интернет-сайте обрабатываются только необходимые файлы
+              cookie для:<br />
+              корректного функционирования интернет-сайта;<br />
+              использования специальных возможностей для пользователей с
+              ограниченными возможностями. Часть файлов cookie хранится в
+              течение текущего сеанса и удаляется после закрытия браузера. Срок
+              хранения остальных файлов cookie ограничен 1 годом с момента
+              первого посещения сайта.
+            </p>
+            <p>Пример 2.</p>
+            <p>
+              2. На интернет-сайте обрабатываются следующие категории файлов
+              cookie:
+            </p>
+            <img
+              class="tablet"
+              src="political/image/92a325200537f7dd274692bdfd0c5780570617d2 (1).png"
+              alt=""
+            />
+            <p>3.Правовые основания обработки файлов cookie</p>
+            <br />
+            <p>Пример 1.</p>
+            <p>
+              3. Необходимые файлы cookie используются для обеспечения
+              полноценного и корректного функционирования интернет-сайта и
+              обрабатываются независимо от предоставления пользователем
+              согласия.
+            </p>
+            <br />
+            <p>Пример 2.</p>
+            <p>
+              3.1. Необходимые файлы cookie используются для обеспечения
+              полноценного и корректного функционирования интернет-сайта и
+              обрабатываются независимо от предоставления пользователем
+              согласия.
+            </p>
+            3.2. Целевые файлы cookie обрабатываются на основании согласия на
+            обработку персональных данных. При первом посещении интернет-сайта
+            пользователю во всплывающем окне предлагается дать согласие на
+            использование файлов cookie либо отказаться от их использования1.
+            <p>
+              Пользователь может изменить настройки использования файлов cookie,
+              в том числе отозвать ранее предоставленное согласие
+              на их обработку, посредством нажатия кнопки ”Настройка файлов
+              cookie“ в нижней части главной страницы интернет-сайта.
+            </p>
+            <br />
+            <p>4. Трансграничная передача файлов cookie</p>
+            <br />
+            <p>Пример 1.</p>
+            <p>
+              4. (Наименование оператора) не осуществляет трансграничную
+              передачу файлов cookie.
+            </p>
+            <br />
+            <p>Пример 2.</p>
+            <p>
+              4.1. (Наименование оператора) при использовании сторонних целевых
+              сервисов для обработки файлов cookie осуществляет трансграничную
+              передачу файлов cookie третьим лицам, указанным в приложении к
+              настоящей Политике.
+            </p>
+            <p>
+              4.2. Трансграничная передача персональных данных, содержащихся в
+              файлах cookie, осуществляется в государства, на территории которых
+              обеспечивается надлежащий уровень защиты прав субъектов
+              персональных данных.
+            </p>
+            <br />
+            <p>Пример 3.</p>
+            <p>
+              4.1. (Наименование оператора) при использовании сторонних целевых
+              сервисов для обработки файлов cookie осуществляет трансграничную
+              передачу файлов cookie третьим лицам, указанным в приложении к
+              настоящей Политике.
+            </p>
+            <p>
+              4.2. Трансграничная передача персональных данных, содержащихся в
+              файлах cookie, осуществляется как в государства, на территории
+              которых обеспечивается надлежащий уровень защиты прав субъектов
+              персональных данных, так и в государства без надлежащего уровня
+              обеспечения.
+            </p>
+            <br />
+            <p>
+              5. Права субъектов персональных данных и механизм их реализации
+            </p>
+            <p>
+              5.1 Перечень прав субъектов персональных данных, а также порядок
+              их реализации определен в соответствующем разделе Политики в
+              отношении обработки персональных данных (наименование оператора),
+              с которой можно ознакомиться (указывается способ обеспечения
+              доступа к Политике, избранный оператором) по адресу (путь к
+              Политике).
+            </p>
+            <br />
+            <p>6. Отключение файлов cookie в настройках браузера</p>
+            <p>
+              6.1. Большинство браузеров изначально настроены на прием файлов
+              cookie. Пользователь может удалить ранее сохраненные файлы сookie,
+              выбрав соответствующую опцию в истории браузера. Кроме того,
+              некоторые браузеры позволяют посещать сайты в режиме ”инкогнито“,
+              чтобы ограничить хранимый на компьютере объем информации и
+              автоматически удалять некоторые типы файлов cookie. 6.2.
+              Пользователь также может отключить использование файлов cookie
+              путем изменения настроек своего браузера. Подробнее с параметрами
+              управления файлами cookie можно ознакомиться на официальных
+              интернет-сайтах браузеров:
+            </p>
           </div>
-        </a>
+          <ul class="browsers__list">
+            <li class="browsers__item">
+              <img
+                src="political/image/2094e06d3c1aa959fe0c18b2ac7766bc8f474c5f.png"
+                alt="Firefox"
+              />
+            </li>
+            <li class="browsers__item">
+              <img
+                src="political/image/c2586ec9819174d8814e9bb6cc81847951069a95.png"
+                alt="Chrome"
+              />
+            </li>
+            <li class="browsers__item">
+              <img
+                src="political/image/237a8fac1121ecd973dc5f39f5bd355170a5b87e.png"
+                alt="Safari"
+              />
+            </li>
+            <li class="browsers__item">
+              <img
+                src="political/image/18f814c437d05c846fa71cfded22212c5c69ef71.png"
+                alt="Opera"
+              />
+            </li>
+            <li class="browsers__item">
+              <img
+                src="political/image/af5e7f6097204bc802ae42db98f6fdf39f9b963d.png"
+                alt="Edge"
+              />
+            </li>
+            <li class="browsers__item">
+              <img
+                src="political/image/611822afce6c18368ce63203f3e7b2cfc9aa6f79.png"
+                alt="Edge"
+              />
+            </li>
+          </ul>
+          <p class="browsers__list-2">
+            Обозначенный раздел обязателен в случае обработки оператором целевых
+            файлов cookie. При обработке оператором только необходимых
+            технических файлов cookie он не подлежит включению в Политику.
+          </p>
+          <!-- FILES (3 карточки как на макете) -->
+          <div class="files">
+            <a class="file-card" href="#" download>
+              <div class="file-card__icon" aria-hidden="true"></div>
+              <div class="file-card__text">
+                Приложение 2.<br />
+                к Политике в отношении обработки персональных данных
+              </div>
+            </a>
+
+            <a class="file-card" href="#" download>
+              <div class="file-card__icon" aria-hidden="true"></div>
+              <div class="file-card__text">
+                Приложение 3.<br />
+                к Политике в отношении обработки персональных данных
+              </div>
+            </a>
+
+            <a class="file-card" href="#" download>
+              <div class="file-card__icon" aria-hidden="true"></div>
+              <div class="file-card__text">
+                Приложение 4.<br />
+                к Политике в отношении обработки персональных данных
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
-    </div>
-  </main>
-</body>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
+            </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"
+              />
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required
+                />
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
+
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link"
+                  >г.Минск ул. Ваупшасова 22</a
+                >
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp-b.svg" alt="" /></a>
+                </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link"
+                  >
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""
+                    />zakaz@roofland.by</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div class="footer__subtitle">С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div class="footer__subtitle">По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <style>
+      .tablet {
+        padding: 2rem 0;
+      }
+      .browsers__item img {
+        width: 2.625rem;
+        height: 2.625rem;
+      }
+      .browsers__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.125rem;
+        height: 3.125rem;
+        border: 1px solid var(--border-drop);
+        border-radius: 0.5rem;
+      }
+      .browsers__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0 2rem 0;
+      }
+      .browsers__list-2 {
+        margin-bottom: 3.25rem;
+      }
+      .files {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+      .file-card__icon {
+        background-image: url(../political/image/files-19.svg);
+        width: 2rem;
+        height: 2rem;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .file-card {
+        border: 1px solid var(--border-drop);
+        background: var(--gray);
+        width: 14.3rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        display: grid;
+        gap: 1rem;
+      }
+      .file-card__text {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 48em) {
+        h1 {
+          font-size: 1.5rem;
+          padding-right: 1rem;
+          padding-bottom: 1.5rem;
+        }
+        .file-card {
+          width: 19.438rem;
+          padding: 1rem;
+        }
+        .file-card__icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        .files {
+          justify-content: center;
+        }
+      }
+      .delivery {
+        padding-top: 0;
+      }
+    </style>
+    <script src="script/index.js"></script>
+  </body>
 </html>

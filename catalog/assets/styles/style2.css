@@ -583,16 +583,7 @@ header {
 }
 
 .header__search {
-  height: 21px;
-  width: 21px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: var(--gray-2);
-  border-radius: 12px;
-  border: var(--border-1);
-  margin-right: 16px;
+  margin-right: 0;
   transition: all 0.5s;
 }
 
@@ -608,16 +599,6 @@ header {
   padding: 0px;
   border: none;
   background-color: transparent;
-}
-
-.header__search:hover > .search__input {
-  width: auto;
-  max-width: auto;
-  padding-left: 4px;
-}
-
-.header__search:hover {
-  width: auto;
 }
 
 .but__market {
@@ -1299,20 +1280,7 @@ header {
 }
 
 /*прайс лист*/
-.price__list {
-  background: url(../img/form-bg.webp);
-  overflow: hidden;
-  background-color: var(--black-2);
-  background-size: cover;
-}
 
-.price-list {
-  color: var(--white-1);
-  display: flex;
-  justify-content: space-between;
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
 
 .price-list__content-wrap {
   max-width: 550px;

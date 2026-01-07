@@ -1,124 +1,135 @@
-<link rel="stylesheet" href="style.css">
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
 
 body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
 }
 
 /* общий лэйаут */
-.layout{
-  min-height: 100vh;
+.layout {
+  /* min-height: 100vh; */
   display: flex;
-  background: #ffffff
+  background: #ffffff;
 }
 
 .hide-mobile {
   display: block;
+  margin-bottom: 0;
 }
 
 .only-mobile {
   display: none;
 }
 /* левая часть (чёрная) */
-.left{
+.left {
   flex: 1;
   background: #ffffff;
   position: relative;
 }
-.left-text{
-font-family: Inter;
-position: absolute;
-text-align: start;
-color: #000000;
-margin-top: 30%;
-margin-bottom: 30%;
-margin-left: 20%;
+.left-text {
+  font-family: Inter;
+  position: absolute;
+  text-align: start;
+  color: #000000;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  margin-left: 20%;
 }
-.left-caps{
-font-weight: 700;
-font-style: Bold;
-font-size: 40px;
-line-height: 100%;
-letter-spacing: 0%;
+.left-caps {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 0.938rem;
 }
-.left-stroce{
-font-weight: 400;
-font-size: 16px;
-line-height: 100%;
-letter-spacing: 0%;
+.left-stroce {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 2rem;
 }
 /* кнопка как в макете — снизу слева */
-.btn{
-max-width: 226;
-max-height: 43;
-padding-top: 16px;
-padding-right: 24px;
-padding-bottom: 16px;
-padding-left: 24px;
-gap: 10px;
-border-radius: 12px;
-position: absolute;
-display: inline-flex;
-align-items: start;
-justify-content: start;
-height: 10%;
-min-width: 20%;
-border-radius: 10px;
-background: #4153E4;
+.btn-404 {
+  /* max-width: 226px;
+max-height: 43px; */
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  gap: 10px;
+  border-radius: 12px;
+  /* position: absolute; */
+  display: inline-flex;
+  align-items: start;
+  justify-content: start;
+  /* height: 10%;
+min-width: 20%; */
+  border-radius: 10px;
+  background: #4153e4;
 
-text-decoration: none;
-font-weight: 600;
-font-size: 16px;
-line-height: 1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
 }
 
-.btn-text{
-color: #ffffff;
-font-family: Inter;
-font-weight: 600;
-font-style: Semi Bold;
-font-size: 16px;
-line-height: 100%;
-letter-spacing: 0%;
+.btn-text {
+  color: #ffffff;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
-.btn:hover{
-background: #fafafa;
+.btn:hover {
+  background: #fafafa;
 }
 
-.btn-text:hover{ 
-color: #4153E4;
+.btn-text:hover {
+  color: #4153e4;
 }
 
-.btn:active{ transform: translateY(1px); }
+.btn:active {
+  transform: translateY(1px);
+}
 
 /* правая часть (светлая) */
-.right{
+.right {
   flex: 1;
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 52px;
+  height: fit-content;
 }
 
 /* контейнер для картинки */
-.img-wrap{
+.img-wrap {
   width: min(720px, 100%);
 }
 
-.img-wrap img{
+.img-wrap img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-
 /* адаптив: на мобилке складываем в колонку */
-@media (max-width: 900px){
-  .layout{
+@media (max-width: 900px) {
+  .layout {
     flex-direction: column-reverse;
   }
 
@@ -128,42 +139,43 @@ color: #4153E4;
 
   .only-mobile {
     display: block;
-}
+    margin-top: 2.25rem;
+  }
 
-  .left{
+  .left {
     min-height: 140px;
   }
 
-  .btn{
+  .btn {
     position: static;
   }
 
-  .right{
+  .right {
     min-height: calc(100vh - 140px);
   }
 
-  .left-caps{
+  .left-caps {
     font-family: Inter;
     font-weight: 700;
     font-style: Bold;
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
-    color:  #000000;
+    color: #000000;
     align-items: start;
   }
 
-  .left-stroce{
+  .left-stroce {
     font-family: Inter;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    color:  #000000;
+    color: #000000;
     align-items: start;
-    }
+  }
 
-  .btn-mobail{
+  .btn-mobail {
     max-width: 226;
     max-height: 43;
     padding-top: 16px;
@@ -173,5 +185,22 @@ color: #4153E4;
     gap: 10px;
     border-radius: 12px;
     align-items: start;
-    }  
+  }
+  .mobail-caps {
+    margin-bottom: 0.5rem;
+  }
+  .mobail-stroce {
+    margin-bottom: 1.5rem;
+  }
+  .btn-404 {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+  }
+  .btn-text {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .mobail-text{
+    margin-bottom: 1.5rem;
+  }
 }

@@ -4,265 +4,814 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>О компании Rooﬂand</title>
-
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"  rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="about/styles.css" />
+  <link rel="stylesheet" href="access\style.css" />
 </head>
 
 <body>
+  <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
+                </div>
+              </div>
+              <button class="burger__but" id="burger__but"></button>
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="actions__link">
+                <a href="#">
+                  <img src="access/img/viber-logo.svg" class="img" alt="viber">
+                </a>
+                <a href="#">
+                  <img src="access/img/telegram-logo.svg" class="img" alt="telegram">
+                </a>
+                <a href="#">
+                  <img src="access/img/whatsapp.svg" class="img" alt="whatsapp">
+                </a>
+              </div>
+              <button class="btn btn__calcul mobal_btn">
+                <img src="access/img/calculator.svg" alt="icon">
+                Рассчитать стоимость
+              </button>
+              <div class="header__search">
+                <button class="but__search">
+                  <img src="access/img/search-loap.svg" alt="" />
+                </button>
+                <input type="text" placeholder="Найти в каталоге" />
+                <button class="header__search-close">
+                  <img src="access/img/close.svg" alt="" />
+                </button>
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu" id="header__menu">
+            <div class="container">
+
+                <nav class="header__content">
+
+                <!-- ITEM WITH SUBMENU -->
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                      <span class="menu-left">
+                        <img src="access/img/catalog.svg" alt="">
+                        <span class="menu-title">Каталог</span>
+                      </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <!-- сюда потом вставишь ссылки -->
+                      <a href="#" class="">Материалы для кровли</a>
+                      <a href="#" class="">Материалы для фасада</a>
+                      <a href="" class="">Заборы и ограждения</a> 
+                      <a href="" class="">Кровельные аксессуары</a> 
+                      <a href="" class="">Водосточные системы</a>  
+                      <a href="" class="">Услуги монтажа</a>  
+                    </div>
+                </div>
+
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                        <span class="menu-left">
+                          <img src="access/img/hammer-screwdriver.svg" alt="">
+                          <span class="menu-title">Кровельные работы</span>
+                        </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <a href="#">Монтаж кровли под ключ</a>
+                    <a href="#">Реконструкция домов и дач</a>
+                    <a href="">Монтаж кровли из металлочерепицы</a>  
+                    <a href="">Монтаж натуральной черепицы</a>  
+                    <a href="">Монтаж фальцевой кровли</a>  
+                    <a href="">Установка водосточной системы</a>  
+                    <a href="">Установка мансардных окон</a>  
+                    <a href="">Установка снегодержателей</a>  
+                    </div>
+                </div>
+
+                <!-- SIMPLE LINKS -->
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/picture-image.svg" alt="">
+                    </span>
+                    <span class="menu-title">Портфолио</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/work-job-pin-location-suitcase.svg" alt="">
+                    </span>
+                    <span class="menu-title">О компании</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link active">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/rew-icon.svg" alt="">
+                    </span>
+                    <span class="menu-title">Отзывы</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/money-coins.1-w.svg" alt="">
+                    </span>
+                    <span class="menu-title">Оплата</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/dosvtvozl.svg" alt="">
+                    </span>
+                    <span class="menu-title">Доставка и возврат</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/cont.svg" alt="">
+                    </span>
+                    <span class="menu-title">Контакты</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/bookmark-favorite.svg" alt="">
+                    </span>
+                    <span class="menu-title">Блог</span>
+                  </span>
+                </a>
+
+                <!-- SOCIALS -->
+                <div class="menu-socials">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+                </div>
+              </nav>
+                <!-- BUTTON -->
+                <div class="menu-bottom">
+                   <a href="" class="btn btn__shop">Интернет-магазин <span>⬈</span></a>
+                </div>
+
+                
+
+            </div>
+            </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle" class="link_active"
+                >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Материалы для кровли</a>
+                <a href="#">Материалы для фасада</a>
+                <a href="#">Заборы и ограждения</a>
+                <a href="#">Кровельные аксессуары</a>
+                <a href="#">Водосточные системы</a>
+                <a href="#">Услуги монтажа</a>
+              </div>
+            </li>
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Кровельные работы
+                <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Монтаж кровли под ключ</a>
+                <a href="#">Реконструкция домов и дач</a>
+                <a href="#">Монтаж кровли из металлочерепицы</a>
+                <a href="#">Монтаж натуральной черепицы</a>
+                <a href="#">Монтаж фальцевой кровли</a>
+                <a href="#">Установка водосточной системы</a>
+                <a href="#">Установка мансардных окон</a>
+                <a href="#">Установка снегодержателей</a>
+              </div>
+            </li>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="" class="active">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
+          </div>
+        </div>
+      </div>
+    </header>
   <div class="page-mobile">
+    <div class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb__content">
+            <span><a href="" class="breadcrumb__link">Главная</a></span>
+            <span>/</span>
+            <span class="breadcrumb__end">О компании</span>
+          </div>
+        </div>
+      </div>
     <section class="hero">
       <div class="container">
-        <div class="hero-text">
-          <h3><a href="#id">Главная</a>/О компании</h3>
-        </div>
-
+        
         <div class="hero-text">
           <h1>О КОМПАНИИ <span>ROOFLAND</span></h1>
         </div>
 
         <!-- HERO BLOCK -->
         <div class="hero-media">
-          <img src="about/image/image.png" alt="Команда RoofLand" class="hero-img" />
-          <p class="hero-label">ROOFLAND TEAM</p>
-          <p class="hero-description">
+          <!-- <img src="about/image/image.png" alt="Команда RoofLand" class="hero-img" /> -->
+          <p class="hero-label desc-o">ROOFLAND TEAM</p>
+          <p class="hero-description desc-o">
             Компания Руфлэнд была основана в октябре 2014 года. С каждым годом мы стараемся улучшать уровень сервиса и следуем своей цели
           </p>
         </div>
+          <p class="hero-label modal-v">ROOFLAND TEAM</p>
+          <p class="hero-description modal-v">
+            Компания Руфлэнд была основана в октябре 2014 года. С каждым годом мы стараемся улучшать уровень сервиса и следуем своей цели
+          </p>
 
         <!-- STATISTIC CARDS -->
-        <section class="stats">
-          <div class="stat-card">
-            <div class="stat-number">14</div>
-            <div class="stat-label">Монтажных бригад</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number">4500+</div>
-            <div class="stat-label">Смонтированных объектов</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number">75+</div>
-            <div class="stat-label">Положительных отзывов</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-number">1+</div>
-            <div class="stat-label">YouTube-канал о кровле</div>
-          </div>
-        </section>
+        <div class="banner-work__content-bottom">
+              <div class="banner-work__bottom-item">
+                <div class="banner-work__item-title">14</div>
+                <div class="banner-work__item-subtitle">Монтажных бригад</div>
+              </div>
+              <div class="banner-work__bottom-item">
+                <div class="banner-work__item-title">4500+</div>
+                <div class="banner-work__item-subtitle">
+                  Смонтированных объектов
+                </div>
+              </div>
+              <div class="banner-work__bottom-item">
+                <div class="banner-work__item-title">75+</div>
+                <div class="banner-work__item-subtitle">
+                  Положительных отзывов
+                </div>
+              </div>
+              <div class="banner-work__bottom-item">
+                <div class="banner-work__item-title">1<span>-й</span></div>
+                <div class="banner-work__item-subtitle">
+                  YouTube-канал о кровле
+                </div>
+              </div>
+            </div>
 
         <!-- COMPANY GOAL -->
-        <section class="company-goal">
+        <div class="company-goal">
           <h4>Цель компании:</h4>
           <h2>
-            Сделать наш клиентский сервис, качество предлагаемых услуг и товаров такими, чтобы ни у одного
+            <span>Сделать наш клиентский сервис, качест</span>во предлагаемых услуг и товаров такими, чтобы ни у одного
             застройщика в стране не возникало вопроса: “Куда обратиться за качественной кровлей?”
           </h2>
-        </section>
+        </div>
       </div>
     </section>
 
     <section class="history">
-      <div class="history-header">
-        <h2 class="section-title">История нашей компании</h2>
-        <a href="#vacancies" class="one-btn">Вакансии компании</a>
-      </div>
+      <div class="container">
+        <div class="history-header">
+          <h2 class="section-title">История нашей компании</h2>
+          <a href="" class="btn btn__shop desc-o">Вакансии компании <span>⬈</span></a>
+        </div>
 
-      <div class="static hide-mobile">
-        <div class="history-grid">
-          <div class="history-item history-item--left">
-            <p class="year">2014</p>
-            <p class="history-subtitle">Основание и первые проекты</p>
-            <p class="history-text">
-              Начав с небольших частных заказов, компания быстро зарекомендовала себя.
-              Первые клиенты оценили надежность и прозрачность работы, что стало
-              основой для дальнейшего роста.
-            </p>
-          </div>
+        <div class="static hide-mobile">
+          <div class="history-grid">
+            <div class="history-item history-item--left">
+              <p class="year">2014</p>
+              <p class="history-subtitle">Основание и первые проекты</p>
+              <p class="history-text">
+                Начав с небольших частных заказов, компания быстро зарекомендовала себя.
+                Первые клиенты оценили надежность и прозрачность работы, что стало
+                основой для дальнейшего роста.
+              </p>
+              <img src="about/image/arr-bown-left.svg" alt="" class="static-arr static-arr_top">
+            </div>
 
-          <div class="history-item history-item--center">
-            <p class="year">2016</p>
-            <p class="history-subtitle">Расширение ассортимента</p>
-            <p class="history-text">
-              Расширили линейку услуг, добавив новые виды кровельных покрытий и
-              утеплительные системы.
-            </p>
-          </div>
+            <div class="history-item history-item--center">
+              <p class="year">2016</p>
+              <p class="history-subtitle">Расширение ассортимента</p>
+              <p class="history-text">
+                Расширили линейку услуг, добавив новые виды кровельных покрытий и
+                утеплительные системы.
+              </p>
+              <img src="about/image/arr-bown-left.svg" alt="" class="static-arr static-arr_top">
 
-          <div class="history-item history-item--right history-item--down">
-            <p class="year">2018</p>
-            <p class="history-subtitle">Экспертиза</p>
-            <p class="history-text">
-              Стали официальными представителями Dachpol, расширив ассортимент
-              премиальными решениями.
-            </p>
-          </div>
+            </div>
 
-          <div class="history-item history-item--left">
-            <p class="year">2024</p>
-            <p class="history-subtitle">Команда</p>
-            <p class="history-text">
-              Нас уже более 30 профессионалов: инженеры, монтажники, технологи —
-              сплоченная команда единомышленников.
-            </p>
-          </div>
+            <div class="history-item history-item--right history-item--down">
+              <p class="year">2018</p>
+              <p class="history-subtitle">Экспертиза</p>
+              <p class="history-text">
+                Стали официальными представителями Dachpol, расширив ассортимент
+                премиальными решениями.
+              </p>
+              <img src="about/image/ARR-down-down.svg" alt="" class="static-arr static-arr_top">
 
-          <div class="history-item history-item--center">
-            <p class="year">2022</p>
-            <p class="history-subtitle">Лидерство и новые амбиции</p>
-            <p class="history-text">
-              К 2022 году "Руфлэнд" вошла в ТОП-5 кровельных компаний страны, завершив более 500 крупных проектов
-            </p>
-          </div>
+            </div>
 
-          <div class="history-item history-item--right">
-            <p class="year">2020</p>
-            <p class="history-subtitle">Технологический прорыв</p>
-            <p class="history-text">
-              В 2020 году, несмотря на кризис, компания открыла представительство
-              в Польше, выйдя на международный уровень.
-            </p>
+            <div class="history-item history-item--left">
+              <p class="year">2024</p>
+              <p class="history-subtitle">Команда</p>
+              <p class="history-text">
+                Нас уже более 30 профессионалов: инженеры, монтажники, технологи —
+                сплоченная команда единомышленников.
+              </p>
+
+            </div>
+
+            <div class="history-item history-item--center">
+              <p class="year">2022</p>
+              <p class="history-subtitle">Лидерство и новые амбиции</p>
+              <p class="history-text">
+                К 2022 году "Руфлэнд" вошла в ТОП-5 кровельных компаний страны, завершив более 500 крупных проектов
+              </p>
+              <img src="about/image/arr-sown-rigth.svg" alt="" class="static-arr static-arr_down">
+
+            </div>
+
+            <div class="history-item history-item--right">
+              <p class="year">2020</p>
+              <p class="history-subtitle">Технологический прорыв</p>
+              <p class="history-text">
+                В 2020 году, несмотря на кризис, компания открыла представительство
+                в Польше, выйдя на международный уровень.
+              </p>
+              <img src="about/image/arr-sown-rigth.svg" alt="" class="static-arr static-arr_down">
+
+            </div>
           </div>
         </div>
-      </div>
 
-      <img src="about/image/Frame.svg" alt="" class="vector" />
+        <img src="about/image/Frame.svg" alt="" class="vector" />
+      </div>
     </section>
 
     <section class="about-today">
-      <div class="about-today__photo only-mobile">
-        <img src="about/image/Frame 1321315692.png" alt="Команда RoofLand"/>
-      </div>
-      <div class="about-today__container">
-        <div class="about-today__sinistra">
-          <h3 class="about-today__title">Сегодня "Руфлэнд" – это</h3>
-
-          <ul class="about-today__list">
-            <li class="about-today__item">✔ 10+ лет на рынке</li>
-            <li class="about-today__item">✔ Топовый дистрибьютор Grand Line и официальный представитель Металл Профиль</li>
-            <li class="about-today__item">✔ 1000+ довольных клиентов</li>
-            <li class="about-today__item">✔ Полный цикл работ: от проектирования до гарантийного обслуживания</li>
-            <li class="about-today__item">✔ Инновации и экологичность</li>
-          </ul>
-          <a href="#vacancies" class="today-btn">ВАКАНСИИ КОМПАНИИ</a>
+      <div class="container">
+        <div class="about-today__photo only-mobile">
+          <img src="about/image/Frame 1321315692.png" alt="Команда RoofLand"/>
         </div>
-        <div class="about-today__photo only-desktop">
-        <img src="about/image/Frame 1321315692.png" alt="Команда RoofLand"/>
+        <div class="about-today__container">
+          <div class="about-today__sinistra">
+            <h3 class="about-today__title">Сегодня "Руфлэнд" – это</h3>
+
+            <ul class="about-today__list">
+              <li class="about-today__item">✔ 10+ лет на рынке</li>
+              <li class="about-today__item">✔ Топовый дистрибьютор Grand Line и официальный представитель Металл Профиль</li>
+              <li class="about-today__item">✔ 1000+ довольных клиентов</li>
+              <li class="about-today__item">✔ Полный цикл работ: от проектирования до гарантийного обслуживания</li>
+              <li class="about-today__item">✔ Инновации и экологичность</li>
+            </ul>
+            <a href="" class="btn today-btn btn__calcul">Вакансии компании ⬈</a>
+          </div>
+          <div class="about-today__photo only-desktop">
+          <img src="about/image/Frame 1321315692.png" alt="Команда RoofLand"/>
+        </div>
       </div>
     </section>
-    <section>
-      <div class="team-section">
-            <div class="boss">
-              <div class="boss-foto">
-                 <img src="about/image\8ad29deeb2a2027e36512738d9bd4000109ee2e7.jpg" alt="Владимир Вашкалай">
-              </div>
-              <div class="boss-text">
-                <p>Владимир Вашкалай</p>
-                <p>Руковожу ООО "RoofLand" с 2014 года</p>
-              </div>
-              <div class="logo">
-                <img src="about/image/Новый темный.png" alt="logo RoofLand" />
-              </div>
+    <section class="main-team">
+      <div class="container">
+        <h2 class="main__top">
+            Команда RoofLand
+          </h2>
+          <div class="swiper team-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="team__content">
+                        <div class="team__content-left">
+                            <!-- <img src="access/img/percon-img.jpg" alt="" class="person-img"> -->
+                            <div class="team__left-block">
+                                <div class="team__left-block_col">
+                                    <div class="team__col-title">Владимир Вашкалай</div>
+                                    <div class="team__col-subtitle">Руковожу ООО «Руфлэнд» с 2014 года</div>
+                                </div>
+                                <div class="header-logo">
+                                    <img src="access/img/logo-header.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__content-right">
+                            <div class="team__content-right_block">
+                                <div class="team__right-block_col">
+                                    <span>25 человек</span>
+                                    <p>В нашей дружной команде</p>
+                                </div>
+                                <a href="">Стать частью RoofLand Team ⬈</a>
+                            </div>
+                            <div class="vac__col-info">
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                    <h4>10 лет</h4>
+                                    <p>В строительстве</p>
+                                    </div>
+                                </div>
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                    <h4>Более 150</h4>
+                                    <p>Проектов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="rew__item-title">Ух и необычный дом для наших широт нам довеловь делать. Проект конечно необычный и очень интересный, стены дома возведены из газосиликатного блока. Нами же выполнялась вся фасадная отделка металлическим сайдингом с утеплением. </p>
+                            <div class="vacan-swiper_btns">
+                                <div class="vacan__swiper--button team-button-prev swiper-button-prev" tabindex="0"  role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-back.svg" alt="" />
+                                </div>
+                                <div class="vacan__swiper--button team-button-next swiper-button-next"  tabindex="0" role="button" aria-label="Next slide"  aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-next.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team__content">
+                        <div class="team__content-left">
+                            <!-- <img src="access/img/percon-img.jpg" alt="" class="person-img"> -->
+                            <div class="team__left-block">
+                                <div class="team__left-block_col">
+                                    <div class="team__col-title">Владимир Вашкалай</div>
+                                    <div class="team__col-subtitle">Руковожу ООО «Руфлэнд» с 2014 года</div>
+                                </div>
+                                <div class="header-logo">
+                                    <img src="access/img/logo-header.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__content-right">
+                            <div class="team__content-right_block">
+                                <div class="team__right-block_col">
+                                    <span>25 человек</span>
+                                    <p>В нашей дружной команде</p>
+                                </div>
+                                <a href="">Стать частью RoofLand Team ⬈</a>
+                            </div>
+                            <div class="vac__col-info">
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                        <h4>10 лет</h4>
+                                        <p>В строительстве</p>
+                                    </div>
+                                </div>
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                        <h4>Более 150</h4>
+                                        <p>Проектов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="rew__item-title">Ух и необычный дом для наших широт нам довеловь делать. Проект конечно необычный и очень интересный, стены дома возведены из газосиликатного блока. Нами же выполнялась вся фасадная отделка металлическим сайдингом с утеплением. </p>
+                            <div class="vacan-swiper_btns">
+                                <div class="vacan__swiper--button team-button-prev swiper-button-prev" tabindex="0"  role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-back.svg" alt="" />
+                                </div>
+                                <div class="vacan__swiper--button team-button-next swiper-button-next"  tabindex="0" role="button" aria-label="Next slide"  aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-next.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="team-main-card">
-              <div class="team-main-card-header">
-                <div class="team-main-text">
-                  <p class="team-main-label">14 человек</p>
-                  <p class="team-main-subtitle">В нашей дружной команде</p>
-                </div>
-                  <a href="#vacancies" class="team-join-btn">Стать частью<br> RoofLand Team</a>
-              </div>
+          </div>
+          <div class="team-grid only-desktop">
+            <div class="team-item"><img src="about/image/Rectangle 4538.png" alt="Сотрудник" class="team-photo" /></div>
+            <div class="team-item"><img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo" /></div>
+            <div class="team-item"><img src="about/image/Rectangle 4540.png" alt="Сотрудник" class="team-photo" /></div>
+            <div class="team-item"><img src="about/image/Rectangle 4541.png" alt="Сотрудник" class="team-photo" /></div>
+            <div class="team-item"><img src="about/image/Rectangle 4542.png" alt="Сотрудник" class="team-photo" /></div>
+            <div class="team-item"><img src="about/image/Rectangle 4543.png" alt="Сотрудник" class="team-photo" /></div>
+            <div class="team-item"><img src="about/image/Rectangle 4544.png" alt="Сотрудник" class="team-photo" /></div>
+            <div class="team-item"><img src="about/image/Rectangle 4545.png" alt="Сотрудник" class="team-photo" /></div>
+          </div>
+          <div class="team-grid only-mobile">
+            <div class="swiper mySwiper">
+                  <div class="swiper-wrapper rew__bottom-items">
+                    <div class="swiper-slide">
+                      <div class="team-item"><img src="about/image/Rectangle 4538.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="team-item"><img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="team-item"><img src="about/image/Rectangle 4540.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="team-item"><img src="about/image/Rectangle 4541.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
 
-              <div class="team-main-stats">
-                <div class="team-main-stat">
-                  <span class="team-main-stat-number">10 лет</span>
-                  <span class="team-main-stat-text">В строительстве</span>
+                    <div class="swiper-slide">
+                      <div class="team-item"><img src="about/image/Rectangle 4542.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
+                    <div class="swiper-slide">
+                       <div class="team-item"><img src="about/image/Rectangle 4543.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="team-item"><img src="about/image/Rectangle 4544.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
+                    <div class="swiper-slide ">
+                      <div class="team-item"><img src="about/image/Rectangle 4545.png" alt="Сотрудник" class="team-photo" /></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="team-main-stat">
-                  <span class="team-main-stat-number">Более 150</span>
-                  <span class="team-main-stat-text">Проектов</span>
-                </div>
-                <div>
-                  <p>
-                  Ух и необычный дом для наших широт нам довеловь делать. Проект конечно необычный и очень интересный,
-                  стены дома возведены из газосиликатного блока. Нами же выполнялась вся фасадная отделка металлическим
-                  сайдингом с утеплением.
-                  </p>
-                </div>
-              </div>
           </div>
-        </div>
-        <div team-mobail only-mobile>
-          <div class="gallery">
-            <img src="about/image/Rectangle 4538.png" alt="">
-            <img src="about/image/Rectangle 4539.png" alt="">
-            <img src="about/image/Rectangle 4540.png" alt="">
-            <img src="about/image/Rectangle 4541.png" alt="">
-            <img src="about/image/Rectangle 4542.png" alt="">
-          </div>
-        </div>
-        </div>
-        <div class="team-grid only-desktop">
-          <div class="team-item"><img src="about/image/Rectangle 4538.png" alt="Сотрудник" class="team-photo" /></div>
-          <div class="team-item"><img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo" /></div>
-          <div class="team-item"><img src="about/image/Rectangle 4540.png" alt="Сотрудник" class="team-photo" /></div>
-          <div class="team-item"><img src="about/image/Rectangle 4541.png" alt="Сотрудник" class="team-photo" /></div>
-          <div class="team-item"><img src="about/image/Rectangle 4542.png" alt="Сотрудник" class="team-photo" /></div>
-          <div class="team-item"><img src="about/image/Rectangle 4543.png" alt="Сотрудник" class="team-photo" /></div>
-          <div class="team-item"><img src="about/image/Rectangle 4544.png" alt="Сотрудник" class="team-photo" /></div>
-          <div class="team-item"><img src="about/image/Rectangle 4545.png" alt="Сотрудник" class="team-photo" /></div>
-        </div>
       </div>
+      
     </section>
 
-    <section class="search-specialists">
-      <div class="search-specialists__overlay">
-        <div class="search-specialists__container">
-          <div class="search-specialists__content">
-            <h2 class="search-specialists__title">
-              Мы постоянно находимся<br />
-              в поиске крутых специалистов!
-            </h2>
+    <section class="price-list--bg">
+            <div class="container price-list">
+                <div class="price-list__content">
+                    <div class="price-list__content-wrap">
+                        <h2 class="price-list__title">Мы постоянно находимся в поиске крутых специалистов!</h2>
+                        <p class="price-list__text">Если у тебя горят глаза, ты хочешь расти и развиваться, умеешь круто общаться с людьми, понимаешь каким должен быть сервис, умеешь слушать и слышать, грамотно донести свою мысль, если ты хочешь зарабатывать больше айтишников, оставляй свои контакты и руководитель свяжется с тобой.<br><br>
 
-            <p class="search-specialists__text">
-              Если у тебя горят глаза, ты хочешь расти и развиваться,
-              умеешь круто общаться с людьми и понимаешь,
-              каким должен быть сервис — оставляй свои контакты.
-            </p>
+                            У нас большие планы, новые офисы, города, работы много.<br><br>
 
-            <p class="search-specialists__text">
-              У нас большие планы, новые офисы, города и много работы.
-              Мы действительно считаем, что наша сила — в команде.
-            </p>
-          </div>
-
-          <div class="search-specialists__form-wrapper">
-            <form class="search-specialists__form" action="/ajax/send-resume.php" method="post" enctype="multipart/form-data">
-              <p>Если вы считаете, что подходите нам, оставьте свое резюме и мы обязательно с вами свяжемся!</p>
-
-              <input type="hidden" name="FORM_NAME" value="Поиск специалистов" />
-              <input type="hidden" name="TO_EMAIL" value="hr@roofland.by" />
-
-              <input type="text" name="name" placeholder="Введите имя" required />
-              <input type="tel" name="phone" placeholder="Телефон" required />
-
-              <input type="checkbox" name="cover_letter_enabled" hidden checked />
-
-              <textarea name="cover_letter" placeholder="Сопроводительное письмо" rows="4"></textarea>
-
-              <label class="search-specialists__file">
-                <input type="file" name="resume" />
-                Загрузить резюме
-              </label>
-
-              <button type="submit" class="search-specialists__submit">Отправить</button>
+                            И да, мы действительно считаем, что наша сила в нашей крутой команде.</p>
+                            
+                    </div>
+                    <div class="price-form-wrapper">
+                      <form action="" method="post" class="block__form">
+                        <p>
+                          Если Вы считатете, что подходите нам, оставьте свое резюме и
+                          мы обязательно свяжемся с Вами.
+                        </p>
+                        <div class="line__input">
+                          <div class="line__input-text">Ваше имя <span>*</span></div>
+                          <input
+                            type="text"
+                            class="input-line"
+                            placeholder="Введите имя"
+                            required
+                          />
+                        </div>
+                        <div class="line__input">
+                          <div class="line__input-text">
+                            Номер телефона <span>*</span>
+                          </div>
+                          <input
+                            type="tel"
+                            class="input-line"
+                            id="phone"
+                            placeholder="Введите номер телефона"
+                            required
+                          />
+                        </div>
+                        <div class="line__input">
+                          <div class="line__input-text">
+                            Сопроводительное письмо <span>*</span>
+                          </div>
+                          <textarea
+                            id="accom-text"
+                            class="input-line textarea-line"
+                            placeholder="Сопроводительное письмо"
+                            required
+                            maxlength="2500"
+                          ></textarea>
+                          <span id="char-count">0/2500</span>
+                        </div>
+                        <div class="line__input">
+                          <label for="file-upload" class="file-label"
+                            ><img src="access/img/сomp-pre.svg" alt="" /> Загрузить
+                            резюме</label
+                          >
+                          <input id="file-upload" type="file" class="input-file" />
+                        </div>
+                         <label class="form-control contact-form__checkbox">
+                              <input type="checkbox" name="agree" checked required />
+                              <span
+                                >Я соглашаюсь с
+                                <a href="">условиями обработки персональных данных</a></span
+                              >
+                            </label>
+                        <button type="submit" class="btn btn__calcul">Отправить</button>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+  </div>
+  <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
+            </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"
+              />
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required
+                />
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
             </form>
           </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
+
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link"
+                  >г.Минск ул. Ваупшасова 22</a
+                >
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp-b.svg" alt="" /></a>
+                </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link"
+                  >
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""
+                    />zakaz@roofland.by</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div class="footer__subtitle">С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div class="footer__subtitle">По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </div>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script/index.js"></script>  
 </body>
 </html>

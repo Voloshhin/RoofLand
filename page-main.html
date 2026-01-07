@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="access\style.css" />
     <title>Главная Страница</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
+    <link  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -67,6 +64,21 @@
               </div>
             </div>
             <div class="header__content-right">
+              <div class="actions__link">
+                <a href="#">
+                  <img src="access/img/viber-logo.svg" class="img" alt="viber">
+                </a>
+                <a href="#">
+                  <img src="access/img/telegram-logo.svg" class="img" alt="telegram">
+                </a>
+                <a href="#">
+                  <img src="access/img/whatsapp.svg" class="img" alt="whatsapp">
+                </a>
+              </div>
+              <button class="btn btn__calcul mobal_btn">
+                <img src="access/img/calculator.svg" alt="icon">
+                Рассчитать стоимость
+              </button>
               <div class="header__search">
                 <button class="but__search">
                   <img src="access/img/search-loap.svg" alt="" />
@@ -86,26 +98,132 @@
           </div>
         </div>
         <div class="header__menu" id="header__menu">
-          <div class="container">
-            <div class="header__content">
-              <a href="">Каталог</a>
-              <a href="">Кровельные работы</a>
-              <a href="">Портфолио</a>
-              <a href="">О компании</a>
-              <a href="" class="link_active">Отзывы</a>
-              <a href="">Оплата</a>
-              <a href="">Доставка и возврат</a>
-              <a href="">Контакты</a>
-              <a href="">Блог</a>
+            <div class="container">
+
+                <nav class="header__content">
+
+                <!-- ITEM WITH SUBMENU -->
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                      <span class="menu-left">
+                        <img src="access/img/catalog.svg" alt="">
+                        <span class="menu-title">Каталог</span>
+                      </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <!-- сюда потом вставишь ссылки -->
+                      <a href="#" class="">Материалы для кровли</a>
+                      <a href="#" class="">Материалы для фасада</a>
+                      <a href="" class="">Заборы и ограждения</a> 
+                      <a href="" class="">Кровельные аксессуары</a> 
+                      <a href="" class="">Водосточные системы</a>  
+                      <a href="" class="">Услуги монтажа</a>  
+                    </div>
+                </div>
+
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                        <span class="menu-left">
+                          <img src="access/img/hammer-screwdriver.svg" alt="">
+                          <span class="menu-title">Кровельные работы</span>
+                        </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <a href="#">Монтаж кровли под ключ</a>
+                    <a href="#">Реконструкция домов и дач</a>
+                    <a href="">Монтаж кровли из металлочерепицы</a>  
+                    <a href="">Монтаж натуральной черепицы</a>  
+                    <a href="">Монтаж фальцевой кровли</a>  
+                    <a href="">Установка водосточной системы</a>  
+                    <a href="">Установка мансардных окон</a>  
+                    <a href="">Установка снегодержателей</a>  
+                    </div>
+                </div>
+
+                <!-- SIMPLE LINKS -->
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/picture-image.svg" alt="">
+                    </span>
+                    <span class="menu-title">Портфолио</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/work-job-pin-location-suitcase.svg" alt="">
+                    </span>
+                    <span class="menu-title">О компании</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link active">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/rew-icon.svg" alt="">
+                    </span>
+                    <span class="menu-title">Отзывы</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/money-coins.1-w.svg" alt="">
+                    </span>
+                    <span class="menu-title">Оплата</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/dosvtvozl.svg" alt="">
+                    </span>
+                    <span class="menu-title">Доставка и возврат</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/cont.svg" alt="">
+                    </span>
+                    <span class="menu-title">Контакты</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/bookmark-favorite.svg" alt="">
+                    </span>
+                    <span class="menu-title">Блог</span>
+                  </span>
+                </a>
+
+                <!-- SOCIALS -->
+                <div class="menu-socials">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+                </div>
+              </nav>
+                <!-- BUTTON -->
+                <div class="menu-bottom">
+                   <a href="" class="btn btn__shop">Интернет-магазин <span>⬈</span></a>
+                </div>
+
+                
+
             </div>
-          </div>
-        </div>
+            </div>
       </div>
       <div class="header__bottom">
         <div class="container">
           <div class="header__content">
             <li class="menu-dropdown">
-              <a class="menu-dropdown__toggle"
+              <a class="menu-dropdown__toggle" class="link_active"
                 >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
               </a>
               <div class="menu-dropdown__popup">
@@ -135,7 +253,7 @@
             </li>
             <a href="">Портфолио</a>
             <a href="">О компании</a>
-            <a href="">Отзывы</a>
+            <a href="" class="active">Отзывы</a>
             <a href="">Оплата</a>
             <a href="">Доставка и возврат</a>
             <a href="">Контакты</a>
@@ -226,7 +344,7 @@
                     class="banner__item-img"
                   />
                   <div class="banner__item-text">
-                    Купить кровельные материалы
+                    Купить материалы для забора
                   </div>
                 </a>
                 <div class="border-line"></div>
@@ -240,7 +358,7 @@
                     class="banner__item-img"
                   />
                   <div class="banner__item-text">
-                    Купить кровельные материалы
+                    Купить материалы для фасада
                   </div>
                 </a>
                 <div class="border-line"></div>
@@ -254,7 +372,7 @@
                     class="banner__item-img"
                   />
                   <div class="banner__item-text">
-                    Купить кровельные материалы
+                    Кровельные работы под ключ
                   </div>
                 </a>
                 <div class="border-line"></div>
@@ -268,7 +386,7 @@
                     class="banner__item-img"
                   />
                   <div class="banner__item-text">
-                    Купить кровельные материалы
+                    Акции и спец.  предложения
                   </div>
                 </a>
                 <div class="border-line"></div>
@@ -282,7 +400,7 @@
                     class="banner__item-img"
                   />
                   <div class="banner__item-text">
-                    Купить кровельные материалы
+                   Просчитать стоимость кровли
                   </div>
                 </a>
               </div>
@@ -317,15 +435,14 @@
                   <img src="access/img/banner-arr.svg" alt="" />
                 </div>
                 <img
-                  src="access/img/img-w.png"
+                  src="access/img/img-w2.png"
                   alt=""
                   class="catalog__item-img"
                 />
                 <div class="catalog__item-text">
-                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-title">Материалы для фасада</div>
                   <div class="catalog__item-subtitle">
-                    Металлочерепица, модульная металлочерепица, фальцевая кровля
-                    и др.
+                   Фасадные панели, фасадная плитка, природный и искусственный камень
                   </div>
                 </div>
               </a>
@@ -334,15 +451,14 @@
                   <img src="access/img/banner-arr.svg" alt="" />
                 </div>
                 <img
-                  src="access/img/img-w2.png"
+                  src="access/img/img-w.png"
                   alt=""
                   class="catalog__item-img"
                 />
                 <div class="catalog__item-text">
-                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-title">Заборы и ограждения</div>
                   <div class="catalog__item-subtitle">
-                    Металлочерепица, модульная металлочерепица, фальцевая кровля
-                    и др.
+                    Забор Жалюзи, Ранчо, Ранчо-эконом
                   </div>
                 </div>
               </a>
@@ -356,10 +472,9 @@
                   class="catalog__item-img"
                 />
                 <div class="catalog__item-text">
-                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-title">Кровельные аксессуары</div>
                   <div class="catalog__item-subtitle">
-                    Металлочерепица, модульная металлочерепица, фальцевая кровля
-                    и др.
+                    Софиты для подшивки, пленки и мембраны, вентиляция и др.
                   </div>
                 </div>
               </a>
@@ -373,10 +488,9 @@
                   class="catalog__item-img"
                 />
                 <div class="catalog__item-text">
-                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-title">Водосточные системы</div>
                   <div class="catalog__item-subtitle">
-                    Металлочерепица, модульная металлочерепица, фальцевая кровля
-                    и др.
+                    Квадратные, классические, системы для плоских крыш
                   </div>
                 </div>
               </a>
@@ -390,10 +504,9 @@
                   class="catalog__item-img"
                 />
                 <div class="catalog__item-text">
-                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-title">Услуги монтажа</div>
                   <div class="catalog__item-subtitle">
-                    Металлочерепица, модульная металлочерепица, фальцевая кровля
-                    и др.
+                   Металлочерепица, модульная металлочерепица, фальцевая кровля и др.
                   </div>
                 </div>
               </a>
@@ -441,7 +554,7 @@
                     <img src="access/img/money-20.svg" alt="" />
                   </div>
                   <span
-                    >За неиспользованный материал
+                    >За оставшийся материал
                     <strong> возвращаем деньги</strong></span
                   >
                 </div>
@@ -2218,7 +2331,7 @@
                   <a href=""><img src="access/img/instagram.svg" alt="" /></a>
                   <a href=""><img src="access/img/telegram.svg" alt="" /></a>
                   <a href=""><img src="access/img/viber.svg" alt="" /></a>
-                  <a href=""><img src="access/img/whatsapp.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp-b.svg" alt="" /></a>
                 </div>
               </div>
               <div class="footer__row-links">

@@ -67,6 +67,21 @@
               </div>
             </div>
             <div class="header__content-right">
+              <div class="actions__link">
+                <a href="#">
+                  <img src="access/img/viber-logo.svg" class="img" alt="viber">
+                </a>
+                <a href="#">
+                  <img src="access/img/telegram-logo.svg" class="img" alt="telegram">
+                </a>
+                <a href="#">
+                  <img src="access/img/whatsapp.svg" class="img" alt="whatsapp">
+                </a>
+              </div>
+              <button class="btn btn__calcul mobal_btn">
+                <img src="access/img/calculator.svg" alt="icon">
+                Рассчитать стоимость
+              </button>
               <div class="header__search">
                 <button class="but__search">
                   <img src="access/img/search-loap.svg" alt="" />
@@ -92,52 +107,117 @@
 
                 <!-- ITEM WITH SUBMENU -->
                 <div class="menu-item has-children">
-                    <button class="menu-toggle">
+                    <button class="menu-toggle action">
+                      <span class="menu-left">
+                        <img src="access/img/catalog.svg" alt="">
                         <span class="menu-title">Каталог</span>
-                        <span class="menu-icon"></span>
+                      </span>
+                      <span class="menu-icon"></span>
                     </button>
 
                     <div class="submenu">
                     <!-- сюда потом вставишь ссылки -->
-                    <a href="#">Пункт</a>
-                    <a href="#">Пункт</a>
+                      <a href="#" class="active">Материалы для кровли</a>
+                      <a href="#" class="">Материалы для фасада</a>
+                      <a href="" class="">Заборы и ограждения</a> 
+                      <a href="" class="">Кровельные аксессуары</a> 
+                      <a href="" class="">Водосточные системы</a>  
+                      <a href="" class="">Услуги монтажа</a>  
                     </div>
                 </div>
 
                 <div class="menu-item has-children">
                     <button class="menu-toggle">
-                    <span class="menu-title">Кровельные работы</span>
-                    <span class="menu-icon"></span>
+                        <span class="menu-left">
+                          <img src="access/img/hammer-screwdriver.svg" alt="">
+                          <span class="menu-title">Кровельные работы</span>
+                        </span>
+                      <span class="menu-icon"></span>
                     </button>
 
                     <div class="submenu">
-                    <a href="#">Пункт</a>
-                    <a href="#">Пункт</a>
+                    <a href="#">Монтаж кровли под ключ</a>
+                    <a href="#">Реконструкция домов и дач</a>
+                    <a href="">Монтаж кровли из металлочерепицы</a>  
+                    <a href="">Монтаж натуральной черепицы</a>  
+                    <a href="">Монтаж фальцевой кровли</a>  
+                    <a href="">Установка водосточной системы</a>  
+                    <a href="">Установка мансардных окон</a>  
+                    <a href="">Установка снегодержателей</a>  
                     </div>
                 </div>
 
                 <!-- SIMPLE LINKS -->
-                <a href="#" class="menu-link">Портфолио</a>
-                <a href="#" class="menu-link">О компании</a>
-                <a href="#" class="menu-link active">Отзывы</a>
-                <a href="#" class="menu-link">Оплата</a>
-                <a href="#" class="menu-link">Доставка и возврат</a>
-                <a href="#" class="menu-link">Контакты</a>
-                <a href="#" class="menu-link">Блог</a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/picture-image.svg" alt="">
+                    </span>
+                    <span class="menu-title">Портфолио</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/work-job-pin-location-suitcase.svg" alt="">
+                    </span>
+                    <span class="menu-title">О компании</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/rew-icon.svg" alt="">
+                    </span>
+                    <span class="menu-title">Отзывы</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/money-coins.1-w.svg" alt="">
+                    </span>
+                    <span class="menu-title">Оплата</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/dosvtvozl.svg" alt="">
+                    </span>
+                    <span class="menu-title">Доставка и возврат</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/cont.svg" alt="">
+                    </span>
+                    <span class="menu-title">Контакты</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/bookmark-favorite.svg" alt="">
+                    </span>
+                    <span class="menu-title">Блог</span>
+                  </span>
+                </a>
 
                 <!-- SOCIALS -->
                 <div class="menu-socials">
-                    <a href="#" aria-label="YouTube"></a>
-                    <a href="#" aria-label="Instagram"></a>
-                    <a href="#" aria-label="TikTok"></a>
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
                 </div>
-
+              </nav>
                 <!-- BUTTON -->
                 <div class="menu-bottom">
                    <a href="" class="btn btn__shop">Интернет-магазин <span>⬈</span></a>
                 </div>
 
-                </nav>
+                
 
             </div>
             </div>
@@ -200,134 +280,592 @@
           </div>
         </div>
       </div>
-      <section class="block__banner-work">
+      <section class="banner-product block__banner-work">
         <div class="container">
-          <h1><span>монтаж кровли</span> под ключ</h1>
-          <div class="banner-work__content">
-            <div class="banner-work__content-top">
-              <div class="banner-work__top-block">
-                <h3>монтируем кровли под ключ с 2014 года</h3>
-
-                <ul type="disc" class="banner__content-main">
-                  <li>Снижаем цены к строительному сезону</li>
-                  <li>
-                    Доставляем материалы на объект, возвращаем неиспользованный
-                    материал
-                  </li>
-                  <li>Выполняем качественно и в срок по договору</li>
-                </ul>
-                <a href="" class="btn btn__calcul"> Рассчитать стоимость</a>
+          <div class="banner__product-fon banner-work__content-top">
+            <div class="banner__product-fon_content">
+              <div class="banner__product-content_top">
+                <div class="banner__product-minitext">Модульная металлочерепица </div>
+                <h1>Dahpol Egeria</h1>
               </div>
+              <div class="banner__product-content_bottom">
+                <div class="banner__product-line">
+                  <img src="access/img/Truck.svg" alt="">
+                  Доставка по всей Беларуси
+                </div>
+                <div class="banner__product-line">
+                  <img src="access/img/CheckSquare.svg" alt="">
+                  В наличии на складе
+                </div>
+              </div>
+            </div>
+             <div class="banner__circle">
+              <div class="banner__circle-block">
+                <img src="access/img/banner-img_tov.png" alt="">
+              </div>
+             </div>
+             <img src="access/img/tre.svg" alt="" class="zesel-img">
+          </div>
+        </div>
+      </section>
+
+      <section class="product__har">
+        <div class="container">
+          <div class="product__har-content">
+            <div class="har__content-left">
+              <div class="har__left-info">
+                <h2>Основные характеристики:</h2>
+                <div class="har__left-info_block">
+                  <div class="har__left-info_col">
+                   <span>Ширина листа:</span>
+                   <span>Длина листа:</span>
+                   <span>Ширина листа полезная:</span>
+                   <span>Длина листа полезная:</span>
+                   <span>Высота профиля:</span>
+                  </div>
+                  <div class="har__left-info_col">
+                    <span>1250 мм</span>
+                    <span>720 мм, 370 мм</span>
+                    <span>1120 мм</span>
+                    <span>700 мм, 350 мм</span>
+                    <span>30 мм</span>
+                  </div>
+                </div>
+              </div>
+              <div class="har_left-price">от <h2>37,03 BYN</h2> за панель</div>
+              <div class="har_left-otz">
+                <div class="har_left-otz_block">
+                  <div class="rew-stars">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="" class="mask-star">
+                  </div>
+                  <span>4,8</span>
+                </div>
+                 <a href="" class="card__link"><img src="access/img/vector.svg" alt="" />Посмотреть отзывы</a>
+              </div>
+
+              <div class="header-right__btns">
+                <a href="" class="btn btn__calcul"><img src="access/img/shop-svg.svg" alt="" />Интернет-магазин</a >
+                <button class="btn btn__shop">Рассчитать стоимость</button>
+              </div>
+              
+            </div>
+            <div class="har__content-right">
+              <video src="" poster="access/img/image-about.png" class="video-about"></video>
+              <p>
+                Видеообзор модульной черепицы Dahpol Egeria
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="block-stage">
+      
+
+      <section class="product__card js-tabs">
         <div class="container">
-            <h2 class="main__top">Этапы работы</h2>
-            <div class="stage__content">
-                <div class="stage__content-item">
-                    <img src="access/img/st1.jpg" alt="">
-                    <div class="stage__content-item_block">
-                        <div class="stage__item-num">Шаг 1</div>
-                        <div class="stage__item-title">
-                            Выбор и доставка материалов на объект
-                        </div>
-                        <ul class="stage__item-text" type="disc">
-                            <li>Определяемся и расчитываем количество необходимых материалов</li>
-                            <li>В кратчайшие сроки комплектуем материалы на нашем складе</li>
-                            <li>Доставляем материалы на объект</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="stage__content-item stage__item-order">
-                    <img src="access/img/st2.jpg" alt="">
-                    <div class="stage__content-item_block">
-                        <div class="stage__item-num">Шаг 2</div>
-                        <div class="stage__item-title">
-                           Подготовка к кровельным работам
-                        </div>
-                        <ul class="stage__item-text" type="disc">
-                            <li>Принимаем материалы на объекте и сверяем их количество</li>
-                            <li>Производим демонтаж старой кровли либо монтаж балок перекрытия и мауэрлата (в зависимости от комплекса работ)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="stage__content-item">
-                    <img src="access/img/st3.jpg" alt="">
-                    <div class="stage__content-item_block">
-                        <div class="stage__item-num">Шаг 3</div>
-                        <div class="stage__item-title">
-                            Монтаж кровли
-                        </div>
-                        <ul class="stage__item-text" type="disc">
-                            <li>Подготовка кровли к монтажу финишного покрытия</li>
-                            <li>Монтаж кровельного покрытия (металлочерепица, гибкая черепица, фальцевая кровля и т.д)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="stage__content-item stage__item-order">
-                    <img src="access/img/st4.jpg" alt="">
-                    <div class="stage__content-item_block">
-                        <div class="stage__item-num">Шаг 4</div>
-                        <div class="stage__item-title">
-                            Сдача готового объекта
-                        </div>
-                        <ul class="stage__item-text" type="disc">
-                            <li>Проверка качества выполненных работ</li>
-                            <li>Подсчет и возврат неиспользованных материалов</li>
-                            <li>Приемка готового объекта со счастливым заказчиком</li>
-                        </ul>
-                    </div>
-                </div>
+          <div class="product__card-content">
+            <div class="product__card-content_top">
+              <h2 class="main__top">Dahpol Egeria</h2>
+              <p>Dachpol Egeria(Дахпол Эгерия)- это гибридная модульная черепица имеющая абсолютную симметричность профиля, благодаря чему экономится количество кровельного материала на сложных кровлях т.к появляется возможность сдвигать модули, использовать остатки и разделять кровельную панель до 3-х частей.</p>
             </div>
+            <div class="product__card-content_main">
+              <h4>Сравнение покрытий металлочерепицы</h4>
+              <div class="rew__top-btns">
+                <!-- Desktop buttons -->
+                <div class="tab-buttons">
+                  <button class="tab-button active" data-tab="root1">
+                    Granite UltraMatt
+                  </button>
+                  <button class="tab-button" data-tab="root2">
+                    Crown Mat BT SSAB
+                  </button>
+                  <button class="tab-button" data-tab="root3">
+                    Rought Matt SSAB 
+                  </button>
+                  <button class="tab-button" data-tab="root4">
+                    Pural Matt SSAB 
+                  </button>
+                </div>
+                <!-- Mobile select -->
+                <div class="custom-dropdown tab-select">
+                  <div class="dropdown-toggle">
+                    Granite UltraMatt
+                    <span class="dropdown-arrow"></span>
+                  </div>
+                  <ul class="dropdown-menu">
+                    <li data-value="root1" class="active">
+                      Granite UltraMatt
+                    </li>
+                    <li data-value="root2">Crown Mat BT SSAB</li>
+                    <li data-value="root3">Rought Matt SSAB</li>
+                    <li data-value="root4">Pural Matt SSAB</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="root1" class="tab-content active">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="root__content-top_left">
+                      <div class="root__top-left_line">
+                        <strong>Толщина метала:</strong> 0,45 - 0,5 мм
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Толщина покрытия:</strong> 20-22 мк
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Гарантия:</strong> до 20 лет
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Вид:</strong> модульная/листовая
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Содержание цинка:</strong> 100 - 140 г/м²
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Устойчивость к царапинам:</strong> standart
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Изготовитель металла:</strong> Беларусь, Россия
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="root2" class="tab-content">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="har__left-info_block">
+                      <div class="har__left-info_col">
+                      <span>Ширина листа:</span>
+                      <span>Длина листа:</span>
+                      <span>Ширина листа полезная:</span>
+                      <span>Длина листа полезная:</span>
+                      <span>Высота профиля:</span>
+                      </div>
+                      <div class="har__left-info_col">
+                        <span>1250 мм</span>
+                        <span>720 мм, 370 мм</span>
+                        <span>1120 мм</span>
+                        <span>700 мм, 350 мм</span>
+                        <span>30 мм</span>
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="root3" class="tab-content">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="root__content-top_left">
+                      <div class="root__top-left_line">
+                        <strong>Толщина метала:</strong> 0,45 - 0,5 мм
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Толщина покрытия:</strong> 20-22 мк
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Гарантия:</strong> до 20 лет
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Вид:</strong> модульная/листовая
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Содержание цинка:</strong> 100 - 140 г/м²
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Устойчивость к царапинам:</strong> standart
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Изготовитель металла:</strong> Беларусь, Россия
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="root4" class="tab-content">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="har__left-info_block">
+                      <div class="har__left-info_col">
+                      <span>Толщина метала:</span>
+                      <span>Толщина покрытия:</span>
+                      <span>Гарантия:</span>
+                      <span>Вид:</span>
+                      <span>Содержание цинка:</span>
+                      <span>Устойчивость к царапинам:</span>
+                      <span>Изготовитель металла:</span>
+                      </div>
+                      <div class="har__left-info_col">
+                        <span>0,45 - 0,5 мм</span>
+                        <span>20-22 мк</span>
+                        <span>до 20 лет</span>
+                        <span>модульная/листовая</span>
+                        <span>100 - 140 г/м²</span>
+                        <span>standart</span>
+                        <span>Беларусь, Россия</span>
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
         </div>
       </section>
 
-      <section class="block-learn">
+      <section class="banner__more feedback__image">
         <div class="container">
-            <h2 class="main__top">Подробнее о монтаже </h2>
-            <div class="learn__content">
-                <img src="access/img/block-learn_img.jpg" alt="" class="block-learn_img">
-                <div class="learn__content-info">
-                    <div class="banner-work__content-bottom">
-                        <div class="banner-work__bottom-item">
-                            <div class="banner-work__item-title">7</div>
-                            <div class="banner-work__item-subtitle">Монтажных бригад</div>
-                        </div>
-                        <div class="banner-work__bottom-item">
-                            <div class="banner-work__item-title">500+</div>
-                            <div class="banner-work__item-subtitle">
-                            Реализованных проектов
-                            </div>
-                        </div>
-                        <div class="banner-work__bottom-item">
-                            <div class="banner-work__item-title">11+<span>лет</span></div>
-                            <div class="banner-work__item-subtitle">
-                            Практический опыт в реконструкции домов
-                            </div>
-                        </div>
-                    </div>
-                    <div class="learn__content-info_text">
-                        <p>
-                            Крыша – пятая стена: от нее зависит надежность всего дома. Хорошая кровля служит несколько десятков лет, не протекает, сохраняет тепло. Качество зависит не только от материалов, но и способа монтажа и квалификации рабочих. Доверьте услугу компании, которая знает свое дело.<br><br>
+           <div class="feedback__content">
+              <div class="feedback__content-text">
+                <h2>Хотите узнать подробнее про покрытия?</h2>
+                <p>
+                 Переходите в наш блог, там много полезной информации о покрытиях, их преимуществах и отличиях
+                </p>
+                <a href="" class="btn btn__shop" >Читать про покрытия<span>⬈</span></a>
+                <img src="access/img/arr.svg" alt="" class="banner-arr" />
+              </div>
+              <img src="access/img/phone-image.png" alt="" class="phone-more">
+           </div>
+        </div>
+      </section>
 
-                            Больше восьми лет ООО «Руфленд» берется за любые виды работ – установка и монтаж:
-                        
-                        </p>
-                        <ul type="disc">
-                            <li>мауэрлата. Брус с сечением 150х150 монтируют, чтобы распределить нагрузку на стены здания;</li>
-                            <li>стропильной системы. Это несущий элемент кровли, который придает крыше форму;</li>
-                            <li>гидроизоляции – кровельная мембрана или пленка. Защита строительных конструкций, зданий и сооружений от проникновения воды или материала сооружений от вредного воздействия омывающей, или фильтрующей воды, или другой агрессивной жидкости;</li>
-                            <li>контробрешетки. Это брусок толщиной 20-25 мм и шириной 50 мм. Он нужен, чтобы проветривать кровельный пирог и минимизировать скопление конденсата под покрытие;</li>
-                            <li>обрешетки. На нее устанавливают покрытие кровли – черепицу и металлочерепицу. Если монтируем гибкую или битумную, поверх обрешетки монтируем плиту OSB.</li>
-                        </ul>
-                        <p> В финале монтируем черепицу и декоративные элементы.</p>
-                        <p>Монтируем любой вид кровли: двухскатную, вальмовую, шатровую, ломаную, многоскатную. Почему строительный работы доверяют нам? За годы работы мы приобрели опыт, с которым справляемся с любыми сложностями.</p>
-                        <p>Так компания работает по нормам и правилам Республики Беларусь – ТКП и СНИП. </p>
+      <section class="product__advantages">
+        <div class="container">
+          <h2 class="main__top">Преимущества Dahpol Egeria  
+            <a href="" class="btn btn__shop desc-o">Купить в интернет-магазине<span>⬈</span></a>
+          </h2>
+          <div class="product__advantages-content">
+            <div class="white__circle"></div>
+            <img src="access/img/tovar1.png" alt="" class="advan-image">
+            <img src="access/img/vector7.svg" alt="" class="modal-v vector-line">
+            <img src="access/img/groundv.svg" alt="" class="modal-v vector-ground">
+            <img src="access/img/groundv.svg" alt="" class="modal-v vector-ground2">
+            <div class="product__advantages-items">
+              <div class="product__advantages-item advan-1">
+                <img src="access/img/Vector1.svg" alt="" class="Vector">
+                <div class="advan__item-info">
+                  <h5>
+                     <div class="advan__image-block">
+                      <img src="access/img/adv1.jpg" alt="" class="advan-block_ims">
                     </div>
+                    <div class="w-title">Качество</div></h5>
+                  <p>Dachpol Egeria производится из высококачественной стали трех проверенных производителей SSAB (Швеция) ArcelorMittal (Германия) Arvedi (Италия)</p>
                 </div>
+              </div>
+              <div class="product__advantages-item advan-2">
+                <img src="access/img/Vector2.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv2.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Герметичность</div></h5>
+                  <p>Увеличенное боковое соединение панелей улучшает герметичность кровельного покрытия и позволяет производить монтаж на кровлях с более малым градусом уклона</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-3">
+                <img src="access/img/Vector3.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv3.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Гибридная модульная черепица</div></h5>
+                  <p>Максимальная экономия кровельного материала на вашей крыше. Большое количество размеров в наличии на складе. Полная симметричность</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-4">
+                <img src="access/img/Vector4.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv4.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Современный стиль +<br> прочность</div></h5>
+                  <p>Шесть волн высотой 30 мм с тремя ребрами на каждой придают индивидуальный вид кровле и дополнительную прочность при монтаже</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-5">
+                <img src="access/img/Vector5.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv5.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Защита от подделки</div></h5>
+                  <p>Компания дорожит своей репутацией именно поэтому все кровельные модули Эгерия имеют защитную лазерную маркировку. Что обеспечивает покупателю защиту от обмана</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-6">
+                <img src="access/img/Vector6.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv6.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Полная симметричность</div></h5>
+                  <p>Симметричность модулей особенность модульной черепицы Эгерия, благодаря этому появляется возможность сэкономить материал: сдвигая модули и используя обрезки</p>
+                </div>
+              </div>
             </div>
+          </div>
+          <a href="" class="btn btn__shop modal-v mar-t" >Купить в интернет-магазине<span>⬈</span></a>
         </div>
       </section>
 
@@ -335,7 +873,7 @@
         <div class="container">
           <div class="price-list__content">
             <div class="price-list__content-wrap">
-              <h2 class="price-list__title">Прайс-лист на услуги</h2>
+              <h2 class="price-list__title">Прайс-лист на материалы</h2>
               <p>
                 Не тратьте время на долгие поиски.<br />
                 Скачайте прайс с описанием и актуальными ценами
@@ -406,45 +944,11 @@
           </div>
         </div>
       </section>
-      <section class="block-advantages">
-        <div class="container">
-            <h2 class="main__top">Преимущества работы с нами</h2>
-            <div class="advantages__content">
-                <div class="advantages__content-item">
-                    <img src="access/img/ad1.svg" alt="">
-                    <div class="advantages__content-item_block">
-                        <div class="advantages__item-block">Работаем по договору и с гарантией</div>
-                        <p>Если в течение гарантийного периода что-то произойдет – приедем и бесплатно отремонтируем. Забираем остатки и возвращаем за них деньги.</p>
-                    </div>
-                </div>
-                <div class="advantages__content-item">
-                    <img src="access/img/ad2.svg" alt="">
-                    <div class="advantages__content-item_block">
-                        <div class="advantages__item-block">5 собственных монтажных бригад</div>
-                        <p>Мы гордимся нашими сотрудниками и показываем их на сайте, Instagram, YouTube. Еще до сотрудничества можете познакомиться и узнать, кто к вам приедет.</p>
-                    </div>
-                </div>
-                <div class="advantages__content-item">
-                    <img src="access/img/ad3.svg" alt="">
-                    <div class="advantages__content-item_block">
-                        <div class="advantages__item-block">Дорожим репутацией</div>
-                        <p>Есть видео-отзывы реальных людей и портфолио с адресами, куда можно приехать и оценить работу.</p>
-                    </div>
-                </div>
-                <div class="advantages__content-item">
-                    <img src="access/img/ad4.svg" alt="">
-                    <div class="advantages__content-item_block">
-                        <div class="advantages__item-block">Склад и офис в одном месте</div>
-                        <p>У нас нет пробников, можем достать из поддона и продемонстрировать реальную продукцию, которую используем при выполнении работ.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
+
       <section class="main-project">
         <div class="container">
           <h2 class="main__top">
-            Наши проекты
+            Реализованные проекты Dachpol Egeria
             <a href="" class="btn btn__shop desc-o">Посмотреть все портфолио <span>⬈</span></a>
           </h2>
           <div class="swiper project-swiper">
@@ -704,94 +1208,107 @@
           >
         </div>
       </section>
-      <section class="roof-socials roof-pad">
-            <div class="container">
-                <div class="socials__content-wrap">
-                    <h2 class="socials__title">Подписывайся на наш Instagram-канал </h2>
-                    <p class="socials__text">И в live-режиме следи за процессом строительства</p>
-                    <div class="socials__cards-wrap">
-                        <div class="socials__card">
-                            <img src="access/img/video-icon.svg" alt="icon">
-                            <p>Видеообзоры металлочерепицы и&nbsp;других товаров</p>
-                        </div>
-                        <div class="socials__card">
-                            <img src="access/img/message-text.1.svg" alt="icon">
-                            <p>Живые отзывы клиентов о &nbsp; качестве выполненных работ</p>
-                        </div>
-                        <div class="socials__card">
-                            <img src="access/img/home-notification-square.svg" alt="icon">
-                            <p>Показываем процесс строительства вашего дома в&nbsp;live-режиме</p>
-                        </div>
-
-                    </div>
-                    <div class="socials__button-wrap">
-                        <a href="#" class="btn button--ghost btn__shop">
-                            <img src="access/img/ig-colored.webp" alt="icon" width="26">&ensp;Наш Instagram&ensp;<span>⬈</span>
-                        </a>
-                        <a href="#" class="btn button--ghost btn__shop">
-                            <img src="access/img/yt-colored.webp" alt="icon" width="26">&ensp;Наш YouTube канал&ensp;<span>⬈</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-      </section>
       <section class="main-reviews block-reviews">
         <div class="container">
           <h2 class="main__top">
-            Как клиенты оценивают нашу работу
-            <a href="" class="btn btn__shop desc-o">Посмотреть все отзывы <span>⬈</span></a>
+            Отзывы на металлочерепицу Dahpol Egeria
+            <a href="#feedback" class="btn feedback-btn desc-o"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
           </h2>
-            <div class="reviews__content">
-                <div class="reviews__list-item">
-                  <div class="reviews-card__left">
-                    <div class="reviews-card__left-block">
-                      <div class="rew-stars">
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
+            <div class="swiper vacan-swiper">
+            <div class="swiper-wrapper vacancy__content-items s-block">
+             
+              <div class="swiper-slide">
+               <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
                       </div>
-                      <div class="rew-data">03.08.2022</div>
-                      <h4>Екатерана Маханек</h4>
-                      <p class="rew__item-title">
-                        Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая
-                        КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на
-                        сложные погодные условия. Цена не изменилась, хотя
-                        оговаривали её ещё в начале октября. Остаток
-                        металлочерепицы забрали и сделали перерасчёт. Приятно
-                        иметь дело с ответственными и честными людьми!
-                      </p>
-                      <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
                     </div>
-                    
-                  </div>
-                    <img src="access/img/Frame.png" alt="" />
                 </div>
-              <div class="rew__content-item">
-                  <video src="" poster="access/img/image.png"></video>
-                  <div class="rew__item-content">
-                    <div class="rew__item-top">
-                      <div class="rew-stars">
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
-                        <img src="access/img/star.svg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
                       </div>
-                      <h5 class="rew__item-title">
-                        Оригинальный отзыв заказчика. Смотреть до конца.
-                        Оригинальный отзыв заказчика. Смотреть до конца
-                      </h5>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
                     </div>
-                    <div class="rew-data">03.08.2022</div>
-                  </div>
                 </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide ">
+               <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
             </div>
+            
+          </div>
           
-          <a href="" class="btn btn__shop modal-v mar-t"
-            >Посмотреть все отзывы <span>⬈</span></a
-          >
+            <div class="rew__btns-modal mar-t">
+              <button class="btn btn__calcul modal-v">Показать больше</button>
+              <a href="#feedback" class="btn feedback-btn modal-v"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
+            </div>
         </div>
       </section>
     </main>
@@ -897,7 +1414,7 @@
                   <a href=""><img src="access/img/instagram.svg" alt="" /></a>
                   <a href=""><img src="access/img/telegram.svg" alt="" /></a>
                   <a href=""><img src="access/img/viber.svg" alt="" /></a>
-                  <a href=""><img src="access/img/whatsapp.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp-b.svg" alt="" /></a>
                 </div>
               </div>
               <div class="footer__row-links">

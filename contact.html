@@ -4,180 +4,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рауф</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="contact/assets/styles/style.css">
+    <link rel="stylesheet" href="access\style.css" />
     <script src="https://api-maps.yandex.ru/v3/?apikey=a8233ca6-e6bb-4e60-8dfc-25a93d06f32c&lang=en_US"
         type="text/javascript"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__top">
-            <div class="header__main">
-                <div class="container header__content">
-                    <div class="header__info">
-                        <div class="info__content">
-                            <a class="logo" href="#">
-                                <img src="contact/assets/img/logo.svg" alt="Рауфленд" class="img">
-                            </a>
-                            <div class="header__contact">
-                                <div class="contact__info">
-                                    <div class="header__phone" id="header__phone">
-                                        <img src="contact/assets/img/phones.svg" alt="">
-                                        <span class="header__number">+375 29 628 20 09</span>
-                                        <span class="arrow__down" id="arrow__down"></span>
-                                    </div>
-                                    <a class="header__ring" href="#">Заказать звонок</a>
-                                </div>
-                                <div id="modal__overlay"></div>
-                                <div class="header__modal" id="header__modal">
-                                    <div class="modal__item">
-                                        <div class="item__title">
-                                            <img src="contact/assets/img/phones.svg" alt="">
-                                            <a class="header__number" href="tel:+375296282009">+375 29 628 20 09</a>
-                                        </div>
-                                    </div>
-                                    <div class="modal__item">
-                                        <div class="item__title">
-                                            <img src="contact/assets/img/home-modern-pin.svg" alt="">
-                                            <span>Офис-склад в Минске</span>
-                                        </div>
-                                        <div class="item__text">
-                                            г.Минск ул. Ваупшасова 22
-                                        </div>
-                                    </div>
-                                    <div class="modal__item">
-                                        <div class="item__title">
-                                            <img src="contact/assets/img/time-clock.svg" alt="">
-                                            <span>Время работы</span>
-                                        </div>
-                                        <div class="item__text">
-                                            <span class="item__bold">Пн-пт:</span> С 9:00 до 18:00
-                                        </div>
-                                        <div class="item__text">
-                                            <span class="item__bold">Сб-вс:</span> по согласованию
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="header__media">
-                                <a href="#">
-                                    <img src="contact/assets/img/youtube.svg" alt="youtube">
-                                </a>
-                                <a href="#">
-                                    <img src="contact/assets/img/instagram.svg" alt="telegram">
-                                </a>
-                                <a href="#">
-                                    <img src="contact/assets/img/tik_tok.svg" alt="tik_tok">
-                                </a>
-                            </div>
-                        </div>
-                        <button class="burger__but" id="burger__but">
-                        </button>
-                    </div>
-                    <div class="header__actions">
-                        <div class="header__search">
-                            <button class="but__search">
-                                <img src="contact/assets/img/search-loap.svg" alt="">
-                            </button>
-                            <input class="search__input" type="text" placeholder="Найти в катологе">
-                        </div>
-                        </input>
-                        <button class="but__market">
-                            Интернет-магазин
-                        </button>
-                        <button class="but__cost but__main__active">
-                            Рассчитать стоимость
-                        </button>
-                    </div>
-                </div>
-                <div class="header__actions__mobile container">
-                    <div class="actions__link">
-                        <a href="#">
-                            <img src="contact/assets/img/viber-logo.svg" class="img" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="contact/assets/img/telegram-logo.svg" class="img" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="contact/assets/img/whatsapp.svg" class="img" alt="">
-                        </a>
-                    </div>
-                    <button class="actions-mobile__but but__main__active">
-                        <img src="contact/assets/img/calculator.svg" alt="">
-                        Рассчитать стоимость
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
                     </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
                 </div>
-                <!-- <div class="header__search__mobile container">
-                    <button class="but__search__mobile">
-                        <img src="./assets/img/search-loap.svg" alt="">
+              </div>
+              <button class="burger__but" id="burger__but"></button>
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="actions__link">
+                <a href="#">
+                  <img src="access/img/viber-logo.svg" class="img" alt="viber">
+                </a>
+                <a href="#">
+                  <img src="access/img/telegram-logo.svg" class="img" alt="telegram">
+                </a>
+                <a href="#">
+                  <img src="access/img/whatsapp.svg" class="img" alt="whatsapp">
+                </a>
+              </div>
+              <button class="btn btn__calcul mobal_btn">
+                <img src="access/img/calculator.svg" alt="icon">
+                Рассчитать стоимость
+              </button>
+              <div class="header__search">
+                <button class="but__search">
+                  <img src="access/img/search-loap.svg" alt="" />
+                </button>
+                <input type="text" placeholder="Найти в каталоге" />
+                <button class="header__search-close">
+                  <img src="access/img/close.svg" alt="" />
+                </button>
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu" id="header__menu">
+            <div class="container">
+
+                <nav class="header__content">
+
+                <!-- ITEM WITH SUBMENU -->
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                      <span class="menu-left">
+                        <img src="access/img/catalog.svg" alt="">
+                        <span class="menu-title">Каталог</span>
+                      </span>
+                      <span class="menu-icon"></span>
                     </button>
-                    <input class="search__input__mobile" type="text" placeholder="Найти в катологе">
-                </div> -->
-            </div>
-            <div class="header__menu" id="header__menu">
-                <div class="menu__inner container">
-                    <div class="menu__item">
-                        Каталог
-                    </div>
-                    <div class="menu__item">
-                        Интернет-магазин
-                    </div>
-                    <div class="menu__item">
-                        Кровельные работы
-                    </div>
-                    <div class="menu__item">
-                        Портфолио
-                    </div>
-                    <div class="menu__item">
-                        О компании
-                    </div>
-                    <div class="menu__item">
-                        Отзывы
-                    </div>
-                    <div class="menu__item">
-                        Клиенту
-                    </div>
-                    <div class="menu__item">
-                        Контакты
-                    </div>
-                    <div class="menu__item">
-                        Блог
+
+                    <div class="submenu">
+                    <!-- сюда потом вставишь ссылки -->
+                      <a href="#" class="">Материалы для кровли</a>
+                      <a href="#" class="">Материалы для фасада</a>
+                      <a href="" class="">Заборы и ограждения</a> 
+                      <a href="" class="">Кровельные аксессуары</a> 
+                      <a href="" class="">Водосточные системы</a>  
+                      <a href="" class="">Услуги монтажа</a>  
                     </div>
                 </div>
+
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                        <span class="menu-left">
+                          <img src="access/img/hammer-screwdriver.svg" alt="">
+                          <span class="menu-title">Кровельные работы</span>
+                        </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <a href="#">Монтаж кровли под ключ</a>
+                    <a href="#">Реконструкция домов и дач</a>
+                    <a href="">Монтаж кровли из металлочерепицы</a>  
+                    <a href="">Монтаж натуральной черепицы</a>  
+                    <a href="">Монтаж фальцевой кровли</a>  
+                    <a href="">Установка водосточной системы</a>  
+                    <a href="">Установка мансардных окон</a>  
+                    <a href="">Установка снегодержателей</a>  
+                    </div>
+                </div>
+
+                <!-- SIMPLE LINKS -->
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/picture-image.svg" alt="">
+                    </span>
+                    <span class="menu-title">Портфолио</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/work-job-pin-location-suitcase.svg" alt="">
+                    </span>
+                    <span class="menu-title">О компании</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link active">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/rew-icon.svg" alt="">
+                    </span>
+                    <span class="menu-title">Отзывы</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/money-coins.1-w.svg" alt="">
+                    </span>
+                    <span class="menu-title">Оплата</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/dosvtvozl.svg" alt="">
+                    </span>
+                    <span class="menu-title">Доставка и возврат</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/cont.svg" alt="">
+                    </span>
+                    <span class="menu-title">Контакты</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/bookmark-favorite.svg" alt="">
+                    </span>
+                    <span class="menu-title">Блог</span>
+                  </span>
+                </a>
+
+                <!-- SOCIALS -->
+                <div class="menu-socials">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+                </div>
+              </nav>
+                <!-- BUTTON -->
+                <div class="menu-bottom">
+                   <a href="" class="btn btn__shop">Интернет-магазин <span>⬈</span></a>
+                </div>
+
+                
+
             </div>
-        </div>
-        <div class="header__nav">
-            <div class="container nav__inner">
-                <span class="nav__item">
-                    Каталог
-                </span>
-                <span class="nav__item">
-                    Кровельные работы
-                </span>
-                <span class="nav__item">
-                    Портфолио
-                </span>
-                <span class="nav__item">
-                    О Компании
-                </span>
-                <span class="nav__item">
-                    Отзывы
-                </span>
-                <span class="nav__item">
-                    Оплата
-                </span>
-                <span class="nav__item">
-                    Доставка и возврат
-                </span>
-                <span class="nav__item nav__item__active">
-                    Контакты
-                </span>
-                <span class="nav__item">
-                    Блог
-                </span>
             </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle" class="link_active"
+                >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Материалы для кровли</a>
+                <a href="#">Материалы для фасада</a>
+                <a href="#">Заборы и ограждения</a>
+                <a href="#">Кровельные аксессуары</a>
+                <a href="#">Водосточные системы</a>
+                <a href="#">Услуги монтажа</a>
+              </div>
+            </li>
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Кровельные работы
+                <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Монтаж кровли под ключ</a>
+                <a href="#">Реконструкция домов и дач</a>
+                <a href="#">Монтаж кровли из металлочерепицы</a>
+                <a href="#">Монтаж натуральной черепицы</a>
+                <a href="#">Монтаж фальцевой кровли</a>
+                <a href="#">Установка водосточной системы</a>
+                <a href="#">Установка мансардных окон</a>
+                <a href="#">Установка снегодержателей</a>
+              </div>
+            </li>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="" class="active">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
+          </div>
         </div>
+      </div>
     </header>
     <main>
         <div class="contact__block">
@@ -273,7 +359,7 @@
                         </div>
                     </div>
                     <div class="illustration__action">
-                        <button class="illustration__but but__main__active">Напишите нам</button>
+                        <button class="illustration__but">Напишите нам</button>
                         <span>Напишите нам, если остались вопросы</span>
                     </div>
                     <div class="illustration__phone">
@@ -289,15 +375,15 @@
         </div>
         <div class="block__actions">
             <div class="actions__inner container">
-                <button class="actions__but but__main__active">
+                <button class="actions__but">
                     <img src="contact/assets/img/money-coins.svg" alt="">
                     Условия оплаты
                 </button>
-                <button class="actions__but but__main__active">
+                <button class="actions__but">
                     <img src="contact/assets/img/delivery-truck-fast.svg" alt="">
                     Доставка
                 </button>
-                <button class="actions__but but__main__active">
+                <button class="actions__but">
                     <img src="contact/assets/img/calculator.svg" alt="">
                     Калькулятор
                 </button>
@@ -343,182 +429,159 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <div class="footer__main container">
-            <div class="feedback__card">
-                <div class="feedback__logo">
-                    <img src="contact/assets/img/logo.svg" alt="">
-                </div>
-                <div class="feedback__text">
-                    <div class="feedback__title">
-                        <h5>Остались вопросы?</h5>
-                    </div>
-                    <div class="feedback__subtitle">
-                        <span>
-                            Оставьте свои контактные данные и мы свяжемся с вами в ближайшее время
-                        </span>
-                    </div>
-                </div>
-                <form action="" class="feedback__form">
-                    <input type="text" placeholder="+375 (_) __-__-_">
-                    <div class="feedback__checkbox">
-                        <input type="checkbox">
-                        <div> <span>Я соглашаюсь с <a href="#" class="feedback__text__active">условиями обработки
-                                    персональных
-                                    данных</a></span></div>
-                    </div>
-                    <button class="feedback__but but__main__active">
-                        Отправить
-                    </button>
-                    <span class="feedback__juridical">
-                        Ваши контакты используются исключительно для связи с Вами и не будут переданы третьим лицам
-                    </span>
-                </form>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
             </div>
-            <div class="footer__inner">
-                <div class="footer__pages drop-down-list">
-                    <h5>
-                        Страницы
-                        <span class="footer-arrow-down"></span>
-                    </h5>
-                    <div class="item__content">
-                        <span>
-                            Каталог
-                        </span>
-                        <span>
-                            Интернет-магазин
-                        </span>
-                        <span>
-                            Кровельные работы
-                        </span>
-                        <span>
-                            Портфолио
-                        </span>
-                        <span>
-                            О компании
-                        </span>
-                        <span>
-                            Отзывы
-                        </span>
-                        <span>
-                            Клиенту
-                        </span>
-                        <span>
-                            Контакты
-                        </span>
-                        <span>
-                            Блог
-                        </span>
-                    </div>
-                </div>
-                <div class="footer__catalog drop-down-list">
-                    <h5>
-                        Каталог
-                        <span class="footer-arrow-down"></span>
-                    </h5>
-                    <div class="item__content">
-                        <span>
-                            Материалы для кровли
-                        </span>
-                        <span>
-                            Материалы для фасада
-                        </span>
-                        <span>
-                            Заборы и ограждения
-                        </span>
-                        <span>
-                            Кровельные аксессуары
-                        </span>
-                        <span>
-                            Водосточные системы
-                        </span>
-                        <span>
-                            Услуги монтажа
-                        </span>
-                    </div>
-                </div>
-                <div class="footer__contacts">
-                    <h5>
-                        Контакты
-                    </h5>
-                    <div class="footer__subtitle">
-                        <span>
-                            Офис-склад в Минске
-                        </span>
-                        <span>
-                            г.Минск ул. Ваупшасова 22
-                        </span>
-                    </div>
-                    <div class="footer__subtitle">
-                        <span>
-                            Соцсети
-                        </span>
-                        <div class="subtitle__img">
-                            <a href="#">
-                                <img src="contact/assets/img/youtube.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="contact/assets/img/instagram.svg" alt="">
-                            </a>
-                            <a href="#">
-                                <img src="contact/assets/img/telegram.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer__subtitle">
-                        <span>
-                            Контакты для связи
-                        </span>
-                        <div class="subtitle__contact">
-                            <img src="contact/assets/img/phones.svg" alt="">
-                            <a href="tel:+375296282009">+375 29 628 20 09</a>
-                        </div>
-                        <div class="subtitle__contact">
-                            <img src="contact/assets/img/phones.svg" alt="">
-                            <a href="tel:+375296282009">+375 29 628 20 09</a>
-                        </div>
-                        <div class="subtitle__contact">
-                            <img src="contact/assets/img/email.svg" alt="">
-                            <a href="mailto:zakaz@roofland.by">zakaz@roofland.by</a>
-                        </div>
-                    </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"
+              />
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required
+                />
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
 
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link"
+                  >г.Минск ул. Ваупшасова 22</a
+                >
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp-b.svg" alt="" /></a>
                 </div>
-                <div class="footer__worktime">
-                    <h5>
-                        Время работы
-                    </h5>
-                    <div class="footer__subtitle">
-                        <span>
-                            Пн-пт:
-                        </span>
-                        <span>
-                            С 9:00 до 18:00
-                        </span>
-                    </div>
-                    <div class="footer__subtitle">
-                        <span>
-                            Сб-вс:
-                        </span>
-                        <span>
-                            По согласованию
-                        </span>
-                    </div>
-                    <div class="footer__juridical">
-                        <span>
-                            УНП: 691776269
-                        </span>
-                        <span>Номер в Торговом реестре/Реестре бытовых услуг/Регистре производителей товаров:
-                            691776269</span>
-                        <a href="#">Политика конфиденциальности</a>
-                    </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link"
+                  >
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""
+                    />zakaz@roofland.by</a
+                  >
                 </div>
+              </div>
             </div>
-            <div class="footer__content">
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div class="footer__subtitle">С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div class="footer__subtitle">По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
     <script src="contact/assets/scripts/script.js"></script>
+    <script src="script/index.js"></script>
 </body>
 
 </html>

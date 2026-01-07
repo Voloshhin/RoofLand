@@ -36,7 +36,6 @@ ul {
   list-style-type: none;
 }
 
-
 html {
   font-family: "Inter";
   font-size: 16px;
@@ -55,7 +54,6 @@ html {
   margin: 0 auto;
   padding: 0 16px;
 }
-
 
 a {
   text-decoration: none;
@@ -153,13 +151,13 @@ header {
     cursor: pointer;
   }
 
-  .drop-down-list>.item__content {
+  .drop-down-list > .item__content {
     transition: all 0.5s;
     max-height: 0px;
     overflow: hidden;
   }
 
-  .drop-down-list__active>.item__content {
+  .drop-down-list__active > .item__content {
     max-height: 500px;
   }
 
@@ -211,7 +209,7 @@ header {
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
-  font-size: clamp(24px, 5vw, 50px);
+  font-size: 3.125rem;
   text-transform: uppercase;
   padding-top: 16px;
 }
@@ -231,7 +229,7 @@ header {
 .breadcrumbs__item {
   color: inherit;
   text-decoration: none;
-  transition: color .15s;
+  transition: color 0.15s;
   text-decoration: none;
 }
 
@@ -249,7 +247,16 @@ header {
     margin-top: 52px;
   }
 }
-
+.main-title {
+  padding-top: 0;
+  padding-bottom: 52px;
+}
+@media (max-width: 48em) {
+  .main-title {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
 .header__search__mobile {
   border: var(--border-2);
   border-radius: 12px;
@@ -290,7 +297,7 @@ header {
   column-gap: 8px;
 }
 
-.actions__link>* {
+.actions__link > * {
   display: block;
 }
 
@@ -404,7 +411,7 @@ header {
   column-gap: 8px;
 }
 
-.header__media>a {
+.header__media > a {
   max-width: 24px;
 }
 
@@ -414,16 +421,7 @@ header {
 }
 
 .header__search {
-  height: 42px;
-  width: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: var(--gray-2);
-  border-radius: 12px;
-  border: var(--border-1);
-  margin-right: 16px;
+  margin-right: 0;
   transition: all 0.5s;
 }
 
@@ -439,16 +437,6 @@ header {
   padding: 0px;
   border: none;
   background-color: transparent;
-}
-
-.header__search:hover>.search__input {
-  width: auto;
-  max-width: auto;
-  padding-left: 4px;
-}
-
-.header__search:hover {
-  width: auto;
 }
 
 .but__market {
@@ -554,7 +542,7 @@ header {
   column-gap: 3px;
 }
 
-.modal__item:nth-child(n + 2)>.item__title>span {
+.modal__item:nth-child(n + 2) > .item__title > span {
   font-size: 14px;
   font-weight: 600;
 }
@@ -705,22 +693,6 @@ footer {
   margin-top: 8px;
 }
 
-.feedback__but {
-  background-color: var(--main-color);
-  width: 100%;
-  padding: 12px 20px;
-  color: var(--white-1);
-  border-radius: 12px;
-  border: none;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.feedback__but:hover {
-  transform: scale(0.97);
-}
 
 .footer__inner {
   display: grid;
@@ -759,11 +731,11 @@ footer {
   font-size: 14px;
   color: #222;
   text-decoration: none;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .footer__list a:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .footer__text {
@@ -783,11 +755,11 @@ footer {
   width: 22px;
   height: 22px;
   display: block;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .footer__socials a:hover img {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .footer__small {
@@ -800,7 +772,6 @@ footer {
   color: var(--black-2);
   text-decoration: underline;
 }
-
 
 @media (min-width: 769px) {
   .footer__inner {
@@ -828,24 +799,7 @@ footer {
   }
 }
 
-
 /*прайс лист*/
-.price-list--bg {
-  background: url(./img/form-bg.webp);
-  background-color: #363636;
-  background-size: cover;
-  background-position: left 20% top;
-}
-
-.price-list {
-  overflow: hidden;
-  color: var(--white-1);
-  display: flex;
-  justify-content: space-between;
-  padding-top: 60px;
-  padding-bottom: 30px;
-  flex-direction: column;
-}
 
 .price-list__content-wrap {
   max-width: 100%;
@@ -868,7 +822,14 @@ footer {
   background-position: center;
   z-index: 3;
 }
-
+.price-list__content-wrap img {
+  position: absolute;
+  bottom: 3rem;
+  width: 14.264rem;
+  height: 14.264rem;
+  right: 4rem;
+  z-index: 4;
+}
 .price-list__content-wrap:after {
   content: "";
   position: absolute;
@@ -881,6 +842,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 4;
+  display: none;
 }
 
 .price-list__title {
@@ -980,15 +942,15 @@ footer {
   }
 
   .price-list__content-wrap::before {
-    bottom: -90px;
+    bottom: -4rem;
     left: initial;
-    right: -60px;
-    width: 60%;
+    right: -6rem;
+    width: 40%;
     height: 60%;
     transform: rotate(-40deg);
   }
 
-  .price-list__content-wrap:after {
+  .price-list__content-wrap::after {
     bottom: 60px;
     right: 15%;
     width: 60%;
@@ -1006,7 +968,7 @@ footer {
 
 .delivery__title {
   margin: 0 0 10px;
-  font-size: clamp(20px, 4vw, 40px);
+  font-size: 2.5rem;
   line-height: 1.05;
   font-weight: 700;
 }
@@ -1014,7 +976,7 @@ footer {
 .delivery__subtitle {
   margin: 0 0 24px;
   max-width: 900px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -1030,15 +992,15 @@ footer {
   border: 1px solid #eef0f3;
   border-radius: 14px;
   background: var(--gray-2);
-  padding: 18px 18px 16px;
+  padding: 1.5rem;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
 }
 
 .delivery-card__title {
   margin: 16px 0 10px;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .delivery-card__text {
@@ -1055,7 +1017,7 @@ footer {
   list-style: disc;
 }
 
-.delivery-card__list li+li {
+.delivery-card__list li + li {
   margin-top: 6px;
 }
 
@@ -1070,12 +1032,14 @@ footer {
 
 @media (min-width: 768px) {
   .delivery {
-    padding-top: 52px;
+    padding-top: 0;
     padding-bottom: 90px;
   }
 
   .delivery__subtitle {
     margin-bottom: 52px;
+    font-size: 1rem;
+    line-height: normal;
   }
 
   .delivery__grid {
@@ -1084,17 +1048,17 @@ footer {
   }
 
   .delivery-card {
-    padding: 24px 24px 48px;
+    padding: 1.5rem;
   }
 
   .delivery-card__title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
 /*payment cards*/
 .cards {
-  padding-top: 20px;
+  padding-top: 1.25rem;
   padding-bottom: 80px;
 }
 
@@ -1109,8 +1073,8 @@ footer {
   background-color: var(--gray-2);
   border: 1px solid var(--gray-1);
   border-radius: 16px;
-   cursor: pointer;
-   transition: all 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .pay__card {
@@ -1131,10 +1095,6 @@ footer {
 @media (min-width: 768px) {
   .cards {
     padding-bottom: 90px;
-  }
-
-  .pay__grid {
-    gap: 24px;
   }
 
   .pay__grid-item {
@@ -1160,19 +1120,22 @@ footer {
 .popup {
   position: fixed;
   inset: 0;
-  z-index: 5;
+  z-index: 15;
   width: 100%;
   background: #ffffff;
-  padding: 32px 36px;
+  padding: 6rem 0;
   box-sizing: border-box;
   color: #000;
   display: none;
 }
+.popup .container {
+  position: relative;
+}
 
 .popup-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: -4rem;
+  right: 0;
   background: transparent;
   border: none;
   font-size: 52px;
@@ -1214,7 +1177,9 @@ footer {
   margin: 0 0 12px 0;
 }
 
-.popup-list:has(li) { padding-left: 15px;}
+.popup-list:has(li) {
+  padding-left: 15px;
+}
 
 .popup-list li {
   margin-bottom: 6px;
@@ -1223,7 +1188,7 @@ footer {
 
 @media (min-width: 768px) {
   .popup {
-    padding: 60px;
+    padding: 4rem 0;
   }
 
   .popup-header {
@@ -1242,10 +1207,69 @@ footer {
 
 @media (min-width: 1020px) {
   .popup {
-    padding: 90px 108px;
+    padding: 6rem 0;
   }
 }
 
 .is-active {
   display: block;
+}
+.delivery-card__icon img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media (max-width: 48em) {
+  .price-list__content-wrap img {
+    bottom: 0;
+    width: 7.6rem;
+    height: 7.6rem;
+    right: 0;
+  }
+  .delivery__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+  }
+  .price-list--bg {
+    margin: 0 !important;
+  }
+  .price-list {
+    padding: 1rem;
+  }
+  .delivery-card__icon img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .delivery__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .pay__grid {
+    gap: 0.5rem;
+  }
+  .pay__grid-item {
+    width: 10.438rem;
+    border-radius: 1rem;
+  }
+  .pay__card {
+    padding: 1rem;
+  }
+  .pay__grid-item img {
+    border-radius: 1rem;
+  }
+  .pay__card-title {
+    font-size: 0.875rem;
+  }
+  .price-list--bg .price-list__title {
+    font-size: 1.5rem;
+  }
+  .popup .container {
+    margin: 1.25rem 1rem 6rem 1rem;
+  }
+  .popup-close {
+    top: -5rem;
+  }
+  .delivery-card__title{
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
 }
