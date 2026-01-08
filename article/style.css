@@ -1369,4 +1369,10 @@ h3.comment-form__title {
   .article__title{
     font-size: 1.5rem;
   }
+  section {
+    margin: 1rem 1rem 6rem 1rem !important;
+  }
+  .article__swiper figure{
+    margin: 0 !important;
+  }
 }

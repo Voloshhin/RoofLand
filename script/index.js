@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (textarea && counter) {
     textarea.addEventListener("input", () => {
-      counter.textContent = `${textarea.value.length} / 250`;
+      counter.textContent = `${textarea.value.length} / 2500`;
     });
   }
 
@@ -336,12 +336,28 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+  if (document.querySelector(".new-rev-swiper")) {
+    new Swiper(".new-rev-swiper", {
+      slidesPerView: 2,
+      // slidesPerGroup: 2,
+      spaceBetween: 24,
+      allowTouchMove: false,
+      simulateTouch:false,
+      breakpoints: {
+        1440: { allowTouchMove: false },
+        1024: { spaceBetween: 16, allowTouchMove: false },
+        768: { slidesPerGroup: 1, allowTouchMove: true },
+        0: { slidesPerGroup: 1, allowTouchMove: true },
+      },
+    });
+  }
+  
   if (document.querySelector(".project-swiper")) {
     new Swiper(".project-swiper", {
       slidesPerView: 2,
       // slidesPerGroup: 2,
       spaceBetween: 24,
-      allowTouchMove: true,
+      // allowTouchMove: true,
       breakpoints: {
         1440: { allowTouchMove: true },
         1024: { spaceBetween: 16, allowTouchMove: true },

@@ -1,28 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RoofLand | Отзывы</title>
-    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
-    <link rel="shortcut icon" href="./favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="./favicon/site.webmanifest" />
-  <!-- <script type="module" crossorigin src="reviews/assets/js/index-chunk.js"></script> -->
-  <link rel="stylesheet" href="reviews/assets/css/index.css">
-  <link rel="stylesheet" href="access/style.css" />
-  
-</head>
-<body>
-<svg style="display: none;" aria-hidden="true">
-    <symbol id="icon-star" viewBox="0 0 12 11">
-        <path d="M4.58215 0.690721C4.8815 -0.23059 6.18491 -0.230588 6.48426 0.690722L7.1048 2.60055C7.23868 3.01258 7.62263 3.29154 8.05586 3.29154H10.064C11.0327 3.29154 11.4355 4.53115 10.6518 5.10055L9.02716 6.28089C8.67667 6.53554 8.53001 6.9869 8.66389 7.39893L9.28443 9.30875C9.58378 10.2301 8.5293 10.9962 7.74559 10.4268L6.12099 9.24645C5.7705 8.99181 5.29591 8.99181 4.94542 9.24645L3.32082 10.4268C2.5371 10.9962 1.48263 10.2301 1.78198 9.30876L2.40252 7.39893C2.53639 6.98691 2.38974 6.53554 2.03925 6.28089L0.414648 5.10055C-0.369066 4.53115 0.0337112 3.29154 1.00243 3.29154H3.01055C3.44378 3.29154 3.82773 3.01258 3.96161 2.60055L4.58215 0.690721Z"/>
-    </symbol>
-</svg>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="access\style.css" />
+    <title>Отзыв на Яндекс.Картах</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
       <div class="header__top">
         <div class="container">
           <div class="header__content">
@@ -127,7 +117,7 @@
 
                     <div class="submenu">
                     <!-- сюда потом вставишь ссылки -->
-                      <a href="#" class="">Материалы для кровли</a>
+                      <a href="#" class="active">Материалы для кровли</a>
                       <a href="#" class="">Материалы для фасада</a>
                       <a href="" class="">Заборы и ограждения</a> 
                       <a href="" class="">Кровельные аксессуары</a> 
@@ -266,7 +256,7 @@
             </li>
             <a href="">Портфолио</a>
             <a href="">О компании</a>
-            <a href="" class="active">Отзывы</a>
+            <a href=""class="active">Отзывы</a>
             <a href="">Оплата</a>
             <a href="">Доставка и возврат</a>
             <a href="">Контакты</a>
@@ -275,7 +265,8 @@
         </div>
       </div>
     </header>
-    <div class="breadcrumb">
+    <main>
+      <div class="breadcrumb">
         <div class="container">
           <div class="breadcrumb__content">
             <a href="" class="breadcrumb__link">
@@ -285,13 +276,11 @@
             <h6 class="breadcrumb__end">Отзывы</h6>
           </div>
         </div>
-    </div>
-  <section class="reviews js-tabs">
-    <div class="container reviews__container">
-        <div class="reviews__top">
-            <h1 class="reviews__title">
-                <span>ОТЗЫВЫ</span> о компании roofland
-            </h1>
+      </div>
+      <section class="block__rewS js-tabs">
+        <div class="container">
+          <h1><span>отзывы</span> о компании roofland</h1>
+          <div class="rew__content">
             <div class="rew__content-top">
               <div class="rew__top-btns">
                 <!-- Desktop buttons -->
@@ -321,417 +310,526 @@
               </div>
               <a href="#feedback" class="btn feedback-btn desc-o"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
             </div>
-        </div>
-        <div id="video" class="tab-content"></div>
-        <div id="yandex" class="tab-content active">
-            <div class="reviews__top-card">
-                <div class="reviews__top-content">
-                    <div class="reviews__rating">
-                        <svg width="15" height="15" class="reviews__star">
-                            <use href="#icon-star"/>
-                        </svg>
-                        <svg width="15" height="15" class="reviews__star">
-                            <use href="#icon-star"/>
-                        </svg>
-                        <svg width="15" height="15" class="reviews__star">
-                            <use href="#icon-star"/>
-                        </svg>
-                        <svg width="15" height="15" class="reviews__star">
-                            <use href="#icon-star"/>
-                        </svg>
-                        <svg width="15" height="15" class="reviews__star">
-                            <use href="#icon-star"/>
-                        </svg>
+            <div id="video" class="tab-content">
+              <div class="rew__content-main">
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
                     </div>
-                    <time class="reviews__date" datetime="2025-02-15">15.2.2025</time>
-                    <div class="reviews__top-info">
-                        <h2 class="reviews__author">Екатерана Маханек</h2>
-                        <p class="reviews__text">
-                            Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ!
-                            Ребята работали несмотря на сложные погодные условия. Цена не менялась,
-                            хотя и оговаривали её ещё в начале октября. Остаток металлочерепицы забрали
-                            и сделали переработку. Приятно иметь дело с ответственными и честным...
-                        </p>
-                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
                 </div>
-                <img src="reviews/img/roof-desktop.png" alt="Работа по монтажу кровли" class="reviews__top-img">
-            </div>
-            <div class="reviews__list">
-                <article class="reviews__card">
-                    <div class="reviews__image-wrapper">
-                        <picture>
-                            <img class="reviews__image" src="reviews/img/placeholder.png" alt="Работа по монтажу кровли">
-                        </picture>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
                     </div>
-                    <div class="reviews__content">
-                        <div class="reviews__content-top">
-                            <time class="reviews__date" datetime="2025-02-15">15.2.2025</time>
-                            <div class="reviews__rating">
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="reviews__info">
-                            <h2 class="reviews__author">Екатерана Маханек</h2>
-                            <p class="reviews__text">
-                                Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ!
-                                Ребята работали несмотря на сложные погодные условия. Цена не менялась,
-                                хотя и оговаривали её ещё в начале октября. Остаток металлочерепицы забрали
-                                и сделали переработку. Приятно иметь дело с ответственными и честным...
-                            </p>
-                        </div>
-
-                        <div class="reviews__full">
-                            <a href="#" class="reviews__link">Отзыв на Яндекс.Картах</a>
-                            <button class="reviews__btn">
-                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="reviews__arrow">
-                                    <path d="M0.75 0.75L4.75 4.75L8.75 0.75" stroke="#4153E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-                <article class="reviews__card">
-                <div class="reviews__image-wrapper">
-                    <picture>
-                        <img class="reviews__image" src="reviews/img/shifer.png" alt="Работа по монтажу кровли">
-                    </picture>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
                 </div>
-                <div class="reviews__content">
-                    <div class="reviews__content-top">
-                        <time class="reviews__date" datetime="2025-02-15">15.2.2025</time>
-                        <div class="reviews__rating">
-                            <svg width="12" height="11" class="reviews__star">
-                                <use href="#icon-star"/>
-                            </svg>
-                            <svg width="12" height="11" class="reviews__star">
-                                <use href="#icon-star"/>
-                            </svg>
-                            <svg width="12" height="11" class="reviews__star">
-                                <use href="#icon-star"/>
-                            </svg>
-                            <svg width="12" height="11" class="reviews__star">
-                                <use href="#icon-star"/>
-                            </svg>
-                            <svg width="12" height="11" class="reviews__star">
-                                <use href="#icon-star"/>
-                            </svg>
-                        </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
                     </div>
-                    <div class="reviews__info">
-                        <h2 class="reviews__author">Екатерана Маханек</h2>
-                        <p class="reviews__text">
-                            Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ!
-                            Ребята работали несмотря на сложные погодные условия. Цена не менялась,
-                            хотя и оговаривали её ещё в начале октября. Остаток металлочерепицы забрали
-                            и сделали переработку. Приятно иметь дело с ответственными и честным...
-                        </p>
-                    </div>
-
-                    <div class="reviews__full">
-                        <a href="#" class="reviews__link">Отзыв на Яндекс.Картах</a>
-                        <button class="reviews__btn">
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="reviews__arrow">
-                                <path d="M0.75 0.75L4.75 4.75L8.75 0.75" stroke="#4153E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
                 </div>
-            </article>
-                <article class="reviews__card">
-                    <div class="reviews__image-wrapper">
-                        <picture>
-                            <img class="reviews__image" src="reviews/img/shifer.png" alt="Работа по монтажу кровли">
-                        </picture>
-                    </div>
-                    <div class="reviews__content">
-                        <div class="reviews__content-top">
-                            <time class="reviews__date" datetime="2025-02-15">15.2.2025</time>
-                            <div class="reviews__rating">
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="reviews__info">
-                            <h2 class="reviews__author">Екатерана Маханек</h2>
-                            <p class="reviews__text">
-                                Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ!
-                                Ребята работали несмотря на сложные погодные условия. Цена не менялась,
-                                хотя и оговаривали её ещё в начале октября. Остаток металлочерепицы забрали
-                                и сделали переработку. Приятно иметь дело с ответственными и честным...
-                            </p>
-                        </div>
-                        <div class="reviews__full">
-                            <a href="#" class="reviews__link">Отзыв на Яндекс.Картах</a>
-                            <button class="reviews__btn">
-                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="reviews__arrow">
-                                    <path d="M0.75 0.75L4.75 4.75L8.75 0.75" stroke="#4153E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-                <article class="reviews__card">
-                    <div class="reviews__image-wrapper">
-                        <picture>
-                            <img class="reviews__image" src="reviews/img/shifer.png" alt="Работа по монтажу кровли">
-                        </picture>
-                    </div>
-                    <div class="reviews__content">
-                        <div class="reviews__content-top">
-                            <time class="reviews__date" datetime="2025-02-15">15.2.2025</time>
-                            <div class="reviews__rating">
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                                <svg width="12" height="11" class="reviews__star">
-                                    <use href="#icon-star"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="reviews__info">
-                            <h2 class="reviews__author">Екатерана Маханек</h2>
-                            <p class="reviews__text">
-                                Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ!
-                                Ребята работали несмотря на сложные погодные условия. Цена не менялась,
-                                хотя и оговаривали её ещё в начале октября. Остаток металлочерепицы забрали
-                                и сделали переработку. Приятно иметь дело с ответственными и честным...
-                            </p>
-                        </div>
-                        <div class="reviews__full">
-                            <a href="#" class="reviews__link">Отзыв на Яндекс.Картах</a>
-                            <button class="reviews__btn">
-                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="reviews__arrow">
-                                    <path d="M0.75 0.75L4.75 4.75L8.75 0.75" stroke="#4153E4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="reviews__actions">
-                <button class="reviews__actions-btn reviews__actions-btn--more">Показать больше</button>
-                <button class="reviews__actions-btn reviews__actions-btn--review">Оставить отзыв</button>
-            </div>
-            <div class="reviews__pagination">
-                <button class="reviews__pagination-arrow reviews__pagination-arrow--prev" disabled>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_642_31456)">
-                            <path d="M14 17L10 13L14 9" stroke="#ECECEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_642_31456">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </button>
-
-                <button class="reviews__pagination-item is-active" data-page="1">1</button>
-                <button class="reviews__pagination-item" data-page="2">2</button>
-                <button class="reviews__pagination-item" data-page="3">3</button>
-                <button class="reviews__pagination-item" data-page="4">4</button>
-                <span class="reviews__pagination-dots">...</span>
-                <button class="reviews__pagination-item" data-page="24">24</button>
-
-                <button class="reviews__pagination-arrow reviews__pagination-arrow--next">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_642_31470)">
-                            <path d="M10 9L14 13L10 17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_642_31470">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="google" class="tab-content"></div>
-    </div>
-  </section>
-  <div class="reviews-form">
-      <div class="container reviews-form__container">
-          <div class="reviews-form__content">
-              <!-- Заголовок и описание -->
-              <div class="reviews-form__header">
-                  <h2 class="reviews-form__title">
-                      Оставьте честный отзыв – ваше мнение важно для нас!
-                  </h2>
-                  <p class="reviews-form__description">
-                      Расскажите о вашем опыте использования нашей продукции. Поделитесь впечатлениями,
-                      отметьте достоинства или недостатки – это поможет другим сделать правильный выбор.
-                  </p>
-                  <p class="reviews-form__description">
-                      Мы ценим каждое мнение и стремимся стать лучше благодаря вашей обратной связи!
-                  </p>
-                  <picture>
-                      <source media="(min-width: 900px)" srcset="reviews/img/arrow-form-dsk.svg">
-                      <img src="reviews/img/arrow-form.svg" alt="стрелка" class="reviews-form__arrow">
-                  </picture>
-
               </div>
-              <form class="review-form" id="reviewForm">
-                  <!-- Поле: Ваше имя -->
-                  <div class="review-form__field">
-                      <label class="review-form__label" for="reviewName">
-                          Ваше имя <span class="review-form__required">*</span>
-                      </label>
-                      <input
-                              type="text"
-                              id="reviewName"
-                              name="name"
-                              class="review-form__input"
-                              placeholder="Введите имя"
-                              required
-                      >
+              <div class="rew__content-bottom">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper rew__bottom-items">
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
                   </div>
-
-                  <!-- Поле: Отзыв -->
-                  <div class="review-form__field">
-                      <label class="review-form__label" for="reviewText">
-                          Отзыв <span class="review-form__required">*</span>
-                      </label>
-                      <textarea
-                              id="reviewText"
-                              name="review"
-                              class="review-form__input review-form__textarea"
-                              placeholder="Напишите отзыв"
-                              rows="5"
-                              required
-                      ></textarea>
-                      <div class="review-form__char-count">
-                          <span id="charCount">0</span> / 1000
+                </div>
+              </div>
+              <ul class="pagination">
+                <li>
+                  <a href="#" class="link-back disabled">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M14 9L10 13L14 17" stroke="#ECECEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li><a class="active" href="#">1</a></li>
+                <li><a class="" href="#">2</a></li>
+                <li><a class="" href="#">3</a></li>
+                <li><a class="" href="#">4</a></li>
+                <li><span class="dots">...</span></li>
+                <li><a href="#">6</a></li>
+                <li>
+                  <a href="#" class="link-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M10 9L14 13L10 17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="yandex" class="tab-content">
+              <div class="rew__content-main">
+                <div class="reviews__list-item fr-block">
+                    <div class="reviews-card__left">
+                        <div class="reviews-card__left-block">
+                            <div class="rew--block">
+                                <div class="blog-data">24.10.2023
+                                    <div class="rew-stars">
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                    </div>
+                                </div>
+                                <h4>Екатерана Маханек</h4>
+                                <p class="rew__item-title">
+                                    Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!
+                                </p>
+                            </div>
+                            <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                        </div>
+                    </div>
+                    <img src="access/img/Frame.png" alt="" class="rew-img_frame">
+                </div>
+              </div>
+              <div class="rew__content-main s-block">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
                       </div>
-                  </div>
-
-                  <!-- Поле: Поставьте оценку -->
-                  <div class="review-form__field">
-                      <label class="review-form__label">
-                          Поставьте нам оценку <span class="review-form__required">*</span>
-                      </label>
-                      <div class="review-form__rating" id="reviewRating">
-                          <input class="visually-hidden" type="radio" name="rating" value="1" id="star1" required>
-                          <label for="star1" class="review-form__star" data-value="1">
-                              <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.58166 0.690965C4.88101 -0.230346 6.18442 -0.230344 6.48377 0.690967L7.10431 2.6008C7.23819 3.01282 7.62214 3.29178 8.05537 3.29178H10.0635C11.0322 3.29178 11.435 4.5314 10.6513 5.1008L9.02667 6.28114C8.67618 6.53578 8.52952 6.98715 8.6634 7.39917L9.28394 9.309C9.58329 10.2303 8.52881 10.9964 7.7451 10.427L6.1205 9.24669C5.77001 8.99205 5.29542 8.99205 4.94493 9.24669L3.32033 10.427C2.53662 10.9964 1.48214 10.2303 1.78149 9.309L2.40203 7.39917C2.5359 6.98715 2.38925 6.53578 2.03876 6.28114L0.41416 5.1008C-0.369554 4.53139 0.0332229 3.29178 1.00195 3.29178H3.01006C3.44329 3.29178 3.82724 3.01282 3.96112 2.6008L4.58166 0.690965Z" fill="currentColor" />
-                              </svg>
-                          </label>
-
-                          <input class="visually-hidden" type="radio" name="rating" value="2" id="star2">
-                          <label for="star2" class="review-form__star" data-value="2">
-                              <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.58166 0.690965C4.88101 -0.230346 6.18442 -0.230344 6.48377 0.690967L7.10431 2.6008C7.23819 3.01282 7.62214 3.29178 8.05537 3.29178H10.0635C11.0322 3.29178 11.435 4.5314 10.6513 5.1008L9.02667 6.28114C8.67618 6.53578 8.52952 6.98715 8.6634 7.39917L9.28394 9.309C9.58329 10.2303 8.52881 10.9964 7.7451 10.427L6.1205 9.24669C5.77001 8.99205 5.29542 8.99205 4.94493 9.24669L3.32033 10.427C2.53662 10.9964 1.48214 10.2303 1.78149 9.309L2.40203 7.39917C2.5359 6.98715 2.38925 6.53578 2.03876 6.28114L0.41416 5.1008C-0.369554 4.53139 0.0332229 3.29178 1.00195 3.29178H3.01006C3.44329 3.29178 3.82724 3.01282 3.96112 2.6008L4.58166 0.690965Z" fill="currentColor" />
-                              </svg>
-                          </label>
-
-                          <input class="visually-hidden" type="radio" name="rating" value="3" id="star3">
-                          <label for="star3" class="review-form__star" data-value="3">
-                              <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.58166 0.690965C4.88101 -0.230346 6.18442 -0.230344 6.48377 0.690967L7.10431 2.6008C7.23819 3.01282 7.62214 3.29178 8.05537 3.29178H10.0635C11.0322 3.29178 11.435 4.5314 10.6513 5.1008L9.02667 6.28114C8.67618 6.53578 8.52952 6.98715 8.6634 7.39917L9.28394 9.309C9.58329 10.2303 8.52881 10.9964 7.7451 10.427L6.1205 9.24669C5.77001 8.99205 5.29542 8.99205 4.94493 9.24669L3.32033 10.427C2.53662 10.9964 1.48214 10.2303 1.78149 9.309L2.40203 7.39917C2.5359 6.98715 2.38925 6.53578 2.03876 6.28114L0.41416 5.1008C-0.369554 4.53139 0.0332229 3.29178 1.00195 3.29178H3.01006C3.44329 3.29178 3.82724 3.01282 3.96112 2.6008L4.58166 0.690965Z" fill="currentColor" />
-                              </svg>
-                          </label>
-
-                          <input class="visually-hidden" type="radio" name="rating" value="4" id="star4">
-                          <label for="star4" class="review-form__star" data-value="4">
-                              <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.58166 0.690965C4.88101 -0.230346 6.18442 -0.230344 6.48377 0.690967L7.10431 2.6008C7.23819 3.01282 7.62214 3.29178 8.05537 3.29178H10.0635C11.0322 3.29178 11.435 4.5314 10.6513 5.1008L9.02667 6.28114C8.67618 6.53578 8.52952 6.98715 8.6634 7.39917L9.28394 9.309C9.58329 10.2303 8.52881 10.9964 7.7451 10.427L6.1205 9.24669C5.77001 8.99205 5.29542 8.99205 4.94493 9.24669L3.32033 10.427C2.53662 10.9964 1.48214 10.2303 1.78149 9.309L2.40203 7.39917C2.5359 6.98715 2.38925 6.53578 2.03876 6.28114L0.41416 5.1008C-0.369554 4.53139 0.0332229 3.29178 1.00195 3.29178H3.01006C3.44329 3.29178 3.82724 3.01282 3.96112 2.6008L4.58166 0.690965Z" fill="currentColor" />
-                              </svg>
-                          </label>
-
-                          <input class="visually-hidden" type="radio" name="rating" value="5" id="star5">
-                          <label for="star5" class="review-form__star" data-value="5">
-                              <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.58166 0.690965C4.88101 -0.230346 6.18442 -0.230344 6.48377 0.690967L7.10431 2.6008C7.23819 3.01282 7.62214 3.29178 8.05537 3.29178H10.0635C11.0322 3.29178 11.435 4.5314 10.6513 5.1008L9.02667 6.28114C8.67618 6.53578 8.52952 6.98715 8.6634 7.39917L9.28394 9.309C9.58329 10.2303 8.52881 10.9964 7.7451 10.427L6.1205 9.24669C5.77001 8.99205 5.29542 8.99205 4.94493 9.24669L3.32033 10.427C2.53662 10.9964 1.48214 10.2303 1.78149 9.309L2.40203 7.39917C2.5359 6.98715 2.38925 6.53578 2.03876 6.28114L0.41416 5.1008C-0.369554 4.53139 0.0332229 3.29178 1.00195 3.29178H3.01006C3.44329 3.29178 3.82724 3.01282 3.96112 2.6008L4.58166 0.690965Z" fill="currentColor" />
-                              </svg>
-                          </label>
+                      <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/zak.png" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
                       </div>
+                      <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/zak.png" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <ul class="pagination">
+                <li>
+                  <a href="#" class="link-back disabled">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M14 9L10 13L14 17" stroke="#ECECEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li><a class="active" href="#">1</a></li>
+                <li><a class="" href="#">2</a></li>
+                <li><a class="" href="#">3</a></li>
+                <li><a class="" href="#">4</a></li>
+                <li><span class="dots">...</span></li>
+                <li><a href="#">6</a></li>
+                <li>
+                  <a href="#" class="link-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M10 9L14 13L10 17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="google" class="tab-content active">
+              <div class="rew__content-main">
+                <div class="reviews__list-item fr-block">
+                    <div class="reviews-card__left">
+                        <div class="reviews-card__left-block">
+                            <div class="rew--block">
+                                <div class="blog-data">24.10.2023
+                                    <div class="rew-stars">
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                        <img src="access/img/star.svg" alt="" />
+                                    </div>
+                                </div>
+                                <h4>Екатерана Маханек</h4>
+                                <p class="rew__item-title">
+                                    Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!
+                                </p>
+                            </div>
+                            <a href class="card__link">Отзыв на Google.Картах</a>
+                        </div>
+                    </div>
+                    <img src="access/img/Frame.png" alt="" class="rew-img_frame">
+                </div>
+              </div>
+              <div class="rew__content-main s-block">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/zak.png" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/zak.png" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <ul class="pagination">
+                <li>
+                  <a href="#" class="link-back disabled">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M14 9L10 13L14 17" stroke="#ECECEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li><a class="active" href="#">1</a></li>
+                <li><a class="" href="#">2</a></li>
+                <li><a class="" href="#">3</a></li>
+                <li><a class="" href="#">4</a></li>
+                <li><span class="dots">...</span></li>
+                <li><a href="#">6</a></li>
+                <li>
+                  <a href="#" class="link-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M10 9L14 13L10 17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="rew__btns-modal">
+              <button class="btn btn__calcul modal-v">Показать больше</button>
+              <a href="#feedback" class="btn feedback-btn modal-v"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback-banner" id="feedback">
+        <div class="feedback__image">
+          <div class="container">
+            <div class="feedback__content">
+              <div class="feedback__content-text">
+                <h2>Оставьте честный отзыв - ваше мнение важно для нас!</h2>
+                <p>
+                  Расскажите о вашем опыте использования нашей продукции.
+                  Поделитесь впечатлениями, отметьте достоинства или недостатки
+                  – это поможет другим сделать правильный выбор
+                </p>
+                <p>
+                  Мы ценим каждое мнение и стремимся стать лучше благодаря вашей
+                  обратной связи!
+                </p>
+                <img src="access/img/arr.svg" alt="" class="banner-arr" />
+              </div>
+              <form action="" method="post" class="block__form">
+                <div class="line__input">
+                  <div class="line__input-text">Ваше имя <span>*</span></div>
+                  <input
+                    type="text"
+                    class="input-line"
+                    placeholder="Введите имя"
+                    required
+                  />
+                </div>
+                <div class="line__input">
+                  <div class="line__input-text">Отзыв <span>*</span></div>
+                  <textarea
+                    id="review-text"
+                    class="input-line textarea-line"
+                    placeholder="Напишите отзыв"
+                    required
+                    maxlength="2500"
+                  ></textarea>
+                  <span id="char-count">0/2500</span>
+                </div>
+                <div class="line__input">
+                  <div class="line__input-text">
+                    Поставьте нам оценку <span>*</span>
                   </div>
+                  <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5" data-star="5"></label>
 
-                  <!-- Поле: Прикрепить файл -->
-                  <div class="review-form__field">
-                      <button type="button" class="review-form__file-btn" id="fileButton">
-                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M9.26164 14.2311L11.966 8.13759C12.1856 7.64264 11.9917 7.069 11.5327 6.80476L11.4376 6.75631L11.4369 6.75598C10.9075 6.51819 10.2846 6.75646 10.0491 7.28686L7.68282 12.6187C7.5428 12.9342 7.17352 13.0764 6.85802 12.9364C6.54252 12.7964 6.40026 12.4271 6.54029 12.1116L8.9066 6.77979C9.42282 5.61688 10.7865 5.09528 11.9473 5.61584L11.9484 5.61543C13.1039 6.13325 13.6218 7.48785 13.1085 8.64465L10.4042 14.7382C10.2642 15.0537 9.89488 15.1959 9.57937 15.0559C9.26408 14.9158 9.12166 14.5465 9.26164 14.2311Z" fill="#4153E4"/>
-                              <path d="M3.91281 11.9031L6.97205 5.00999C7.11207 4.69449 7.48135 4.55223 7.79685 4.69225C8.11235 4.83228 8.25461 5.20155 8.11459 5.51706L5.05534 12.4102C4.91532 12.7257 4.54604 12.8679 4.23054 12.7279C3.91504 12.5879 3.77279 12.2186 3.91281 11.9031Z" fill="#4153E4"/>
-                              <path d="M12.2229 13.7222L14.5892 8.39036C14.7293 8.07486 15.0985 7.9326 15.414 8.07263C15.7295 8.21265 15.8718 8.58192 15.7318 8.89743L13.3655 14.2292C13.2254 14.5447 12.8562 14.687 12.5407 14.547C12.2252 14.407 12.0829 14.0377 12.2229 13.7222Z" fill="#4153E4"/>
-                              <path d="M3.76104 12.2461L3.93006 11.8652C4.07008 11.5497 4.43936 11.4075 4.75486 11.5475C5.07036 11.6875 5.21262 12.0568 5.07259 12.3723L4.90357 12.7531C4.39015 13.91 4.91175 15.264 6.06859 15.7774C7.22543 16.2908 8.57944 15.7692 9.09286 14.6124L9.26188 14.2315C9.4019 13.916 9.77118 13.7738 10.0867 13.9138C10.4022 14.0538 10.5444 14.4231 10.4044 14.7386L10.2354 15.1194C9.44193 16.9073 7.34937 17.7134 5.56152 16.9199C3.77368 16.1265 2.96757 14.0339 3.76104 12.2461Z" fill="#4153E4"/>
-                              <path d="M14.5891 8.39029C15.3825 6.60277 14.5762 4.50974 12.7887 3.71642C11.0011 2.9231 8.90811 3.72938 8.11479 5.51691C7.97477 5.83241 7.60549 5.97466 7.28999 5.83464C6.97449 5.69462 6.83223 5.32534 6.97226 5.00984C8.04562 2.59131 10.8772 1.50052 13.2957 2.57389C15.7143 3.64725 16.805 6.47883 15.7317 8.89736C15.5917 9.21286 15.2224 9.35511 14.9069 9.21509C14.5914 9.07507 14.4491 8.70579 14.5891 8.39029Z" fill="#4153E4"/>
-                          </svg>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4" data-star="4"></label>
 
-                          Прикрепить файл
-                      </button>
-                      <input
-                              type="file"
-                              id="reviewFile"
-                              name="file"
-                              class="review-form__file-input"
-                              accept="image/*,.pdf"
-                              hidden
-                      >
-                      <div class="review-form__file-name" id="fileName"></div>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3" data-star="3"></label>
+
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2" data-star="2"></label>
+
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1" data-star="1"></label>
                   </div>
-
-                  <!-- Чекбокс согласия -->
-                  <div class="review-form__checkbox">
-                      <input
-                              type="checkbox"
-                              id="reviewAgree"
-                              name="agree"
-                              class="review-form__checkbox-input"
-                              required
-                      >
-                      <label for="reviewAgree" class="review-form__checkbox-label">
-                          Я соглашаюсь с
-                          <a href="#" class="review-form__link">условиями обработки персональных данных</a>
-                      </label>
-                  </div>
-
-                  <!-- Кнопка отправки -->
-                  <button type="submit" class="review-form__submit">
-                      Отправить
-                  </button>
-               </form>
-      </div>
-  </div>
-  </div>
-  <footer>
+                </div>
+                <div class="line__input">
+                  <label for="file-upload" class="file-label"
+                    ><img src="access/img/сomp-pre.svg" alt="" /> Прикрепить
+                    файл</label
+                  >
+                  <input id="file-upload" type="file" class="input-file" />
+                </div>
+                <label class="form-control">
+                  <input type="checkbox" name="agree" checked required />
+                  <span
+                    >Я соглашаюсь с
+                    <a href="">условиями обработки персональных данных</a></span
+                  >
+                </label>
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer__form">
@@ -833,7 +931,7 @@
                   <a href=""><img src="access/img/instagram.svg" alt="" /></a>
                   <a href=""><img src="access/img/telegram.svg" alt="" /></a>
                   <a href=""><img src="access/img/viber.svg" alt="" /></a>
-                  <a href=""><img src="access/img/whatsapp.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp-b.svg" alt="" /></a>
                 </div>
               </div>
               <div class="footer__row-links">
@@ -882,7 +980,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <script src="script/index.js"></script>
-</body>
+  </body>
 </html>
-

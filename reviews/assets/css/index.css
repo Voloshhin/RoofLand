@@ -1198,14 +1198,15 @@ body:has(.mobile-menu.active) .search-bar {
   overflow: hidden;
   transition: all 0.4s ease;
   max-height: 96px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .reviews__text.is-expanded {
   -webkit-line-clamp: unset;
   max-height: 1000px;
 }
 .reviews__link {
-  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4153e4;

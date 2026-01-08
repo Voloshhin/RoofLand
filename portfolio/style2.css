@@ -8,11 +8,6 @@
   --card-bg: #fafafa;
 }
 
-.roof-pad {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
 *,
 *::before,
 *::after {
@@ -220,9 +215,9 @@ form .button {
 .project-card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
+  gap: 1.5rem;
   background: var(--card-bg);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   align-items: stretch;
   cursor: pointer;
 }
@@ -283,7 +278,24 @@ form .button {
   overflow: hidden;
   order: -1;
 }
-
+.roof-project .project-card__right {
+  width: 18rem;
+}
+.roof-project .project-card__left {
+  width: 18rem;
+}
+.roof-project .project-card {
+  justify-items: end;
+}
+.roof-project .project-card__title{
+  font-size: 1.25rem;
+}
+.roof-project .project-card__list li{
+  margin: 0;
+}
+#projectSwiper .swiper-slide img{
+  border-radius: 0.625rem;
+}
 .project-card__img {
   width: 100%;
   height: 100%;
@@ -551,7 +563,6 @@ form .button {
 
 /*прайс лист*/
 
-
 .price-list__content-wrap {
   max-width: 100%;
   width: 100%;
@@ -636,7 +647,7 @@ form .button {
   font-size: 15px;
   border: 1px solid #dfe2f5;
   border-radius: 10px;
-  color: var(--main-bg);
+  /* color: var(--main-bg); */
   outline: none;
   transition: border 0.2s;
   margin-bottom: 24px;
@@ -1097,11 +1108,6 @@ form .button {
 
 /* >= 769px */
 @media (min-width: 769px) {
-  .roof-pad {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
   .price-list__content-wrap:after {
     width: 90%;
     height: 90%;
@@ -1114,11 +1120,6 @@ form .button {
 
 /* >= 920px */
 @media (min-width: 920px) {
-  .roof-pad {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
   .main-title {
     font-size: 3.125rem;
   }
@@ -1172,7 +1173,7 @@ form .button {
   }
 
   .project-card__list {
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 6;
   }
 
   .project-card__more-link {
@@ -1182,8 +1183,6 @@ form .button {
   #projectSwiper {
     height: 360px;
   }
-
-
 
   .roof-socials .container {
     background-image: url(./img/tel.webp);
@@ -1218,8 +1217,6 @@ form .button {
   .socials__button-wrap .button {
     width: calc(50% - 12px);
   }
-
-
 
   .price-list__content-wrap {
     max-width: 550px;
@@ -1269,11 +1266,6 @@ form .button {
 
 /* >= 1220px */
 @media (min-width: 1220px) {
-  .roof-pad {
-    padding-left: 108px;
-    padding-right: 108px;
-  }
-
   .roof-socials {
     background-position: right 80px center;
   }
@@ -1291,24 +1283,22 @@ form .button {
     width: 335px;
   }
 }
-.project-modal .popular-button-prev img,.project-modal .popular-button-next img{
-    width: 1.5rem !important;
-    height: 1.5rem !important;
-  }
-  #projectSwiper .swiper-button-prev{
-    left: 8.438rem !important;
-  }
-  #projectSwiper .swiper-button-next{
-    right: 8.438rem !important;
-  }
+.project-modal .popular-button-prev img,
+.project-modal .popular-button-next img {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+#projectSwiper .swiper-button-prev {
+  left: 8.438rem !important;
+}
+#projectSwiper .swiper-button-next {
+  right: 8.438rem !important;
+}
 @media (max-width: 48em) {
-    .roof-socials .container{
-        padding: 0;
-    }
-  .roof-project .main-title {
+  .roof-socials .container {
     padding: 0;
   }
-  .roof-pad {
+  .roof-project .main-title {
     padding: 0;
   }
   .roof-project .roof-project-list {
@@ -1326,8 +1316,13 @@ form .button {
   .socials__button-wrap {
     gap: 1.5rem !important;
   }
-  .price-list__title{
+  .price-list__title {
     font-size: 1.5rem;
   }
-  
+  .roof-project .project-card__right,.roof-project .project-card__left{
+    width: 100%;
+  }
+  .project-modal__content .container{
+    padding:0 1rem;
+  }
 }
