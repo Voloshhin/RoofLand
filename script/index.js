@@ -323,12 +323,12 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: 3.1,
       // slidesPerGroup: 2,
       spaceBetween: 24,
-      allowTouchMove: true,
+      // allowTouchMove: true,
       breakpoints: {
         1440: { allowTouchMove: true },
         1024: { spaceBetween: 16, allowTouchMove: true },
         768: { allowTouchMove: false },
-        0: { slidesPerGroup: 1 },
+        0: { slidesPerGroup: 1, allowTouchMove: false },
       },
       navigation: {
         nextEl: ".vacan-swiper .swiper-button-next",

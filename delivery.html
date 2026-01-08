@@ -399,9 +399,8 @@
             <div class="container price-list">
                 <div class="price-list__content">
                     <div class="price-list__content-wrap">
-                        <h2 class="price-list__title">Остались вопросы <br>по возврату товара?</h2>
-                        <p class="price-list__text">Оставьте свою заявку и&nbsp;мы проконсультируем вас по&nbsp;всем
-                            вопросам</p>
+                        <h2 class="price-list__title">Остались вопросы <br>по оплате или рассрочке?</h2>
+                        <p class="price-list__text">Оставьте свою заявку и мы проконсультируем вас по всем вопросам и поможем подобрать оптимальный вариант оплаты</p>
                             <img src="delivery/img/fopvs.svg" alt="">
                     </div>
                     <div class="price-form-wrapper">
@@ -409,18 +408,28 @@
 
                             <h3 class="price-form__title">Остались вопросы?<br>Напишите нам и мы свяжемся с вами</h3>
 
-                            <label class="price-form__label" for="phone">Ваше имя</label>
+                            <label class="price-form__label" for="phone">Ваше имя <span>*</span></label>
 
-                            <input class="price-form__input" type="text" id="name" name="name" placeholder="Ваше имя"
+                            <input class="price-form__input" type="text" id="name" name="name" placeholder="Введите имя"
                                 required>
-                            <label class="price-form__label" for="phone">Введите номер телефона</label>
+                            <label class="price-form__label" for="phone">Номер телефона <span>*</span></label>
 
-                            <input class="price-form__input" type="tel" id="phone" name="phone" placeholder="Номер телефона"
+                            <input class="price-form__input" type="tel" id="phone" name="phone" placeholder="Введите номер телефона"
                                 pattern="^[0-9+\-\s()]{6,20}$" required>
 
-                            <label class="price-form__label" for="message">Сообщение</label>
-                            <textarea class="price-form__input price-form__textarea" id="message" name="message"
-                                placeholder="Введите ваше сообщение" rows="4"></textarea>
+                            <div class="line__input">
+                              <div class="line__input-text">
+                                Сообщение
+                              </div>
+                              <textarea
+                                id="accom-text"
+                                class="input-line textarea-line"
+                                placeholder="Введите сообщение"
+                                required
+                                maxlength="2500"
+                              ></textarea>
+                              <span id="char-count">0/2500</span>
+                            </div>
                             <label class="form-control contact-form__checkbox">
                               <input type="checkbox" name="agree" checked required />
                               <span

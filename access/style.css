@@ -616,6 +616,9 @@ h1 span {
     display: grid;
     margin-right: 1rem;
   }
+  .block-reviews .rew__btns-modal{
+    margin-right: 0;
+  }
   .block__blog {
     margin-bottom: 5.625rem;
     margin-right: 1rem;
@@ -1918,7 +1921,7 @@ section .menu-dropdown.is-open .menu-dropdown__popup {
   border-radius: 0.5rem;
   border: 1px solid var(--input-border);
   background: var(--cerulean);
-  color: var(--texterea-span);
+  color: var(--defolt-text);
   font-size: 0.875rem;
   outline: none;
   appearance: none;
@@ -1927,7 +1930,9 @@ section .menu-dropdown.is-open .menu-dropdown__popup {
   background-position: right 0.625rem center;
   background-size: 1.25rem;
 }
-
+.project-list-filter__select option{
+  color: #B4BCBD;
+}
 .project-list-filter__select:focus-within {
   border: 1px solid var(--blue);
 }
@@ -4791,6 +4796,9 @@ ul:not(
   }
   .har__left-info_block {
     min-width: 21.438rem;
+  }
+  .root__content .har__left-info_block{
+    order: 2;
   }
   .har__left-info_col:first-child {
     min-width: 12.5rem;
