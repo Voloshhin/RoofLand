@@ -140,29 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/*мобильное меню */
-document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.header__burger');
-  const menu = document.getElementById('mobileMenu');
-  const closeBtn = document.querySelector('.mobile-menu__close');
-
-  function openMenu(){
-    menu.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMenu(){
-    menu.classList.remove('is-open');
-    document.body.style.overflow = '';
-  }
-
-  burger.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
-  });
-});
 
 /**Переключение тем в зависимости от настроек пользователя. Позже можно переделать на кнопку смены тем 
 (function () {

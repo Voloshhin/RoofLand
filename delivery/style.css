@@ -725,7 +725,7 @@ h6 {
 
 /* Card */
 .delivery-card {
-  border: 1px solid #eef0f3;
+  border: 1px solid #ECECEC;
   border-radius: 14px;
   background: var(--gray-2);
   padding: 18px 18px 16px;
@@ -766,7 +766,7 @@ h6 {
   text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .delivery {
     padding-top: 52px;
     padding-bottom: 90px;
@@ -835,7 +835,7 @@ h6 {
   line-height: 1.65;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .return {
     padding-bottom: 6rem;
   }
@@ -1099,7 +1099,7 @@ h6 {
   text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .delivery {
     padding-top: 0;
     padding-bottom: 90px;
@@ -1158,10 +1158,10 @@ h6 {
 }
 
 .pay__card-title {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .cards {
     padding-bottom: 90px;
   }
@@ -1175,7 +1175,7 @@ h6 {
   }
 
   .pay__card-title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -1256,7 +1256,7 @@ h6 {
   list-style-type: disc;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .popup {
     padding: 4rem 0;
   }
@@ -1333,7 +1333,7 @@ h6 {
     font-size: 1.5rem;
   }
   .popup .container {
-    margin: 1.25rem 1rem 6rem 1rem;
+    /* margin: 1.25rem 1rem 6rem 1rem; */
   }
   .popup-close {
     top: -5rem;

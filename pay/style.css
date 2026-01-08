@@ -175,7 +175,7 @@ h6 {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .header__actions__mobile {
     display: none;
   }
@@ -308,7 +308,6 @@ h6 {
   border: none;
   padding: 0px;
 }
-
 
 .menu__inner {
   display: flex;
@@ -582,7 +581,6 @@ h6 {
 
 /*footer*/
 
-
 .contact-form {
   flex-shrink: 0;
   width: 100%;
@@ -651,7 +649,6 @@ h6 {
   text-align: center;
   margin-top: 8px;
 }
-
 
 .footer__inner {
   display: grid;
@@ -737,7 +734,6 @@ h6 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 
 @media (min-width: 1220px) {
   .contact-form {
@@ -859,11 +855,11 @@ h6 {
   transition: border 0.2s;
   margin-bottom: 24px;
 }
-.line__input{
+.line__input {
   margin-bottom: 1.5rem;
 }
 
-.line__input #char-count{
+.line__input #char-count {
   font-size: 0.625rem;
   margin-top: 0;
 }
@@ -942,7 +938,7 @@ h6 {
 
 /* Card */
 .delivery-card {
-  border: 1px solid #eef0f3;
+  border: 1px solid #ececec;
   border-radius: 14px;
   background: var(--gray-2);
   padding: 1.5rem;
@@ -950,7 +946,7 @@ h6 {
 }
 
 .delivery-card__title {
-  margin: 16px 0 10px;
+  margin: 16px 0 0px;
   font-size: 1.25rem;
   line-height: 1.25;
   font-weight: 700;
@@ -983,7 +979,7 @@ h6 {
   text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .delivery {
     padding-top: 0;
     padding-bottom: 90px;
@@ -1022,7 +1018,7 @@ h6 {
 }
 
 .pay__grid-item {
-  width: calc(50% - 8px);
+  width: calc(50% - 0.5rem);
   background-color: var(--gray-2);
   border: 1px solid var(--gray-1);
   border-radius: 16px;
@@ -1042,16 +1038,16 @@ h6 {
 }
 
 .pay__card-title {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .cards {
     padding-bottom: 90px;
   }
 
   .pay__grid-item {
-    width: calc(33% - 20px);
+    width: calc(33% - 1.25rem);
   }
 
   .pay__card {
@@ -1059,13 +1055,13 @@ h6 {
   }
 
   .pay__card-title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 @media (min-width: 1020px) {
   .pay__grid-item {
-    width: calc(25% - 18px);
+    width: calc(25% - 1.125rem);
   }
 }
 
@@ -1080,6 +1076,7 @@ h6 {
   box-sizing: border-box;
   color: #000;
   display: none;
+  overflow: scroll;
 }
 .popup .container {
   position: relative;
@@ -1139,7 +1136,7 @@ h6 {
   list-style-type: disc;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 49rem) {
   .popup {
     padding: 4rem 1rem;
   }
@@ -1171,6 +1168,9 @@ h6 {
   width: 2.5rem;
   height: 2.5rem;
 }
+.modal-open {
+  overflow-y: hidden;
+}
 @media (max-width: 48em) {
   .price-list__content-wrap img {
     bottom: 0;
@@ -1180,7 +1180,7 @@ h6 {
   }
   .delivery__grid {
     grid-template-columns: repeat(1, 1fr);
-    gap: 18px;
+    gap: 1.5rem;
   }
   .price-list--bg {
     margin: 0 !important;
@@ -1216,18 +1216,18 @@ h6 {
     font-size: 1.5rem;
   }
   .popup .container {
-    margin: 1.25rem 1rem 6rem 1rem;
+    /* margin: 1.25rem 1rem 6rem 1rem; */
   }
   .popup-close {
     top: 1rem;
     right: 2rem;
   }
-  .delivery-card__title{
+  .delivery-card__title {
     margin-top: 1rem;
     margin-bottom: 0;
     font-size: 1rem;
   }
-  .delivery-card{
+  .delivery-card {
     border-radius: 1rem;
   }
   section {

@@ -95,6 +95,64 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const filterForm = document.querySelector(".project-list-filter__form");
+const searchInput = filterForm?.querySelector('input[type="text"]');
+const selects = filterForm?.querySelectorAll(".menu-dropdown.project-list-filter__select");
+const resetButton = filterForm?.querySelector(".project-list-filter__reset");
+
+function updateResetState() {
+  let hasValue = false;
+
+  // проверка инпута
+  if (searchInput && searchInput.value.trim() !== "") {
+    hasValue = true;
+  }
+
+  // проверка селектов
+  selects.forEach(select => {
+    if (select.classList.contains("has-value")) {
+      hasValue = true;
+    }
+  });
+
+  resetButton.disabled = !hasValue;
+  resetButton.classList.toggle("is-active", hasValue);
+}
+
+// ввод в поиск
+if (searchInput) {
+  searchInput.addEventListener("input", updateResetState);
+}
+
+// выбор в селекте (у тебя уже есть обработчик — просто добавим вызов)
+selects.forEach(select => {
+  select.querySelectorAll(".menu-dropdown__popup a").forEach(option => {
+    option.addEventListener("click", () => {
+      updateResetState();
+    });
+  });
+});
+
+// сброс формы
+filterForm.addEventListener("reset", () => {
+  setTimeout(() => {
+    selects.forEach(select => {
+      select.classList.remove("has-value");
+      select.removeAttribute("data-value");
+
+      const active = select.querySelector(".active");
+      if (active) active.classList.remove("active");
+
+      const toggle = select.querySelector(".menu-dropdown__toggle");
+      toggle.childNodes[0].textContent = toggle.dataset.placeholder || "Выбрать";
+    });
+
+    updateResetState();
+  }, 0);
+});
+
+// инициализация
+updateResetState();
   /* ================= TABS ================= */
 
   // const buttons = document.querySelectorAll(".tab-button");
@@ -342,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // slidesPerGroup: 2,
       spaceBetween: 24,
       allowTouchMove: false,
-      simulateTouch:false,
+      simulateTouch: false,
       breakpoints: {
         1440: { allowTouchMove: false },
         1024: { spaceBetween: 16, allowTouchMove: false },
@@ -351,7 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
-  
+
   if (document.querySelector(".project-swiper")) {
     new Swiper(".project-swiper", {
       slidesPerView: 2,
@@ -726,57 +784,99 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //Попапы карточек с платежами
-const openModal = (card) => {
+  const openModal = (card) => {
     const modalId = card.dataset.modal;
     const modal = document.querySelector(`.popup[data-modal="${modalId}"]`);
 
     if (!modal) return;
 
-    modal.classList.add('is-active');
-    document.body.classList.add('modal-open');
-};
+    modal.classList.add("is-active");
+    document.body.classList.add("modal-open");
+  };
 
-const closeModal = (modal) => {
-    modal.classList.remove('is-active');
-    document.body.classList.remove('modal-open');
-};
+  const closeModal = (modal) => {
+    modal.classList.remove("is-active");
+    document.body.classList.remove("modal-open");
+  };
 
-document.querySelectorAll('.pay__card').forEach(card => {
-    card.addEventListener('click', () => openModal(card));
-});
+  document.querySelectorAll(".pay__card").forEach((card) => {
+    card.addEventListener("click", () => openModal(card));
+  });
 
-document.querySelectorAll('.popup-close').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        const modal = e.target.closest('.popup');
-        if (modal) closeModal(modal);
+  document.querySelectorAll(".popup-close").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const modal = e.target.closest(".popup");
+      if (modal) closeModal(modal);
     });
-});
+  });
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.popup.is-active').forEach(modal => {
-            closeModal(modal);
-        });
-    }
-});
-});
-function toggleDropdown(button) {
-    const dropdown = button.closest(".dropdown");
-    if (!dropdown) return;
-
-    // закрыть другие dropdown (если нужно)
-    document.querySelectorAll(".dropdown.active").forEach((d) => {
-      if (d !== dropdown) d.classList.remove("active");
-    });
-
-    dropdown.classList.toggle("active");
-  }
-
-  // закрытие по клику вне
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".dropdown")) {
-      document
-        .querySelectorAll(".dropdown.active")
-        .forEach((d) => d.classList.remove("active"));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".popup.is-active").forEach((modal) => {
+        closeModal(modal);
+      });
     }
   });
+});
+function toggleDropdown(button) {
+  const dropdown = button.closest(".dropdown");
+  if (!dropdown) return;
+
+  // закрыть другие dropdown (если нужно)
+  document.querySelectorAll(".dropdown.active").forEach((d) => {
+    if (d !== dropdown) d.classList.remove("active");
+  });
+
+  dropdown.classList.toggle("active");
+}
+
+// закрытие по клику вне
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown")) {
+    document
+      .querySelectorAll(".dropdown.active")
+      .forEach((d) => d.classList.remove("active"));
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(
+    ".project-list-filter__form"
+  );
+  if (!form) return;
+
+  // ⚠️ только SELECT внутри ЭТОЙ формы
+  const selects = form.querySelectorAll(
+    'select.project-list-filter__select'
+  );
+  const resetButton = form.querySelector(
+    ".project-list-filter__reset"
+  );
+
+  function updateResetButtonState() {
+    let hasValue = false;
+
+    selects.forEach(select => {
+      if (select.value !== "") {
+        hasValue = true;
+      }
+    });
+
+    resetButton.disabled = !hasValue;
+    resetButton.classList.toggle("is-active", hasValue);
+  }
+
+  // изменение select
+  selects.forEach(select => {
+    select.addEventListener("change", updateResetButtonState);
+  });
+
+  // reset формы
+  form.addEventListener("reset", () => {
+    // ждём, пока браузер сбросит select
+    setTimeout(updateResetButtonState, 0);
+  });
+
+  // инициализация
+  updateResetButtonState();
+});
