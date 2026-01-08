@@ -1164,7 +1164,7 @@ footer {
 
 @media (min-width: 768px) {
   .popup {
-    padding: 4rem 0;
+    padding: 4rem 1rem;
   }
 
   .popup-header {
@@ -1242,7 +1242,8 @@ footer {
     margin: 1.25rem 1rem 6rem 1rem;
   }
   .popup-close {
-    top: -5rem;
+    top: 1rem;
+    right: 2rem;
   }
   .delivery-card__title{
     margin-top: 1rem;
@@ -1254,5 +1255,10 @@ footer {
   }
   section {
     margin: 1rem 1rem 6rem 1rem !important;
+  }
+  .popup {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: scroll;
   }
 }
