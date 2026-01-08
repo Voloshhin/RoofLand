@@ -89,30 +89,13 @@ h6 {
   height: auto;
 }
 
-/* Обновленные стили для десктопа с использованием rem */
-@media (min-width: 1240px) {
-  /* .container уже задан глобально выше, убираем отсюда */
-
-  .footer__main {
-    flex-direction: row;
-  }
-  .footer__inner {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .feedback__card {
-    min-width: 20.31rem; /* 325px -> ~20.31rem */
-  }
-}
 
 /* Адаптив планшет/мобильные */
 @media (max-width: 1240px) {
   .footer__main {
     flex-direction: column;
   }
-  .container {
-    padding: 0 1rem; /* Добавляем паддинги вместо margin */
-    margin: 0 auto;
-  }
+  
 }
 
 @media (min-width: 998px) {
@@ -554,10 +537,6 @@ h6 {
   text-transform: uppercase;
 }
 
-.footer {
-  background-color: var(--gray-2);
-  border-top: var(--border-1);
-}
 
 .footer__main {
   display: flex;

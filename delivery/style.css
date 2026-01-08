@@ -410,17 +410,7 @@ h6 {
 }
 
 /*footer*/
-footer {
-  background-color: var(--gray-2);
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
 
-.footer {
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
-}
 
 .contact-form {
   flex-shrink: 0;
@@ -570,25 +560,6 @@ footer {
   text-decoration: underline;
 }
 
-@media (min-width: 769px) {
-  .footer__inner {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 920px) {
-  .footer {
-    flex-direction: row;
-  }
-
-  .footer__inner {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .contact-form {
-    width: 235px;
-  }
-}
 
 @media (min-width: 1220px) {
   .contact-form {

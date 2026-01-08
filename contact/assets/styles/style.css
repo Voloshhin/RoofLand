@@ -1059,19 +1059,7 @@ h6 {
   grid-area: media__proccess;
 }
 
-.footer {
-  background-color: var(--gray-2);
-  border-top: var(--border-1);
-}
 
-.footer__main {
-  display: flex;
-  row-gap: 2.5rem;
-  column-gap: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-top: 2.5rem;
-  align-items: center;
-}
 
 .feedback__card {
   background-color: var(--white-1);

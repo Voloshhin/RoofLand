@@ -857,14 +857,6 @@ form .button {
 }
 
 /*footer*/
-.footer {
-  background-color: var(--card-bg);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
-}
 
 .contact-form {
   flex-shrink: 0;
@@ -1244,10 +1236,6 @@ form .button {
 
   .mobile-menu {
     display: none;
-  }
-
-  .footer {
-    flex-direction: row;
   }
 
   .footer__inner {
