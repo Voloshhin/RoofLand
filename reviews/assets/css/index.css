@@ -419,13 +419,7 @@ iframe {
 .container-tablet {
   max-width-width: 900px;
 }
-.header {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  position: relative;
-  z-index: 1000;
-  background: #fafafa;
-}
+
 .header__container {
   display: flex;
   flex-direction: column;

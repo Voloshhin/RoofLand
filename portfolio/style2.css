@@ -664,11 +664,6 @@ form .button {
 
 /*хэдер*/
 
-.header {
-  border-bottom: 1px solid #eceff5;
-  margin-bottom: 52px;
-}
-
 .header__container {
   display: flex;
   align-items: center;

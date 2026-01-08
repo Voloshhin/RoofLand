@@ -78,14 +78,6 @@ img {
   height: auto;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-}
-
 .header__menu__active,
 .header__menu {
   display: none;

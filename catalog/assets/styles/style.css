@@ -89,14 +89,6 @@ h6 {
   height: auto;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-}
-
 /* Обновленные стили для десктопа с использованием rem */
 @media (min-width: 1240px) {
   /* .container уже задан глобально выше, убираем отсюда */
