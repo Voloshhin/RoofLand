@@ -295,10 +295,10 @@ header.scrolled {
   top: 3.5rem;
   left: 0;
   width: 100%;
-  height: calc(100vh - 3.5rem);
+  height: calc(100% - 4rem);
   background-color: var(--white-color);
 
-  transform: translateY(calc(-100% - 3.5rem));
+  transform: translateY(calc(-100% - 8.5rem));
   transition: transform 0.4s ease;
 
   overflow-y: auto;
@@ -326,10 +326,11 @@ header.scrolled {
 }
 .menu-bottom {
   position: sticky;
-  bottom: .15rem;
+  bottom: 0;
   padding: 1rem;
   border: 1px solid var(--border-drop);
   background: var(--white-color);
+  width: 100%;
 }
 
 .btn {
@@ -810,10 +811,11 @@ h1 span {
 }
 .textarea-line {
   height: 6.25rem;
-  padding-top: .625rem;
+  padding-top: 0.625rem;
 }
 
-.input-line::placeholder,.price-form__input::placeholder {
+.input-line::placeholder,
+.price-form__input::placeholder {
   color: var(--texterea-span);
 }
 .rew__bottom-item {
@@ -3893,9 +3895,9 @@ body.no-scroll {
   .block-about .team__content-right_block {
     margin-bottom: 1.5rem;
   }
-   .block-about .vac__col-info{
+  .block-about .vac__col-info {
     gap: 1rem;
-   }
+  }
   .main-team .vac__col-info {
     margin-bottom: 1rem;
   }
@@ -3921,7 +3923,7 @@ body.no-scroll {
   .reviews-card__left-block .rew-stars {
     margin-bottom: 1.5rem;
   }
-  .block__rewS .blog-data{
+  .block__rewS .blog-data {
     font-size: 0.75rem;
   }
   .team-swiper {

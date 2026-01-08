@@ -125,10 +125,7 @@ h6 {
   .header__content {
     flex-direction: row;
   }
-  .header__menu__active,
-  .header__menu {
-    display: none;
-  }
+
 }
 
 @media (max-width: 998px) {
@@ -282,23 +279,6 @@ h6 {
 
 .actions__link > * {
   display: block;
-}
-
-.header__menu {
-  display: none;
-  background-color: var(--white-1);
-  height: 0px;
-  width: 100%;
-  position: fixed;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  transition: all 0.5s;
-}
-
-.header__menu__active {
-  display: block;
-  height: 100vh;
-  overflow-y: scroll;
 }
 
 .menu__inner {
