@@ -456,7 +456,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       modal.classList.add("active");
       document.body.classList.add("no-scroll");
-      document.body.style.overflow = "hidden";
     });
   });
 
