@@ -5114,6 +5114,9 @@ ul:not(
   top: 0.9rem;
   left: -6.925rem;
 }
+.advan-3 .advan-block_ims{
+    object-position: 23% 50%;
+}
 .advan-3 .advan__item-info {
   top: 26rem;
   left: 53.738rem;
