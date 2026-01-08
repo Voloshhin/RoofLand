@@ -1348,3 +1348,11 @@ h6 {
 .category__text {
   font-size: 0.875rem;
 }
+@media (max-width:48em) {
+   section {
+    margin: 1rem 1rem 6rem 1rem !important;
+  }
+  .catalog-categories__action-block + .catalog-categoies__close-block{
+    margin: 1rem 1rem 6rem 1rem !important;
+  }
+}
