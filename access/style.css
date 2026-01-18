@@ -5761,6 +5761,9 @@ header .btn__shop {
   padding: 0.3rem 0.5rem;
   border-radius: 0.5rem;
 }
+.tovar__line-drop .project-list-filter__select{
+  padding: 0.625rem;
+}
 @media (max-width: 48em) {
   .tovar__swiper {
     width: 100%;
