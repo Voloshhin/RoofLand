@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="access/swiper-bundle.min.css">
 
     <title>Портфолио</title>
 </head>
@@ -293,14 +293,14 @@
                         <form class="project-list-filter__form">
 
                             <div class="project-list-filter__fields">
-                                <select name="type" class="project-list-filter__select">
+                                <select name="type" class="project-list-filter__select" style="color: rgb(153, 153, 153);">
                                     <option value="">Выберите тип покрытия</option>
                                     <option value="metal">Металлочерепица</option>
                                     <option value="soft">Мягкая кровля</option>
                                     <option value="fold">Фальцевая кровля</option>
                                 </select>
 
-                                <select name="year" class="project-list-filter__select">
+                                <select name="year" class="project-list-filter__select" style="color: rgb(153, 153, 153);">
                                     <option value="">Выберите год</option>
                                     <option value="2025">2025</option>
                                     <option value="2024">2024</option>
@@ -395,7 +395,8 @@
                                             <br>
                                             <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
                                             <br>
-                                            <li>…</li>
+                                            <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                            <br>
                                         </ul>
                                         <p class="project-card__more-link">Подробнее</p>
                                     </div>
@@ -441,7 +442,8 @@
                                             <br>
                                             <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
                                             <br>
-                                            <li>…</li>
+                                            <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                            <br>
                                         </ul>
                                         <p class="project-card__more-link">Подробнее</p>
                                     </div>
@@ -487,7 +489,8 @@
                                             <br>
                                             <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
                                             <br>
-                                            <li>…</li>
+                                           <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                            <br>
                                         </ul>
                                         <p class="project-card__more-link">Подробнее</p>
                                     </div>
@@ -533,7 +536,8 @@
                                             <br>
                                             <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
                                             <br>
-                                            <li>…</li>
+                                            <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                            <br>
                                         </ul>
                                         <p class="project-card__more-link">Подробнее</p>
                                     </div>
@@ -579,7 +583,8 @@
                                             <br>
                                             <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
                                             <br>
-                                            <li>…</li>
+                                            <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                            <br>
                                         </ul>
                                         <p class="project-card__more-link">Подробнее</p>
                                     </div>
@@ -625,7 +630,8 @@
                                             <br>
                                             <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
                                             <br>
-                                            <li>…</li>
+                                           <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                            <br>
                                         </ul>
                                         <p class="project-card__more-link">Подробнее</p>
                                     </div>
@@ -671,7 +677,8 @@
                                             <br>
                                             <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
                                             <br>
-                                            <li>...</li>
+                                            <li>- Модульная металлочерепица DachPol PuralMAT RR33</li>
+                                            <br>
                                         </ul>
                                         <p class="project-card__more-link">Подробнее</p>
                                     </div>
@@ -990,9 +997,78 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/swiper-bundle.min.js"></script>
     <script src="portfolio/index.js"></script>
     <script src="script/index.js"></script>
+    <script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const selects = document.querySelectorAll('.project-list-filter__select');
+		
+		selects.forEach(select => {
+			// Устанавливаем серый цвет по умолчанию
+			if (select.value === '') {
+				select.style.color = '#999';
+			}
+			
+			select.addEventListener('change', function() {
+				if (this.value === '') {
+					this.style.color = '#999'; // серый для плейсхолдера
+				} else {
+					this.style.color = '#000'; // черный для выбранного значения
+				}
+			});
+		});
+	});
+	
+	document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM полностью загружен, начинаем инициализацию селектов');
+    const selects = document.querySelectorAll('.project-list-filter__select');
+    console.log(`Найдено ${selects.length} селектов для обработки`);
+
+    selects.forEach((select, index) => {
+        console.log(`Обработка селекта #${index + 1}:`, select.name || select.id || 'без имени');
+
+        if (select.value === '') {
+            select.style.color = '#999';
+            console.log(`Селект #${index + 1} имеет пустое значение, устанавливаем серый цвет`);
+        } else {
+            console.log(`Селект #${index + 1} имеет значение "${select.value}", цвет остается черным`);
+        }
+
+        select.addEventListener('change', function() {
+            console.log(`Событие change для селекта "${this.name || this.id || 'без имени'}", новое значение: "${this.value}"`);
+            if (this.value === '') {
+                this.style.color = '#999';
+                console.log('Установлен серый цвет для пустого значения');
+                this.classList.remove('rotated');
+                console.log('Удален класс "rotated" при пустом значении');
+            } else {
+                this.style.color = '#000';
+                console.log('Установлен черный цвет для выбранного значения');
+                this.classList.remove('rotated');
+                console.log('Удален класс "rotated" после выбора значения');
+            }
+        });
+
+        select.addEventListener('focus', function() {
+            console.log(`Селект "${this.name || this.id || 'без имени'}" получил фокус`);
+            this.classList.add('rotated');
+            console.log('Добавлен класс "rotated" при фокусе');
+        });
+
+        select.addEventListener('blur', function() {
+            console.log(`Селект "${this.name || this.id || 'без имени'}" потерял фокус`);
+            if (this.value === '') {
+                this.classList.remove('rotated');
+                console.log('Удален класс "rotated" при потере фокуса и пустом значении');
+            } else {
+                console.log('Класс "rotated" оставлен, так как значение выбрано');
+            }
+        });
+    });
+    console.log('Инициализация селектов завершена');
+});
+	</script>
 </body>
 
 </html>

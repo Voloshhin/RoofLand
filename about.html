@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>О компании Rooﬂand</title>
-  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"  rel="stylesheet" />
+  <link href="access/swiper-bundle.min.css"  rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="about/styles.css" />
   <link rel="stylesheet" href="access\style.css" />
+  <link rel="stylesheet" href="access/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -324,8 +325,9 @@
         <div class="company-goal">
           <h4>Цель компании:</h4>
           <h2>
-            <span>Сделать наш клиентский сервис, качест</span>во предлагаемых услуг и товаров такими, чтобы ни у одного
+            <span>Сделать наш клиентский сервис, качество предлагаемых услуг и товаров такими, чтобы ни у одного
             застройщика в стране не возникало вопроса: “Куда обратиться за качественной кровлей?”
+          </span>
           </h2>
         </div>
       </div>
@@ -543,14 +545,31 @@
             </div>
           </div>
           <div class="team-grid only-desktop">
-            <div class="team-item"><img src="about/image/Rectangle 4538.png" alt="Сотрудник" class="team-photo" /></div>
-            <div class="team-item"><img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo" /></div>
-            <div class="team-item"><img src="about/image/Rectangle 4540.png" alt="Сотрудник" class="team-photo" /></div>
-            <div class="team-item"><img src="about/image/Rectangle 4541.png" alt="Сотрудник" class="team-photo" /></div>
-            <div class="team-item"><img src="about/image/Rectangle 4542.png" alt="Сотрудник" class="team-photo" /></div>
-            <div class="team-item"><img src="about/image/Rectangle 4543.png" alt="Сотрудник" class="team-photo" /></div>
-            <div class="team-item"><img src="about/image/Rectangle 4544.png" alt="Сотрудник" class="team-photo" /></div>
-            <div class="team-item"><img src="about/image/Rectangle 4545.png" alt="Сотрудник" class="team-photo" /></div>
+            <a href="about/image/Rectangle 4538.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 1">
+              <img src="about/image/Rectangle 4538.png" alt="Сотрудник" class="team-photo">
+            </a>            
+            <a href="about/image/Rectangle 4539.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 2">
+              <img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo">
+            </a>
+            <a href="about/image/Rectangle 4540.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 3">
+              <img src="about/image/Rectangle 4540.png" alt="Сотрудник" class="team-photo">
+            </a>
+            <a href="about/image/Rectangle 4541.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 2">
+              <img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo">
+            </a>
+            <a href="about/image/Rectangle 4542.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 3">
+              <img src="about/image/Rectangle 4540.png" alt="Сотрудник" class="team-photo">
+            </a>
+            <a href="about/image/Rectangle 4543.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 2">
+              <img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo">
+            </a>
+            <a href="about/image/Rectangle 4544.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 3">
+              <img src="about/image/Rectangle 4540.png" alt="Сотрудник" class="team-photo">
+            </a>
+            <a href="about/image/Rectangle 4539.png" class="team-item" data-pswp-width="1200" data-pswp-height="1600" data-pswp-caption="Сотрудник 2">
+              <img src="about/image/Rectangle 4539.png" alt="Сотрудник" class="team-photo">
+            </a>
+            
           </div>
           <div class="team-grid only-mobile">
             <div class="swiper mySwiper">
@@ -811,7 +830,30 @@
         </div>
       </div>
     </footer>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script/index.js"></script>  
+    
+  <script src="script/swiper-bundle.min.js"></script>
+  <script src="script/index.js"></script>
+  <script type="module">
+  import PhotoSwipeLightbox from 'script/index.js';
+
+  // Инициализация галереи
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.team-grid, .mySwiper',
+    children: 'a',              // все <a> внутри контейнера
+    pswpModule: () => import('script/photoswipe.esm.js'),
+  });
+  lightbox.init();
+
+  // // Если используешь Swiper на mobile — убедимся, что клики не блокируются
+  // const swiper = new Swiper(".mySwiper", {
+  //   slidesPerView: 1.2,
+  //   spaceBetween: 8,             // меньше отступов на mobile
+  //   allowTouchMove: true,
+  //   preventClicks: false,
+  //   preventClicksPropagation: false,
+  // });
+
+  // Остальной твой JS остаётся без изменений
+</script>  
 </body>
 </html>

@@ -1001,7 +1001,7 @@ h6 {
   }
 
   .delivery-card__title {
-    font-size: 1.25rem;
+    font-size: 1.22rem;
   }
 }
 
@@ -1076,7 +1076,7 @@ h6 {
   box-sizing: border-box;
   color: #000;
   display: none;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .popup .container {
   position: relative;
@@ -1104,6 +1104,12 @@ h6 {
   width: 70%;
   max-width: 322px;
   flex-shrink: 0;
+}
+@media (max-width: 38em) {
+  .popup-logo {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .popup-title {
@@ -1219,8 +1225,8 @@ h6 {
     /* margin: 1.25rem 1rem 6rem 1rem; */
   }
   .popup-close {
-    top: 1rem;
-    right: 2rem;
+    top: -3.5rem;
+    right: 0rem;
   }
   .delivery-card__title {
     margin-top: 1rem;
@@ -1234,6 +1240,7 @@ h6 {
     margin: 1rem 1rem 6rem 1rem !important;
   }
   .popup {
+    padding-top: 3.75rem;
     padding-left: 1rem;
     padding-right: 1rem;
     overflow: scroll;

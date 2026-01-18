@@ -9,7 +9,12 @@
   display: block;
   margin-bottom: 0;
 }
-
+.hide-mobile .btn__calcul{
+  width: fit-content;
+}
+.only-mobile .btn__calcul{
+  width: fit-content;
+}
 .only-mobile {
   display: none;
 }
@@ -24,23 +29,19 @@
   position: absolute;
   text-align: start;
   color: #000000;
-  margin-top: 30%;
+  margin-top: 24%;
   margin-bottom: 30%;
   margin-left: 20%;
 }
 .left-caps {
   font-weight: 700;
-  font-style: Bold;
   font-size: 40px;
-  line-height: 100%;
   letter-spacing: 0%;
   margin-bottom: 0.938rem;
 }
 .left-stroce {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
 /* кнопка как в макете — снизу слева */
@@ -144,16 +145,6 @@ min-width: 20%; */
     font-weight: 700;
     font-style: Bold;
     font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #000000;
-    align-items: start;
-  }
-
-  .left-stroce {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
     color: #000000;

@@ -37,122 +37,181 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const dropdowns = document.querySelectorAll(".menu-dropdown");
 
-  dropdowns.forEach((drop) => {
-    const toggle = drop.querySelector(".menu-dropdown__toggle");
-    if (!toggle) return;
+dropdowns.forEach((drop) => {
+  const toggle = drop.querySelector(".menu-dropdown__toggle");
+  if (!toggle) return;
 
-    toggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-      // закрыть все остальные
-      dropdowns.forEach((d) => {
-        if (d !== drop) d.classList.remove("is-open");
-      });
-
-      drop.classList.toggle("is-open");
+    // Закрыть все остальные
+    dropdowns.forEach((d) => {
+      if (d !== drop) d.classList.remove("is-open");
     });
 
-    // если это select
-    if (drop.classList.contains("project-list-filter__select")) {
-      const popup = drop.querySelector(".menu-dropdown__popup");
-      if (!popup) return;
+    drop.classList.toggle("is-open");
+  });
 
-      popup.querySelectorAll("a").forEach((option) => {
-        option.addEventListener("click", (e) => {
-          e.preventDefault();
+  // Если это select (но НЕ tovar__line-drop-2)
+  if (
+    drop.classList.contains("project-list-filter__select") &&
+    !drop.classList.contains("tovar__line-drop-2")
+  ) {
+    const popup = drop.querySelector(".menu-dropdown__popup");
+    if (!popup) return;
 
-          // смена текста
-          toggle.childNodes[0].textContent = option.textContent.trim();
+    popup.querySelectorAll("a").forEach((option) => {
+      option.addEventListener("click", (e) => {
+        e.preventDefault();
 
-          // активный пункт
-          popup
-            .querySelectorAll("a")
-            .forEach((a) => a.classList.remove("active"));
-          option.classList.add("active");
+        // Смена текста (для обычных select)
+        toggle.childNodes[0].textContent = option.textContent.trim();
 
-          // помечаем селект как выбранный
-          drop.classList.add("has-value");
-          drop.dataset.value = option.textContent.trim();
+        // Активный пункт
+        popup
+          .querySelectorAll("a")
+          .forEach((a) => a.classList.remove("active"));
+        option.classList.add("active");
 
-          drop.classList.remove("is-open");
-        });
+        // Помечаем селект как выбранный
+        drop.classList.add("has-value");
+        drop.dataset.value = option.textContent.trim();
+
+        drop.classList.remove("is-open");
       });
-    }
-  });
+    });
+  }
+});
 
-  // закрытие по клику вне
-  document.addEventListener("click", () => {
+// Закрытие по клику вне
+document.addEventListener("click", () => {
+  dropdowns.forEach((d) => d.classList.remove("is-open"));
+});
+
+// Закрытие по Esc
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
     dropdowns.forEach((d) => d.classList.remove("is-open"));
-  });
+  }
+});
 
-  // закрытие по Esc
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      dropdowns.forEach((d) => d.classList.remove("is-open"));
-    }
+
+
+});
+// Специальный обработчик ТОЛЬКО для tovar__line-drop-2
+document.addEventListener('DOMContentLoaded', () => {
+  const targetDropdown = document.querySelector('.menu-dropdown.tovar__line-drop-2');
+  if (!targetDropdown) return;
+
+  const toggle = targetDropdown.querySelector('.menu-dropdown__toggle');
+  const popup = targetDropdown.querySelector('.menu-dropdown__popup');
+  if (!toggle || !popup) return;
+
+  const menuLineInToggle = toggle.querySelector('.tovar__menu-line');
+  if (!menuLineInToggle) return;
+
+  popup.querySelectorAll('a').forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const optionMenuLine = option.querySelector('.tovar__menu-line');
+    if (!optionMenuLine) return;
+
+    // 1. Меняем текст в toggle (отображаем выбранный вариант)
+    menuLineInToggle.innerHTML = optionMenuLine.innerHTML;
+
+    // 2. Помечаем выбранный элемент как активный
+    popup.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+    option.classList.add('active');
+
+    // 3. Закрываем dropdown — без прокрутки!
+    targetDropdown.classList.remove('is-open');
+    });
   });
 });
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  const filterForm = document.querySelector(".project-list-filter__form");
-const searchInput = filterForm?.querySelector('input[type="text"]');
-const selects = filterForm?.querySelectorAll(".menu-dropdown.project-list-filter__select");
-const resetButton = filterForm?.querySelector(".project-list-filter__reset");
+  // const filterForms = document.querySelectorAll(".project-list-filter__form");
+  // if (!filterForms.length) return;
 
-function updateResetState() {
-  let hasValue = false;
+  // filterForms.forEach(form => {
+  //   const searchInput = form.querySelector('input[type="text"]');
+  //   const nativeSelects = form.querySelectorAll('select.project-list-filter__select');
+  //   const dropdownSelects = form.querySelectorAll('.menu-dropdown.project-list-filter__select');
+  //   const resetButton = form.querySelector(".project-list-filter__reset");
 
-  // проверка инпута
-  if (searchInput && searchInput.value.trim() !== "") {
-    hasValue = true;
-  }
+  //   function updateResetState() {
+  //     let hasValue = false;
 
-  // проверка селектов
-  selects.forEach(select => {
-    if (select.classList.contains("has-value")) {
-      hasValue = true;
-    }
-  });
+  //     // input[type="text"]
+  //     if (searchInput && searchInput.value.trim() !== "") {
+  //       hasValue = true;
+  //     }
 
-  resetButton.disabled = !hasValue;
-  resetButton.classList.toggle("is-active", hasValue);
-}
+  //     // обычные select
+  //     nativeSelects.forEach(select => {
+  //       if (select.value) {
+  //         hasValue = true;
+  //       }
+  //     });
 
-// ввод в поиск
-if (searchInput) {
-  searchInput.addEventListener("input", updateResetState);
-}
+  //     // кастомные dropdown
+  //     dropdownSelects.forEach(dropdown => {
+  //       if (dropdown.classList.contains("has-value")) {
+  //         hasValue = true;
+  //       }
+  //     });
 
-// выбор в селекте (у тебя уже есть обработчик — просто добавим вызов)
-selects.forEach(select => {
-  select.querySelectorAll(".menu-dropdown__popup a").forEach(option => {
-    option.addEventListener("click", () => {
-      updateResetState();
-    });
-  });
-});
+  //     resetButton.disabled = !hasValue;
+  //     resetButton.classList.toggle("is-active", hasValue);
+  //   }
 
-// сброс формы
-filterForm.addEventListener("reset", () => {
-  setTimeout(() => {
-    selects.forEach(select => {
-      select.classList.remove("has-value");
-      select.removeAttribute("data-value");
+  //   /* input */
+  //   if (searchInput) {
+  //     searchInput.addEventListener("input", updateResetState);
+  //   }
 
-      const active = select.querySelector(".active");
-      if (active) active.classList.remove("active");
+  //   /* native select */
+  //   nativeSelects.forEach(select => {
+  //     select.addEventListener("change", updateResetState);
+  //   });
 
-      const toggle = select.querySelector(".menu-dropdown__toggle");
-      toggle.childNodes[0].textContent = toggle.dataset.placeholder || "Выбрать";
-    });
+  //   /* custom dropdown */
+  //   dropdownSelects.forEach(dropdown => {
+  //     dropdown.querySelectorAll(".menu-dropdown__popup a").forEach(option => {
+  //       option.addEventListener("click", () => {
+  //         dropdown.classList.add("has-value");
+  //         updateResetState();
+  //       });
+  //     });
+  //   });
 
-    updateResetState();
-  }, 0);
-});
+  //   /* reset */
+  //   form.addEventListener("reset", () => {
+  //     setTimeout(() => {
+  //       dropdownSelects.forEach(dropdown => {
+  //         dropdown.classList.remove("has-value");
 
-// инициализация
-updateResetState();
+  //         const active = dropdown.querySelector(".active");
+  //         if (active) active.classList.remove("active");
+
+  //         const toggle = dropdown.querySelector(".menu-dropdown__toggle");
+  //         if (toggle) {
+  //           toggle.childNodes[0].textContent =
+  //             toggle.dataset.placeholder || "Выбрать";
+  //         }
+  //       });
+
+  //       updateResetState();
+  //     }, 0);
+  //   });
+
+  //   /* init */
+  //   updateResetState();
+  // });
   /* ================= TABS ================= */
 
   // const buttons = document.querySelectorAll(".tab-button");
@@ -367,12 +426,30 @@ updateResetState();
       slidesPerView: 1.2,
       // slidesPerGroup: 2,
       spaceBetween: 22,
-      allowTouchMove: true,
+      // allowTouchMove: true,
       breakpoints: {
         1440: { allowTouchMove: false },
         1024: { spaceBetween: 16, allowTouchMove: false },
         768: { allowTouchMove: true },
-        0: { slidesPerGroup: 1 },
+        0: { slidesPerGroup: 1, allowTouchMove: true },
+      },
+    });
+  }
+  if (document.querySelector(".tovar__swiper-w")) {
+    new Swiper(".tovar__swiper-w", {
+      slidesPerView: 1,
+      // slidesPerGroup: 2,
+      spaceBetween: 0,
+      // allowTouchMove: true,
+      breakpoints: {
+        1440: { allowTouchMove: true },
+        1024: { spaceBetween: 16, allowTouchMove: true },
+        768: { allowTouchMove: true },
+        0: { slidesPerGroup: 1, allowTouchMove: true },
+      },
+      navigation: {
+        nextEl: ".tovar__swiper-w .swiper-button-next",
+        prevEl: ".tovar__swiper-w .swiper-button-prev",
       },
     });
   }
@@ -537,7 +614,7 @@ updateResetState();
   const header = document.querySelector("header");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 1) {
       // когда прокрутка больше 50px
       header.classList.add("scrolled");
     } else {
@@ -839,44 +916,154 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const form = document.querySelector(
+//     ".project-list-filter__form"
+//   );
+//   if (!form) return;
+
+//   // ⚠️ только SELECT внутри ЭТОЙ формы
+//   const selects = form.querySelectorAll(
+//     'select.project-list-filter__select'
+//   );
+//   const resetButton = form.querySelector(
+//     ".project-list-filter__reset"
+//   );
+
+//   function updateResetButtonState() {
+//     let hasValue = false;
+
+//     selects.forEach(select => {
+//       if (select.value !== "") {
+//         hasValue = true;
+//       }
+//     });
+
+//     resetButton.disabled = !hasValue;
+//     resetButton.classList.toggle("is-active", hasValue);
+//   }
+
+//   // изменение select
+//   selects.forEach(select => {
+//     select.addEventListener("change", updateResetButtonState);
+//   });
+
+//   // reset формы
+//   form.addEventListener("reset", () => {
+//     // ждём, пока браузер сбросит select
+//     setTimeout(updateResetButtonState, 0);
+//   });
+
+//   // инициализация
+//   updateResetButtonState();
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(
-    ".project-list-filter__form"
-  );
-  if (!form) return;
+  const filterForms = document.querySelectorAll(".project-list-filter__form");
+  if (!filterForms.length) return;
 
-  // ⚠️ только SELECT внутри ЭТОЙ формы
-  const selects = form.querySelectorAll(
-    'select.project-list-filter__select'
-  );
-  const resetButton = form.querySelector(
-    ".project-list-filter__reset"
-  );
+  filterForms.forEach((form) => {
+    const searchInput = form.querySelector('input[type="text"]');
+    const nativeSelects = form.querySelectorAll(
+      "select.project-list-filter__select"
+    );
+    const dropdownSelects = form.querySelectorAll(
+      ".menu-dropdown.project-list-filter__select"
+    );
+    const resetButton = form.querySelector(".project-list-filter__reset");
 
-  function updateResetButtonState() {
-    let hasValue = false;
+    function updateResetState() {
+      let hasValue = false;
 
-    selects.forEach(select => {
-      if (select.value !== "") {
+      // input[type="text"]
+      if (searchInput && searchInput.value.trim() !== "") {
         hasValue = true;
       }
+
+      // обычные select
+      nativeSelects.forEach((select) => {
+        if (select.value) {
+          hasValue = true;
+        }
+      });
+
+      // кастомные dropdown
+      dropdownSelects.forEach((dropdown) => {
+        if (dropdown.classList.contains("has-value")) {
+          hasValue = true;
+        }
+      });
+
+      resetButton.disabled = !hasValue;
+      resetButton.classList.toggle("is-active", hasValue);
+    }
+
+    /* input */
+    if (searchInput) {
+      searchInput.addEventListener("input", updateResetState);
+    }
+
+    /* native select */
+    nativeSelects.forEach((select) => {
+      select.addEventListener("change", updateResetState);
     });
 
-    resetButton.disabled = !hasValue;
-    resetButton.classList.toggle("is-active", hasValue);
-  }
+    /* custom dropdown */
+    dropdownSelects.forEach((dropdown) => {
+      dropdown.querySelectorAll(".menu-dropdown__popup a").forEach((option) => {
+        option.addEventListener("click", () => {
+          dropdown.classList.add("has-value");
+          updateResetState();
+        });
+      });
+    });
 
-  // изменение select
-  selects.forEach(select => {
-    select.addEventListener("change", updateResetButtonState);
+    /* reset */
+    form.addEventListener("reset", () => {
+      setTimeout(() => {
+        dropdownSelects.forEach((dropdown) => {
+          dropdown.classList.remove("has-value");
+
+          const active = dropdown.querySelector(".active");
+          if (active) active.classList.remove("active");
+
+          const toggle = dropdown.querySelector(".menu-dropdown__toggle");
+          if (toggle) {
+            toggle.childNodes[0].textContent =
+              toggle.dataset.placeholder || "Выбрать";
+          }
+        });
+
+        updateResetState();
+      }, 0);
+    });
+
+    /* init */
+    updateResetState();
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const blocks = document.querySelectorAll(".tovar__line-input");
 
-  // reset формы
-  form.addEventListener("reset", () => {
-    // ждём, пока браузер сбросит select
-    setTimeout(updateResetButtonState, 0);
+  blocks.forEach((block) => {
+    const minusBtn = block.querySelector(".qty-minus");
+    const plusBtn = block.querySelector(".qty-plus");
+    const input = block.querySelector(".qty-input");
+
+    minusBtn.addEventListener("click", () => {
+      let value = parseInt(input.value, 10) || 1;
+      if (value > 1) value--;
+      input.value = value;
+    });
+
+    plusBtn.addEventListener("click", () => {
+      let value = parseInt(input.value, 10) || 1;
+      input.value = value + 1;
+    });
+
+    
+    input.addEventListener("input", () => {
+      if (input.value < 1) input.value = 1;
+    });
   });
-
-  // инициализация
-  updateResetButtonState();
 });
