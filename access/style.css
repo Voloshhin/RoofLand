@@ -5821,7 +5821,7 @@ header .btn__shop {
     justify-content: center;
     align-content: center;
     display: flex;
-    padding: 12%;
+    padding: 12% 14%;
   }
   .tovar__line-block span {
     font-weight: 600;
