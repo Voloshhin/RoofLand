@@ -5723,21 +5723,21 @@ header .btn__shop {
 
 /* Дорожка скролла (фон) */
 .tovar__line-drop .menu-dropdown__popup-block::-webkit-scrollbar-track {
-  background: #ececec; 
+  background: #ececec;
   border-radius: 2.813rem;
 }
 
 /* Ползунок скролла (цвет #4153E4, высота 36px) */
 .tovar__line-drop .menu-dropdown__popup-block::-webkit-scrollbar-thumb {
-  background: #4153e4; 
-  height: 2.25rem; 
-  border-radius: 2.813rem; 
-  opacity: 1; 
+  background: #4153e4;
+  height: 2.25rem;
+  border-radius: 2.813rem;
+  opacity: 1;
 }
 
 /* Стилизация при наведении (опционально) */
 .tovar__line-drop .menu-dropdown__popup-block::-webkit-scrollbar-thumb:hover {
-  background: #4153e4; 
+  background: #4153e4;
 }
 .tovar__line-drop .menu-dropdown.is-open .menu-dropdown__popup {
   border-radius: 0.5rem;
@@ -5761,14 +5761,14 @@ header .btn__shop {
   padding: 0.3rem 0.5rem;
   border-radius: 0.5rem;
 }
-.tovar__line-drop .project-list-filter__select{
+.tovar__line-drop .project-list-filter__select {
   padding: 0.625rem;
 }
 @media (max-width: 48em) {
   .tovar__line-input img {
-  height: 2.3rem;
-  width: 2.5rem;
-}
+    height: 2.3rem;
+    width: 2.5rem;
+  }
   .tovar__swiper {
     width: 100%;
   }
@@ -5820,6 +5820,8 @@ header .btn__shop {
     align-items: center;
     justify-content: center;
     align-content: center;
+    display: flex;
+    padding: 12%;
   }
   .tovar__line-block span {
     font-weight: 600;
