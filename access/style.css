@@ -5765,6 +5765,10 @@ header .btn__shop {
   padding: 0.625rem;
 }
 @media (max-width: 48em) {
+  .tovar__line-input img {
+  height: 2.3rem;
+  width: 2.5rem;
+}
   .tovar__swiper {
     width: 100%;
   }
