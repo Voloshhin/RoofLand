@@ -5813,6 +5813,9 @@ header .btn__shop {
   }
   .tovar__line-input input {
     width: 3rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
   }
   .tovar__line-block span {
     font-weight: 600;
