@@ -7005,7 +7005,7 @@ font[color="#FF0000"] {
 .tablet{
   width: 100%;
 }
-<style>
+
 /* Стили для попапа */
 .zvonok-popup {
     display: none;
@@ -7094,4 +7094,3 @@ font[color="#FF0000"] {
     display: none;
     overflow-y: scroll;
 }
-</style>
