@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+    <link rel="stylesheet" href="access/style.css" />
+  </head>
+  <body>
+    <button class="primary-btn open-quiz-btn">Рассчитать стоимость</button>
+
+    <!-- Modal -->
+    <div class="quiz-modal">
+      <div class="container">
+        <!-- Close -->
+        <button class="quiz-close"><img src="access/img/close-blue.svg" alt=""></button>
+        
+        <div class="quiz-step active" data-step="0">
+         <div class="quiz-step__content">
+          <div class="company-goal">
+            <div class="header-logo">
+                <img src="access/img/logo-header.svg" alt="">
+            </div>
+            <h2>
+                Узнайте стоимость вашей кровли в 7 шагов<br>
+                <span>
+                    и получи гарантированную скидку 20%
+                </span>
+            </h2>
+            <p class="quiz-subtitle">Точность расчета 98%</p>
+            <button class="btn btn__calcul next-btn">Начать расчет
+                <img src="access/img/arr-banner.svg" alt="">
+            </button>
+          </div>
+          <img src="access/img/banner-fon.jpg" alt="" class="quiz-step__img">
+         </div>
+        </div>
+        <div class="quiz-step" data-step="1">
+            <div class="quiz-step__content2">
+             <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>Пройдите тест и рассчитайте стоимость кровли</h2>
+             </div>
+            <div class="quiz-content">
+             <div class="quiz-content__left">
+              <div class="quiz-left__box">
+                <div class="quiz-step__header">
+                    <div class="quiz-step__count">
+                        <span class="quiz-step__current">1</span><span class="quiz-step__total">/7</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar"></div>
+                    </div>
+                </div>
+                <h3 class="quiz-question">
+                    1. Какой расчет вас интересует?
+                </h3>
+                <div class="quiz-options">
+                    <label class="radio quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step1" >
+                            <span>Стоимость кровли под ключ (материалы+ монтаж)</span>
+                        </div>
+                    </label>
+                    <label class="radio quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step1">
+                            <span>Стоимость крыши под ключ</span>
+                        </div>
+                    </label>
+                    <label class="radio quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step1">
+                            <span>Стоимость крыши под ключ</span>
+                        </div>
+                    </label>
+                </div>
+              </div>
+                <div class="quiz-nav">
+                    <button class="secondary-btn prev-btn" disabled><img src="access/img/arr-left.svg" alt="">Назад</button>
+                    <button class="primary-btn next-btn" disabled>Далее <img src="access/img/arr-banner.svg" alt=""></button>
+                </div>
+                </div>
+                <!-- RIGHT -->
+                <div class="quiz-content__right">
+                    <div class="quiz-content__right-box">
+                        <div class="quiz-content__right-info">
+                            <div class="quiz-content__right-master">
+                                <strong>Узнайте полную стоимость за несколько шагов</strong>
+                                <p>Выберите интересующий расчет, чтобы получить стоимость максимально быстро</p> 
+                            </div>
+                            <div class="quiz-content__right-tel">
+                                <p>Телефон для справок</p>
+                                <span><img src="access/img/phones-03.svg" alt=""> +375 29 628 20 09 </span>
+                            </div>
+                        </div>
+                        <div class="quiz-content__right-master">
+                           <strong>Павел Сороко</strong>
+                           <p>Контролирую этапы строительства кровель с 2012 года</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="quiz-step" data-step="2">
+          <div class="quiz-step__content2">
+             <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>Пройдите тест и рассчитайте стоимость кровли</h2>
+             </div>
+            <div class="quiz-content">
+             <div class="quiz-content__left">
+              <div class="quiz-left__box">
+                <div class="quiz-step__header">
+                    <div class="quiz-step__count">
+                        <span class="quiz-step__current">2</span><span class="quiz-step__total">/7</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar"></div>
+                    </div>
+                </div>
+                <h3 class="quiz-question">
+                    2. Какой расчет вас интересует?
+                </h3>
+                <div class="quiz-options">
+                    <label class="radio quiz-options__item ">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step2" class="radio-item" >
+                            Стоимость кровли под ключ (материалы+ монтаж)
+                        </div>
+                    </label>
+                    <label class="radio quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step2" class="radio-item">
+                            Стоимость крыши под ключ
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step2" class="radio-item">
+                            Стоимость крыши под ключ
+                        </div>
+                    </label>
+                </div>
+              </div>
+                <div class="quiz-nav">
+                    <button class="secondary-btn prev-btn"><img src="access/img/arr-left.svg" alt="">Назад</button>
+                    <button class="primary-btn next-btn" disabled>Далее <img src="access/img/arr-banner.svg" alt=""></button>
+                </div>
+              </div>
+                <!-- RIGHT -->
+                <div class="quiz-content__right">
+                    <div class="quiz-content__right-box">
+                        <div class="quiz-content__right-info">
+                            <div class="quiz-content__right-master">
+                                <strong>Узнайте полную стоимость за несколько шагов</strong>
+                                <p>Выберите интересующий расчет, чтобы получить стоимость максимально быстро</p> 
+                            </div>
+                            <div class="quiz-content__right-tel">
+                                <p>Телефон для справок</p>
+                                <span><img src="access/img/phones-03.svg" alt=""> +375 29 628 20 09 </span>
+                            </div>
+                        </div>
+                        <div class="quiz-content__right-master">
+                           <strong>Павел Сороко</strong>
+                           <p>Контролирую этапы строительства кровель с 2012 года</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="quiz-step" data-step="3">
+          <div class="quiz-step__content2">
+             <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>Пройдите тест и рассчитайте стоимость кровли</h2>
+             </div>
+            <div class="quiz-content">
+             <div class="quiz-content__left">
+              <div class="quiz-left__box">
+                <div class="quiz-step__header">
+                    <div class="quiz-step__count">
+                        <span class="quiz-step__current">3</span><span class="quiz-step__total">/7</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar"></div>
+                    </div>
+                </div>
+                <h3 class="quiz-question">
+                    3. Какой расчет вас интересует?
+                </h3>
+                <div class="quiz-options">
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step1" class="radio-item">
+                            Стоимость кровли под ключ (материалы+ монтаж)
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step3" class="radio-item">
+                            Стоимость крыши под ключ
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step3" class="radio-item">
+                            Стоимость крыши под ключ
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step3" class="radio-item">
+                            Стоимость кровли под ключ (материалы+ монтаж)
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step3" class="radio-item">
+                            Стоимость крыши под ключ
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step3" class="radio-item">
+                            Стоимость крыши под ключ
+                        </div>
+                    </label>
+                </div>
+              </div>
+                <div class="quiz-nav">
+                    <button class="secondary-btn prev-btn"><img src="access/img/arr-left.svg" alt="">Назад</button>
+                    <button class="primary-btn next-btn" disabled>Далее <img src="access/img/arr-banner.svg" alt=""></button>
+                </div>
+                </div>
+                <!-- RIGHT -->
+                <div class="quiz-content__right">
+                    <div class="quiz-content__right-box">
+                        <div class="quiz-content__right-info">
+                            <div class="quiz-content__right-master">
+                                <strong>Узнайте полную стоимость за несколько шагов</strong>
+                                <p>Выберите интересующий расчет, чтобы получить стоимость максимально быстро</p> 
+                            </div>
+                            <div class="quiz-content__right-tel">
+                                <p>Телефон для справок</p>
+                                <span><img src="access/img/phones-03.svg" alt="">+375 29 628 20 09 </span>
+                            </div>
+                        </div>
+                        <div class="quiz-content__right-master">
+                           <strong>Павел Сороко</strong>
+                           <p>Контролирую этапы строительства кровель с 2012 года</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="quiz-step" data-step="4">
+          <div class="quiz-step__content2">
+             <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>Пройдите тест и рассчитайте стоимость кровли</h2>
+             </div>
+            <div class="quiz-content">
+             <div class="quiz-content__left">
+              <div class="quiz-left__box">
+                <div class="quiz-step__header">
+                    <div class="quiz-step__count">
+                        <span class="quiz-step__current">4</span><span class="quiz-step__total">/7</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar"></div>
+                    </div>
+                </div>
+                <h3 class="quiz-question">
+                    3. Какой расчет вас интересует?
+                </h3>
+                <div class="quiz-options">
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step4" class="radio-item">
+                            <span>Стоимость крыши под ключ</span>
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step4" class="radio-item">
+                            <span>Стоимость крыши под ключ</span>
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step4" class="radio-item">
+                            <span>Стоимость крыши под ключ</span>
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step4" class="radio-item">
+                            <span>Стоимость кровли под ключ (материалы+ монтаж)</span>
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step4" class="radio-item">
+                            <span>Стоимость крыши под ключ</span>
+                        </div>
+                    </label>
+                    <label class="quiz-options__item">
+                        <img src="access/img/options-item-img.png" alt="">
+                        <div>
+                            <input type="radio" name="step4" class="radio-item">
+                            Стоимость крыши под ключ
+                        </div>
+                    </label>
+                </div>
+              </div>
+                <div class="quiz-nav">
+                    <button class="secondary-btn prev-btn"><img src="access/img/arr-left.svg" alt="">Назад</button>
+                    <button class="primary-btn next-btn" disabled>Далее <img src="access/img/arr-banner.svg" alt=""></button>
+                </div>
+                </div>
+                <!-- RIGHT -->
+                <div class="quiz-content__right">
+                    <div class="quiz-content__right-box">
+                        <div class="quiz-content__right-info">
+                            <div class="quiz-content__right-master">
+                                <strong>Узнайте полную стоимость за несколько шагов</strong>
+                                <p>Выберите интересующий расчет, чтобы получить стоимость максимально быстро</p> 
+                            </div>
+                            <div class="quiz-content__right-tel">
+                                <p>Телефон для справок</p>
+                                <span><img src="access/img/phones-03.svg" alt=""> +375 29 628 20 09 </span>
+                            </div>
+                        </div>
+                        <div class="quiz-content__right-master">
+                           <strong>Павел Сороко</strong>
+                           <p>Контролирую этапы строительства кровель с 2012 года</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="quiz-step" data-step="5">
+          <div class="quiz-step__content2">
+             <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>Пройдите тест и рассчитайте стоимость кровли</h2>
+             </div>
+            <div class="quiz-content">
+             <div class="quiz-content__left">
+                <div class="quiz-left__box">
+
+                <div class="quiz-step__header">
+                    <div class="quiz-step__count">
+                     <span class="quiz-step__current">5</span><span class="quiz-step__total">/7</span>
+                    </div>
+
+                    <div class="quiz-progress">
+                     <div class="quiz-progress-bar"></div>
+                    </div>
+                </div>
+                <h3 class="quiz-question">
+                    5. Укажите ориентировочную площадь кровли или дома, либо прикрепите проект
+                </h3>
+                <div class="quiz-options__inputs">
+                    <label class="quiz-options__input">
+                    Площадь кровли, м²
+                    <input type="text" class="input-text quiz-required">
+                    </label>
+                    <label class="quiz-options__input">
+                    Площадь дома, м²
+                    <input type="text" class="input-text quiz-required">
+                    </label>
+                    <label class="quiz-options__file quiz-file">
+                        <div>
+                            <img src="access/img/сomp-pre.svg" alt="">
+                            Прикрепить проект
+                        </div>
+                        <input type="file" class="input-file">
+                        <div class="file-name"></div>
+                    </label>
+                </div>
+                </div>
+                <div class="quiz-nav">
+                <button class="secondary-btn prev-btn">
+                    <img src="access/img/arr-left.svg"> Назад
+                </button>
+
+                <button class="primary-btn next-btn" disabled>
+                    Далее
+                    <img src="access/img/arr-banner.svg">
+                </button>
+                </div>
+            </div>
+                <!-- RIGHT -->
+                <div class="quiz-content__right">
+                    <div class="quiz-content__right-box">
+                        <div class="quiz-content__right-info">
+                            <div class="quiz-content__right-master">
+                                <strong>Узнайте полную стоимость за несколько шагов</strong>
+                                <p>Выберите интересующий расчет, чтобы получить стоимость максимально быстро</p> 
+                            </div>
+                            <div class="quiz-content__right-tel">
+                                <p>Телефон для справок</p>
+                                <span><img src="access/img/phones-03.svg" alt=""> +375 29 628 20 09 </span>
+                            </div>
+                        </div>
+                        <div class="quiz-content__right-master">
+                           <strong>Павел Сороко</strong>
+                           <p>Контролирую этапы строительства кровель с 2012 года</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="quiz-step" data-step="6">
+          <div class="quiz-step__content2">
+             <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>Пройдите тест и рассчитайте стоимость кровли</h2>
+             </div>
+            <div class="quiz-content">
+             <div class="quiz-content__left">
+                <div class="quiz-left__box">
+                <div class="quiz-step__header">
+                    <div class="quiz-step__count">
+                    <span class="quiz-step__current">6</span><span class="quiz-step__total">/7</span>
+                    </div>
+
+                    <div class="quiz-progress">
+                    <div class="quiz-progress-bar"></div>
+                    </div>
+                </div>
+                <h3 class="quiz-question">
+                    6. Укажите ориентировочную площадь кровли или дома, либо прикрепите проект
+                </h3>
+
+                <div class="quiz-options__inputs">
+                    <label class="quiz-options__input">
+                    Площадь кровли, м²
+                    <input type="text" class="input-text quiz-required">
+                    </label>
+
+                    <label class="quiz-options__input">
+                    Площадь дома, м²
+                    <input type="text" class="input-text quiz-required">
+                    </label>
+
+                    <label class="quiz-options__file quiz-file">
+                        <div>
+                            <img src="access/img/сomp-pre.svg" alt="">
+                            Прикрепить проект
+                        </div>
+                        <input type="file" class="input-file">
+
+                        <div class="file-name"></div>
+                    </label>
+                </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="secondary-btn prev-btn">
+                        <img src="access/img/arr-left.svg"> Назад
+                    </button>
+                    <button class="primary-btn next-btn" disabled>
+                        Далее
+                        <img src="access/img/arr-banner.svg">
+                    </button>
+                </div>
+            </div>
+                <!-- RIGHT -->
+                <div class="quiz-content__right">
+                    <div class="quiz-content__right-box">
+                        <div class="quiz-content__right-info">
+                            <div class="quiz-content__right-master">
+                                <strong>Узнайте полную стоимость за несколько шагов</strong>
+                                <p>Выберите интересующий расчет, чтобы получить стоимость максимально быстро</p> 
+                            </div>
+                            <div class="quiz-content__right-tel">
+                                <p>Телефон для справок</p>
+                                <span><img src="access/img/phones-03.svg" alt=""> +375 29 628 20 09 </span>
+                            </div>
+                        </div>
+                        <div class="quiz-content__right-master">
+                           <strong>Павел Сороко</strong>
+                           <p>Контролирую этапы строительства кровель с 2012 года</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="quiz-step" data-step="7">
+          <div class="quiz-step__content2">
+             <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>Пройдите тест и рассчитайте стоимость кровли</h2>
+             </div>
+            <div class="quiz-content">
+             <div class="quiz-content__left">
+                <div class="quiz-left__box">
+                <div class="quiz-step__header">
+                    <div class="quiz-step__count">
+                    <span class="quiz-step__current">7</span><span class="quiz-step__total">/7</span>
+                    </div>
+
+                    <div class="quiz-progress">
+                    <div class="quiz-progress-bar"></div>
+                    </div>
+                </div>
+                <div class="quiz-question__block">
+                    <h3 class="quiz-question">
+                    7. Мы уже приступили к расчету вашей кровли
+                    </h3>
+                    <p>Стоимость вашей кровли будет рассчитана в течении 30 минут</p>
+                </div>
+               
+                <div class="quiz-options__inputs">
+                    <label class="quiz-options__input">
+                    Ваше имя
+                    <input type="text" class="input-text quiz-required" placeholder="Введите имя">
+                    </label>
+
+                    <label class="quiz-options__input">
+                        <div class="quiz-options__input-box">Номер телефона <span>*</span></div>
+                    
+                    <input type="text" class="input-text quiz-required" placeholder="Введите номер телефона">
+                    </label>
+                    <div class="quiz-radio_box">
+                        <div class="quiz-radio__text">Выберите удобный способ получения расчета</div>
+                        <div>
+                            <label class="quiz-radio-item">
+                                <input type="radio" name="contact" value="phone" checked class="radio-item">
+                                Viber
+                            </label>
+                            <label class="quiz-radio-item">
+                                <input type="radio" name="contact" value="telegram" class="radio-item">
+                                Telegram
+                            </label>
+                            <label class="quiz-radio-item">
+                                <input type="radio" name="contact" value="whatsapp" class="radio-item">
+                                SMS сообщение
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                <div class="quiz-nav">
+                <button class="secondary-btn prev-btn">
+                    <img src="access/img/arr-left.svg"> Назад
+                </button>
+
+                <button class="primary-btn next-btn" disabled>
+                    Далее
+                    <img src="access/img/arr-banner.svg">
+                </button>
+                </div>
+            </div>
+                <!-- RIGHT -->
+                <div class="quiz-content__right">
+                    <div class="quiz-content__right-box">
+                        <div class="quiz-content__right-info">
+                            <div class="quiz-content__right-master">
+                                <strong>Узнайте полную стоимость за несколько шагов</strong>
+                                <p>Выберите интересующий расчет, чтобы получить стоимость максимально быстро</p> 
+                            </div>
+                            <div class="quiz-content__right-tel">
+                                <p>Телефон для справок</p>
+                                <span><img src="access/img/phones-03.svg" alt=""> +375 29 628 20 09 </span>
+                            </div>
+                        </div>
+                        <div class="quiz-content__right-master">
+                           <strong>Павел Сороко</strong>
+                           <p>Контролирую этапы строительства кровель с 2012 года</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="quiz-step" data-step="8">
+          <div class="quiz-step__content">
+            <div class="company-goal">
+                <div class="header-logo">
+                    <img src="access/img/logo-header.svg" alt="">
+                </div>
+                <h2>
+                    Заявка на расчет успешно оформлена!
+                </h2>
+                <p class="quiz-subtitle">Наши специалисты свяжутся с Вами в ближайшее время</p>
+                <button class="btn btn__calcul quiz-close-final">Вернуться на главную
+                    <img src="access/img/arr-banner.svg" alt="">
+                </button>
+            </div>
+            <img src="access/img/banner-fon.jpg" alt="" class="quiz-step__img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/index.js"></script>
+  </body>
+</html>

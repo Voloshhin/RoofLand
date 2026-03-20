@@ -121,7 +121,9 @@ h6 {
     min-width: 20.31rem; /* 325px -> ~20.31rem */
   }
 }
-
+.media__subtitle{
+font-weight: 600;
+}
 /* Адаптив планшет/мобильные */
 @media (max-width: 1240px) {
   .media__title > *:first-child {
@@ -130,6 +132,7 @@ h6 {
   }
   .media__title > *:last-child {
     font-size: 1.125rem; /* 18px */
+    
   }
   .footer__main {
     flex-direction: column;
@@ -384,9 +387,7 @@ h6 {
   .header__actions__mobile {
     display: none;
   }
-  .title__block {
-    margin-bottom: 3.25rem; /* 52px */
-  }
+  
   .title__name > h1 {
     font-size: 3.125rem; /* Взято из первого файла */
   }

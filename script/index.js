@@ -37,101 +37,98 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const dropdowns = document.querySelectorAll(".menu-dropdown");
 
-dropdowns.forEach((drop) => {
-  const toggle = drop.querySelector(".menu-dropdown__toggle");
-  if (!toggle) return;
+  dropdowns.forEach((drop) => {
+    const toggle = drop.querySelector(".menu-dropdown__toggle");
+    if (!toggle) return;
 
-  toggle.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-    // Закрыть все остальные
-    dropdowns.forEach((d) => {
-      if (d !== drop) d.classList.remove("is-open");
+      // Закрыть все остальные
+      dropdowns.forEach((d) => {
+        if (d !== drop) d.classList.remove("is-open");
+      });
+
+      drop.classList.toggle("is-open");
     });
 
-    drop.classList.toggle("is-open");
+    // Если это select (но НЕ tovar__line-drop-2)
+    if (
+      drop.classList.contains("project-list-filter__select") &&
+      !drop.classList.contains("tovar__line-drop-2")
+    ) {
+      const popup = drop.querySelector(".menu-dropdown__popup");
+      if (!popup) return;
+
+      popup.querySelectorAll("a").forEach((option) => {
+        option.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // Смена текста (для обычных select)
+          toggle.childNodes[0].textContent = option.textContent.trim();
+
+          // Активный пункт
+          popup
+            .querySelectorAll("a")
+            .forEach((a) => a.classList.remove("active"));
+          option.classList.add("active");
+
+          // Помечаем селект как выбранный
+          drop.classList.add("has-value");
+          drop.dataset.value = option.textContent.trim();
+
+          drop.classList.remove("is-open");
+        });
+      });
+    }
   });
 
-  // Если это select (но НЕ tovar__line-drop-2)
-  if (
-    drop.classList.contains("project-list-filter__select") &&
-    !drop.classList.contains("tovar__line-drop-2")
-  ) {
-    const popup = drop.querySelector(".menu-dropdown__popup");
-    if (!popup) return;
-
-    popup.querySelectorAll("a").forEach((option) => {
-      option.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        // Смена текста (для обычных select)
-        toggle.childNodes[0].textContent = option.textContent.trim();
-
-        // Активный пункт
-        popup
-          .querySelectorAll("a")
-          .forEach((a) => a.classList.remove("active"));
-        option.classList.add("active");
-
-        // Помечаем селект как выбранный
-        drop.classList.add("has-value");
-        drop.dataset.value = option.textContent.trim();
-
-        drop.classList.remove("is-open");
-      });
-    });
-  }
-});
-
-// Закрытие по клику вне
-document.addEventListener("click", () => {
-  dropdowns.forEach((d) => d.classList.remove("is-open"));
-});
-
-// Закрытие по Esc
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
+  // Закрытие по клику вне
+  document.addEventListener("click", () => {
     dropdowns.forEach((d) => d.classList.remove("is-open"));
-  }
-});
+  });
 
-
-
+  // Закрытие по Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      dropdowns.forEach((d) => d.classList.remove("is-open"));
+    }
+  });
 });
 // Специальный обработчик ТОЛЬКО для tovar__line-drop-2
-document.addEventListener('DOMContentLoaded', () => {
-  const targetDropdown = document.querySelector('.menu-dropdown.tovar__line-drop-2');
+document.addEventListener("DOMContentLoaded", () => {
+  const targetDropdown = document.querySelector(
+    ".menu-dropdown.tovar__line-drop-2",
+  );
   if (!targetDropdown) return;
 
-  const toggle = targetDropdown.querySelector('.menu-dropdown__toggle');
-  const popup = targetDropdown.querySelector('.menu-dropdown__popup');
+  const toggle = targetDropdown.querySelector(".menu-dropdown__toggle");
+  const popup = targetDropdown.querySelector(".menu-dropdown__popup");
   if (!toggle || !popup) return;
 
-  const menuLineInToggle = toggle.querySelector('.tovar__menu-line');
+  const menuLineInToggle = toggle.querySelector(".tovar__menu-line");
   if (!menuLineInToggle) return;
 
-  popup.querySelectorAll('a').forEach(option => {
-    option.addEventListener('click', (e) => {
+  popup.querySelectorAll("a").forEach((option) => {
+    option.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const optionMenuLine = option.querySelector('.tovar__menu-line');
-    if (!optionMenuLine) return;
+      const optionMenuLine = option.querySelector(".tovar__menu-line");
+      if (!optionMenuLine) return;
 
-    // 1. Меняем текст в toggle (отображаем выбранный вариант)
-    menuLineInToggle.innerHTML = optionMenuLine.innerHTML;
+      // 1. Меняем текст в toggle (отображаем выбранный вариант)
+      menuLineInToggle.innerHTML = optionMenuLine.innerHTML;
 
-    // 2. Помечаем выбранный элемент как активный
-    popup.querySelectorAll('a').forEach(a => a.classList.remove('active'));
-    option.classList.add('active');
+      // 2. Помечаем выбранный элемент как активный
+      popup.querySelectorAll("a").forEach((a) => a.classList.remove("active"));
+      option.classList.add("active");
 
-    // 3. Закрываем dropdown — без прокрутки!
-    targetDropdown.classList.remove('is-open');
+      // 3. Закрываем dropdown — без прокрутки!
+      targetDropdown.classList.remove("is-open");
     });
   });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   // const filterForms = document.querySelectorAll(".project-list-filter__form");
@@ -310,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (form1) {
     const requiredFields = form1.querySelectorAll(
-      "input[required]:not([name='rating']), textarea[required]"
+      "input[required]:not([name='rating']), textarea[required]",
     );
     const rating = form1.querySelector(".rating");
     const ratingInputs = rating
@@ -329,14 +326,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     requiredFields.forEach((field) => {
       field.addEventListener("blur", () =>
-        field.value.trim() === "" ? showError(field) : clearError(field)
+        field.value.trim() === "" ? showError(field) : clearError(field),
       );
       field.addEventListener("input", () => clearError(field));
     });
 
     ratingInputs.forEach((radio) => {
       radio.addEventListener("change", () =>
-        rating.classList.remove("rating-error")
+        rating.classList.remove("rating-error"),
       );
     });
 
@@ -660,7 +657,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(
         (src) => `
       <div class="swiper-slide"><img src="${src}" alt=""></div>
-    `
+    `,
       )
       .join("");
   }
@@ -776,7 +773,7 @@ function initTabs(container) {
   function showTab(tabId) {
     // кнопки
     buttons.forEach((b) =>
-      b.classList.toggle("active", b.dataset.tab === tabId)
+      b.classList.toggle("active", b.dataset.tab === tabId),
     );
 
     // контент
@@ -965,10 +962,10 @@ document.addEventListener("DOMContentLoaded", () => {
   filterForms.forEach((form) => {
     const searchInput = form.querySelector('input[type="text"]');
     const nativeSelects = form.querySelectorAll(
-      "select.project-list-filter__select"
+      "select.project-list-filter__select",
     );
     const dropdownSelects = form.querySelectorAll(
-      ".menu-dropdown.project-list-filter__select"
+      ".menu-dropdown.project-list-filter__select",
     );
     const resetButton = form.querySelector(".project-list-filter__reset");
 
@@ -1061,9 +1058,185 @@ document.addEventListener("DOMContentLoaded", function () {
       input.value = value + 1;
     });
 
-    
     input.addEventListener("input", () => {
       if (input.value < 1) input.value = 1;
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.querySelector(".quiz-modal");
+  const openBtn = document.querySelector(".open-quiz-btn");
+  const closeBtn = document.querySelector(".quiz-close");
+  const closeFinalBtn = document.querySelector(".quiz-close-final");
+  const steps = document.querySelectorAll(".quiz-step");
+
+  let currentStep = 0;
+  const totalSteps = 7;
+
+  /* открыть */
+  if (openBtn) {
+    openBtn.addEventListener("click", () => {
+      modal.classList.add("active");
+      goToStep(0);
+    });
+  }
+
+  /* закрыть */
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+    });
+  }
+
+  /* закрыть финальный */
+  if (closeFinalBtn) {
+    closeFinalBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+      goToStep(0);
+    });
+  }
+
+  /* навигация */
+  document.addEventListener("click", function (e) {
+    if (e.target.closest(".next-btn")) {
+      const step = e.target.closest(".quiz-step");
+      if (!validateStep(step)) return;
+      goToStep(currentStep + 1);
+    }
+    if (e.target.closest(".prev-btn")) {
+      goToStep(currentStep - 1);
+    }
+  });
+
+  /* RADIO логика — кнопка активируется только после выбора */
+  document
+    .querySelectorAll(".quiz-step input[type='radio']")
+    .forEach((radio) => {
+      radio.addEventListener("change", function () {
+        const step = this.closest(".quiz-step");
+
+        validateStep(step);
+      });
+    });
+
+  /* TEXT логика */
+  document.querySelectorAll(".quiz-step .input-text").forEach((input) => {
+    input.addEventListener("input", function () {
+      const step = this.closest(".quiz-step");
+
+      validateStep(step);
+    });
+  });
+
+  /* FILE логика */
+  document.querySelectorAll(".quiz-step .input-file").forEach((file) => {
+    file.addEventListener("change", function () {
+      const step = this.closest(".quiz-step");
+      const fileNameBlock = step.querySelector(".file-name");
+      if (this.files.length > 0) {
+        fileNameBlock.textContent = "Файл загружен: " + this.files[0].name;
+      } else {
+        fileNameBlock.textContent = "";
+      }
+    });
+  });
+
+  /* переход */
+  function goToStep(step) {
+    steps.forEach((s) => s.classList.remove("active"));
+    const next = document.querySelector(`.quiz-step[data-step="${step}"]`);
+    if (next) {
+      next.classList.add("active");
+      currentStep = step;
+      updateProgress();
+      validateStep(next);
+    }
+  }
+
+  /* прогресс */
+  function updateProgress() {
+    const percent = (currentStep / totalSteps) * 100;
+    document
+      .querySelectorAll(".quiz-progress-bar")
+      .forEach((bar) => (bar.style.width = percent + "%"));
+  }
+
+  /* ВАЛИДАЦИЯ */
+  function validateStep(step) {
+    const nextBtn = step.querySelector(".next-btn");
+    if (!nextBtn) return true;
+    const textInputs = step.querySelectorAll(".input-text");
+    const radios = step.querySelectorAll("input[type='radio']");
+    let valid = true;
+    /* если есть текстовые поля */
+    if (textInputs.length > 0) {
+      textInputs.forEach((input) => {
+        if (input.value.trim() === "") {
+          valid = false;
+        }
+      });
+    }
+
+    /* если есть radio */
+    if (radios.length > 0) {
+      const checked = step.querySelector("input[type='radio']:checked");
+      if (!checked) valid = false;
+    }
+    nextBtn.disabled = !valid;
+    return valid;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sort = document.querySelector(".sort");
+  const sortButton = document.getElementById("sortButton");
+  const sortRadios = document.querySelectorAll('input[name="sort"]');
+  const sortText = sortButton.querySelector(".sort__text");
+
+  sortButton.addEventListener("click", () => {
+    sort.classList.toggle("sort--open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!sort.contains(e.target)) {
+      sort.classList.remove("sort--open");
+    }
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const sortFromUrl = params.get("sort");
+  const savedSort = localStorage.getItem("sort");
+  const current = sortFromUrl || savedSort || "popular";
+  sortRadios.forEach(radio => {
+    if (radio.value === current) {
+      radio.checked = true;
+      sortText.textContent = radio.parentElement.textContent.trim();
+    }
+  });
+
+  // 🔹 выбор
+  sortRadios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      const value = radio.value;
+      const label = radio.parentElement.textContent.trim();
+      sortText.textContent = label;
+      localStorage.setItem("sort", value);
+      sort.classList.remove("sort--open");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".detailinfo__item");
+
+  items.forEach(item => {
+    const header = item.querySelector(".detailinfo__header");
+
+    header.addEventListener("click", () => {
+      // если нужен только один открытый
+      items.forEach(i => i.classList.remove("active"));
+      item.classList.toggle("active");
     });
   });
 });

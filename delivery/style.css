@@ -140,7 +140,6 @@ h6 {
   padding: 0px;
 }
 
-
 .menu__inner {
   display: flex;
   flex-direction: column;
@@ -388,29 +387,38 @@ h6 {
 .burger__but::before {
   top: 0;
   box-shadow: 0 11px 0 var(--main-color);
-  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  transition:
+    box-shadow 0.3s 0.15s,
+    top 0.3s 0.15s,
+    transform 0.3s;
 }
 
 .burger__but::after {
   bottom: 0;
-  transition: bottom 0.3s 0.15s, transform 0.3s;
+  transition:
+    bottom 0.3s 0.15s,
+    transform 0.3s;
 }
 
 .burger__but__active::before {
   top: 11px;
   transform: rotate(45deg);
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
-  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  transition:
+    box-shadow 0.15s,
+    top 0.3s,
+    transform 0.3s 0.15s;
 }
 
 .burger__but__active::after {
   bottom: 11px;
   transform: rotate(-45deg);
-  transition: bottom 0.3s, transform 0.3s 0.15s;
+  transition:
+    bottom 0.3s,
+    transform 0.3s 0.15s;
 }
 
 /*footer*/
-
 
 .contact-form {
   flex-shrink: 0;
@@ -559,7 +567,6 @@ h6 {
   color: var(--black-2);
   text-decoration: underline;
 }
-
 
 @media (min-width: 1220px) {
   .contact-form {
@@ -725,7 +732,7 @@ h6 {
 
 /* Card */
 .delivery-card {
-  border: 1px solid #ECECEC;
+  border: 1px solid #ececec;
   border-radius: 14px;
   background: var(--gray-2);
   padding: 18px 18px 16px;
@@ -803,8 +810,14 @@ h6 {
   font-weight: 700;
 }
 
+.return__block:first-child {
+  padding: 1rem 0;
+}
 .return__block {
-  padding: 16px 0;
+  padding: 0 0 1rem 0;
+}
+.return__block:last-child {
+  padding: 0;
 }
 
 .return__subtitle {
@@ -842,10 +855,6 @@ h6 {
 
   .return__subtitle {
     font-size: 1.25rem;
-  }
-
-  .return__block {
-    padding: 20px 0;
   }
 }
 
@@ -1199,7 +1208,6 @@ h6 {
 }
 .popup .container {
   position: relative;
-  
 }
 
 .popup-close {
@@ -1343,7 +1351,7 @@ h6 {
     margin-bottom: 0;
     font-size: 1rem;
   }
-  .delivery-card{
+  .delivery-card {
     border-radius: 1rem;
   }
   .delivery-card__list,

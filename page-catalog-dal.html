@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="catalog/assets/styles/style.css">
+    <link rel="stylesheet" href="catalog/assets/img/spite.svg">
+    <link rel="stylesheet" href="access\style.css" />
+    <link
+      href="access/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
+                </div>
+              </div>
+              <button class="burger__but" id="burger__but"></button>
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="actions__link">
+                <a href="#">
+                  <img src="access/img/viber-logo.svg" class="img" alt="viber">
+                </a>
+                <a href="#">
+                  <img src="access/img/telegram-logo.svg" class="img" alt="telegram">
+                </a>
+                <a href="#">
+                  <img src="access/img/whatsapp.svg" class="img" alt="whatsapp">
+                </a>
+              </div>
+              <button class="btn btn__calcul mobal_btn">
+                <img src="access/img/calculator.svg" alt="icon">
+                Рассчитать стоимость
+              </button>
+              <div class="header__search">
+                <button class="but__search">
+                  <img src="access/img/search-loap.svg" alt="" />
+                </button>
+                <input type="text" placeholder="Найти в каталоге" />
+                <button class="header__search-close">
+                  <img src="access/img/close.svg" alt="" />
+                </button>
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu" id="header__menu">
+            <div class="container">
+
+                <nav class="header__content">
+
+                <!-- ITEM WITH SUBMENU -->
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                      <span class="menu-left">
+                        <img src="access/img/catalog.svg" alt="">
+                        <span class="menu-title">Каталог</span>
+                      </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <!-- сюда потом вставишь ссылки -->
+                      <a href="#" class="">Материалы для кровли</a>
+                      <a href="#" class="">Материалы для фасада</a>
+                      <a href="" class="">Заборы и ограждения</a> 
+                      <a href="" class="">Кровельные аксессуары</a> 
+                      <a href="" class="">Водосточные системы</a>  
+                      <a href="" class="">Услуги монтажа</a>  
+                    </div>
+                </div>
+
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                        <span class="menu-left">
+                          <img src="access/img/hammer-screwdriver.svg" alt="">
+                          <span class="menu-title">Кровельные работы</span>
+                        </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <a href="#">Монтаж кровли под ключ</a>
+                    <a href="#">Реконструкция домов и дач</a>
+                    <a href="">Монтаж кровли из металлочерепицы</a>  
+                    <a href="">Монтаж натуральной черепицы</a>  
+                    <a href="">Монтаж фальцевой кровли</a>  
+                    <a href="">Установка водосточной системы</a>  
+                    <a href="">Установка мансардных окон</a>  
+                    <a href="">Установка снегодержателей</a>  
+                    </div>
+                </div>
+
+                <!-- SIMPLE LINKS -->
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/picture-image.svg" alt="">
+                    </span>
+                    <span class="menu-title">Портфолио</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/work-job-pin-location-suitcase.svg" alt="">
+                    </span>
+                    <span class="menu-title">О компании</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/rew-icon.svg" alt="">
+                    </span>
+                    <span class="menu-title">Отзывы</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/money-coins.1-w.svg" alt="">
+                    </span>
+                    <span class="menu-title">Оплата</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/dosvtvozl.svg" alt="">
+                    </span>
+                    <span class="menu-title">Доставка и возврат</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/cont.svg" alt="">
+                    </span>
+                    <span class="menu-title">Контакты</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/bookmark-favorite.svg" alt="">
+                    </span>
+                    <span class="menu-title">Блог</span>
+                  </span>
+                </a>
+
+                <!-- SOCIALS -->
+                <div class="menu-socials">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+                </div>
+              </nav>
+                <!-- BUTTON -->
+                <div class="menu-bottom">
+                   <a href="" class="btn btn__shop">Интернет-магазин <span>⬈</span></a>
+                </div>
+            </div>
+            </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle" class="link_active"
+                >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Материалы для кровли</a>
+                <a href="#">Материалы для фасада</a>
+                <a href="#">Заборы и ограждения</a>
+                <a href="#">Кровельные аксессуары</a>
+                <a href="#">Водосточные системы</a>
+                <a href="#">Услуги монтажа</a>
+              </div>
+            </li>
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Кровельные работы
+                <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Монтаж кровли под ключ</a>
+                <a href="#">Реконструкция домов и дач</a>
+                <a href="#">Монтаж кровли из металлочерепицы</a>
+                <a href="#">Монтаж натуральной черепицы</a>
+                <a href="#">Монтаж фальцевой кровли</a>
+                <a href="#">Установка водосточной системы</a>
+                <a href="#">Установка мансардных окон</a>
+                <a href="#">Установка снегодержателей</a>
+              </div>
+            </li>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div class="breadcrumb">
+            <div class="container">
+                <div class="breadcrumb__content">
+                    <a href="" class="breadcrumb__link">
+                    <h6>Главная</h6>
+                    </a>
+                    <span>/</span>
+                    <h6>Каталог</h6>
+                    <span>/</span>
+                    <h6 class="breadcrumb__end">Модульная металлочерепица</h6>
+                </div>
+            </div>
+        </div>
+        <div class="catalog-title">
+            <div class="container">
+                <div class="title__name">
+                    <h1>
+                        <span>
+                            модульная
+                        </span>
+                            металлочерепица
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <section class="catalog__block new-block">
+            <div class="container">
+                <div class="catalog__main">
+                    <div class="catalog__categories">
+                        <div class="catalog-category__title">
+                            <h4>
+                                Категория товаров
+                            </h4>
+                        </div>
+                        <div class="categories__inner">
+                            <div class="category__block">
+                                <div class="category__title">
+                                    <span>Материалы для кровли</span>
+                                </div>
+                                <div class="category__content">
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Гибкая черепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Клик фальцевая кровля
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Фальцевая кровля
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Натуральная черепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Композитная черепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Плоская кровля
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Профлист для кровли
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__block">
+                                <div class="category__title">
+                                    <span>Материалы для кровли</span>
+                                </div>
+                                <div class="category__content">
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__block">
+                                <div class="category__title">
+                                    <span>Материалы для кровли</span>
+                                </div>
+                                <div class="category__content">
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__block">
+                                <div class="category__title">
+                                    <span>Материалы для кровли</span>
+                                </div>
+                                <div class="category__content">
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                    <div class="category__text">
+                                        <span>
+                                            Модульная металлочерепица
+                                        </span>
+                                        <span>
+                                            (6)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__content">
+                        <div class="catalog-categories__action">
+                            <button class="catalog__categories__but" id="catalog__categories__but">
+                                <img src="catalog/assets/img/btn-cat.svg" alt="">
+                                <span>
+                                    Каталог
+                                </span>
+                            </button>
+                        </div>
+                        <div class="catalog__title">
+                            <h4>
+                                Каталог
+                            </h4>
+                            <div class="sort">
+                                <button class="sort__button" id="sortButton">
+                                    <span class="sort__content">
+                                        <img class="sort__icon" src="/access/img/arrows-diagrams-02.svg">
+                                        <span class="sort__text">По популярности</span>
+                                        <img class="sort__arrow" src="/access/img/chevron-small.svg" alt="">
+                                    </span>
+                                </button>
+
+                                <div class="sort__dropdown" id="sortDropdown">
+                                    <label class="sort__option radio">
+                                    <input type="radio" name="sort" value="popular" checked>
+                                    По популярности
+                                    </label>
+
+                                    <label class="sort__option radio">
+                                    <input type="radio" name="sort" value="price_asc">
+                                    По возрастанию цены
+                                    </label>
+
+                                    <label class="sort__option radio">
+                                    <input type="radio" name="sort" value="price_desc">
+                                    По убыванию цены
+                                    </label>
+
+                                    <label class="sort__option radio">
+                                    <input type="radio" name="sort" value="new">
+                                    По новинкам
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product-inner">
+                            <div class="popular__content-item">
+                                <a href="" class="popular__item-link">
+                                    <img
+                                        src="access/img/2-1.png"
+                                        alt="blog-prom"
+                                        class="img-item"
+                                    />
+                                </a>
+                                <div class="box__stocks">
+                                    <div class="item__stocks">% Акция</div>
+                                    <div class="item__stocks choice">Выбор покупателей</div>
+                                </div>
+                                
+                                <div class="popular__item-content">
+                                    <div class="popular__item-top">
+                                        <a href="">
+                                            <h5 class="popular__item-title">
+                                                Egeria Dachpol
+                                            </h5>
+                                        </a>
+                                        <div class="popular__item-text">
+                                            <p>
+                                            Модульная металлочерепица
+                                            </p>
+                                        </div>
+                                        <div class="popular__item-price">
+                                            от <span>50 BYN</span>
+                                        </div>
+                                        <div class="popular__item-btns">
+                                            <a href="" class="btn btn-more">Подробнее</a>
+                                            <a href="" class="btn btn__calcul">
+                                            <img src="access/img/shop-svg.svg" alt="" />
+                                            В магазин</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="popular__content-item">
+                                <a href="" class="popular__item-link">
+                                    <img
+                                        src="access/img/2-1.png"
+                                        alt="blog-prom"
+                                        class="img-item"
+                                    />
+                                </a>
+                                <div class="box__stocks">
+                                    <div class="item__stocks">% Акция</div>
+                                    <div class="item__stocks choice">Выбор покупателей</div>
+                                </div>
+                                
+                                <div class="popular__item-content">
+                                    <div class="popular__item-top">
+                                        <a href="">
+                                            <h5 class="popular__item-title">
+                                                Egeria Dachpol
+                                            </h5>
+                                        </a>
+                                        <div class="popular__item-text">
+                                            <p>
+                                            Модульная металлочерепица
+                                            </p>
+                                        </div>
+                                        <div class="popular__item-price">
+                                            от <span>50 BYN</span>
+                                        </div>
+                                        <div class="popular__item-btns">
+                                            <a href="" class="btn btn-more">Подробнее</a>
+                                            <a href="" class="btn btn__calcul">
+                                            <img src="access/img/shop-svg.svg" alt="" />
+                                            В магазин</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="popular__content-item">
+                                <a href="" class="popular__item-link">
+                                    <img
+                                        src="access/img/2-1.png"
+                                        alt="blog-prom"
+                                        class="img-item"
+                                    />
+                                </a>
+                                <div class="box__stocks">
+                                    <div class="item__stocks">% Акция</div>
+                                    <div class="item__stocks choice">Выбор покупателей</div>
+                                </div>
+                                
+                                <div class="popular__item-content">
+                                    <div class="popular__item-top">
+                                        <a href="">
+                                            <h5 class="popular__item-title">
+                                                Egeria Dachpol
+                                            </h5>
+                                        </a>
+                                        <div class="popular__item-text">
+                                            <p>
+                                            Модульная металлочерепица
+                                            </p>
+                                        </div>
+                                        <div class="popular__item-price">
+                                            от <span>50 BYN</span>
+                                        </div>
+                                        <div class="popular__item-btns">
+                                            <a href="" class="btn btn-more">Подробнее</a>
+                                            <a href="" class="btn btn__calcul">
+                                            <img src="access/img/shop-svg.svg" alt="" />
+                                            В магазин</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="popular__content-item">
+                                <a href="" class="popular__item-link">
+                                    <img
+                                        src="access/img/2-1.png"
+                                        alt="blog-prom"
+                                        class="img-item"
+                                    />
+                                </a>
+                                <div class="box__stocks">
+                                    <div class="item__stocks">% Акция</div>
+                                    <div class="item__stocks choice">Выбор покупателей</div>
+                                </div>
+                                
+                                <div class="popular__item-content">
+                                    <div class="popular__item-top">
+                                        <a href="">
+                                            <h5 class="popular__item-title">
+                                                Egeria Dachpol
+                                            </h5>
+                                        </a>
+                                        <div class="popular__item-text">
+                                            <p>
+                                            Модульная металлочерепица
+                                            </p>
+                                        </div>
+                                        <div class="popular__item-price">
+                                            от <span>50 BYN</span>
+                                        </div>
+                                        <div class="popular__item-btns">
+                                            <a href="" class="btn btn-more">Подробнее</a>
+                                            <a href="" class="btn btn__calcul">
+                                            <img src="access/img/shop-svg.svg" alt="" />
+                                            В магазин</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="popular__content-item">
+                                <a href="" class="popular__item-link">
+                                    <img
+                                        src="access/img/2-1.png"
+                                        alt="blog-prom"
+                                        class="img-item"
+                                    />
+                                </a>
+                                <div class="box__stocks">
+                                    <div class="item__stocks">% Акция</div>
+                                    <div class="item__stocks choice">Выбор покупателей</div>
+                                </div>
+                                
+                                <div class="popular__item-content">
+                                    <div class="popular__item-top">
+                                        <a href="">
+                                            <h5 class="popular__item-title">
+                                                Egeria Dachpol
+                                            </h5>
+                                        </a>
+                                        <div class="popular__item-text">
+                                            <p>
+                                            Модульная металлочерепица
+                                            </p>
+                                        </div>
+                                        <div class="popular__item-price">
+                                            от <span>50 BYN</span>
+                                        </div>
+                                        <div class="popular__item-btns">
+                                            <a href="" class="btn btn-more">Подробнее</a>
+                                            <a href="" class="btn btn__calcul">
+                                            <img src="access/img/shop-svg.svg" alt="" />
+                                            В магазин</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="popular__content-item">
+                                <a href="" class="popular__item-link">
+                                    <img
+                                        src="access/img/2-1.png"
+                                        alt="blog-prom"
+                                        class="img-item"
+                                    />
+                                </a>
+                                <div class="box__stocks">
+                                    <div class="item__stocks">% Акция</div>
+                                    <div class="item__stocks choice">Выбор покупателей</div>
+                                </div>
+                                
+                                <div class="popular__item-content">
+                                    <div class="popular__item-top">
+                                        <a href="">
+                                            <h5 class="popular__item-title">
+                                                Egeria Dachpol
+                                            </h5>
+                                        </a>
+                                        <div class="popular__item-text">
+                                            <p>
+                                            Модульная металлочерепица
+                                            </p>
+                                        </div>
+                                        <div class="popular__item-price">
+                                            от <span>50 BYN</span>
+                                        </div>
+                                        <div class="popular__item-btns">
+                                            <a href="" class="btn btn-more">Подробнее</a>
+                                            <a href="" class="btn btn__calcul">
+                                            <img src="access/img/shop-svg.svg" alt="" />
+                                            В магазин</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="catalog__detailinfo">
+                            <div class="catalog__detailinfo-top">
+                                <h4>Подробная информация</h4>
+                                <div class="sort__button desk-blk">
+                                    <span class="sort__content">
+                                        <img class="sort__icon" src="/access/img/Component-tel.svg">
+                                        <span class="sort__text">Получить консультацию</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="catalog__detailinfo-main">
+                                <div class="detailinfo__item active">
+                                    <div class="detailinfo__header">
+                                        <span>Видео о монтаже кровли с канала @rooflandteam</span>
+                                        <img class="detailinfo__arrow" src="/access/img/chevron-small.svg" alt="">
+                                    </div>
+                                    <div class="detailinfo__content">
+                                        Металлочерепица НОРДО-это новое исключительное видение металлочерепицы, которая имеет оригинальную форму из четырех изгибов (ребер жёсткости), придающую дому индивидуальность, гармоничный и дорогой вид.
+                                    </div>
+                                </div>
+
+                                <div class="detailinfo__item">
+                                    <div class="detailinfo__header">
+                                        <span>Видео отзывы о работе с нами</span>
+                                        <img class="detailinfo__arrow" src="/access/img/chevron-small.svg" alt="">
+                                    </div>
+                                    <div class="detailinfo__content">
+                                        Металлочерепица НОРДО-это новое исключительное видение металлочерепицы, которая имеет оригинальную форму из четырех изгибов (ребер жёсткости), придающую дому индивидуальность, гармоничный и дорогой вид.
+                                    </div>
+                                </div>
+
+                                <div class="detailinfo__item">
+                                    <div class="detailinfo__header">
+                                        <span>Производители модульной черепицы которым мы доверяем</span>
+                                        <img class="detailinfo__arrow" src="/access/img/chevron-small.svg" alt="">
+                                    </div>
+                                    <div class="detailinfo__content">
+                                        Металлочерепица НОРДО-это новое исключительное видение металлочерепицы, которая имеет оригинальную форму из четырех изгибов (ребер жёсткости), придающую дому индивидуальность, гармоничный и дорогой вид.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sort__button modal-blk">
+                                <span class="sort__content">
+                                    <img class="sort__icon" src="/access/img/Component-tel.svg">
+                                    <span class="sort__text">Получить консультацию</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                <div class="catalog__main video-block">
+                    <div class="catalog__categories">
+                        <div class="catalog-category__title">
+                            <h4>
+                                Популярные обзоры:
+                            </h4>
+                        </div>
+                        <div class="categories__inner">
+                           <video src="" poster="access/img/image-about.png"></video>
+                           <video src="" poster="access/img/image-about.png"></video>
+                           <video src="" poster="access/img/image-about.png"></video>
+                        </div>
+                    </div>
+                    <div class="catalog__content">
+                        <div class="catalog__title">
+                            <h4>
+                                Видеообзор модульной металлочерепицы
+                            </h4>
+                        </div>
+                        <video src="" poster="access/img/image-about.png"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-reviews block-reviews">
+        <div class="container">
+          <h2 class="main__top">
+            Отзывы на металлочерепицу Dahpol Egeria
+            <a href="#feedback" class="btn feedback-btn desc-o"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
+          </h2>
+            <div class="swiper vacan-swiper">
+            <div class="swiper-wrapper vacancy__content-items s-block">
+              <div class="swiper-slide">
+               <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide ">
+               <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="rew__btns-modal mar-t">
+              <button class="btn btn__calcul modal-v">Показать больше</button>
+              <a href="#feedback" class="btn feedback-btn modal-v"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
+            </div>
+        </div>
+      </section>
+        <section class="catalog-categories__action-block" id="catalog-categories__action-block">
+            <div class="catalog-category__title">
+                <h4>
+                    Категория товаров
+                </h4>
+            </div>
+            <div class="categories__inner">
+                <div class="category__block">
+                    <div class="category__title">
+                        <span>Материалы для кровли</span>
+                    </div>
+                    <div class="category__content">
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Гибкая черепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Клик фальцевая кровля
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Фальцевая кровля
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Натуральная черепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Композитная черепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Плоская кровля
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Профлист для кровли
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category__block">
+                    <div class="category__title">
+                        <span>Материалы для кровли</span>
+                    </div>
+                    <div class="category__content">
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category__block">
+                    <div class="category__title">
+                        <span>Материалы для кровли</span>
+                    </div>
+                    <div class="category__content">
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category__block">
+                    <div class="category__title">
+                        <span>Материалы для кровли</span>
+                    </div>
+                    <div class="category__content">
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                        <div class="category__text">
+                            <span>
+                                Модульная металлочерепица
+                            </span>
+                            <span>
+                                (6)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catalog-categoies__close-block">
+            <button class="catalog__categories__but catalog-categoies__close-but">
+                <img src="catalog/assets/img/close-ison.svg" alt="">
+                    Закрыть
+            </button>
+        </section>
+        <section class="price-list roof-pad new-icon">
+            <div class="container">
+                <div class="price-list__content">
+                    <div class="price-list__content-wrap">
+                        <h2 class="price-list__title">Сложно определиться с выбором?</h2>
+                        <p>
+                            Готовы выехать к вам на объект, ответить на ваши вопросы <br> и подготовить детальную смету
+                        </p>
+                        <img src="access/img/arr.svg" alt="" class="img-arr-new">
+                    </div>
+                    <div class="price-form-wrapper">
+                    <form
+                        class="price-form"
+                        action="#"
+                        method="POST"
+                        autocomplete="off"
+                        novalidate=""
+                    >
+                        <img src="access/img/new-icon.png" alt="" class="img-price">
+                        <h3 class="price-form__title">Закажите звонок и мы ответим на все ваши вопросы за 10 минут</h3>
+
+                        <div class="line__input">
+                          <div class="line__input-text">Ваше имя <span>*</span></div>
+                          <input
+                            type="text"
+                            class="input-line"
+                            placeholder="Введите имя"
+                            required
+                          />
+                        </div>
+                        <div class="line__input">
+                          <div class="line__input-text">
+                            Номер телефона <span>*</span>
+                          </div>
+                          <input
+                            type="tel"
+                            class="input-line"
+                            id="phone"
+                            placeholder="Введите номер телефона"
+                            required
+                          />
+                        </div>
+                        
+                        <button class="btn btn__calcul" type="submit">
+                        Позвоните мне
+                        </button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
+            </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"
+              />
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required
+                />
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
+
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link"
+                  >г.Минск ул. Ваупшасова 22</a
+                >
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp-b.svg" alt="" /></a>
+                </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link"
+                  >
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""
+                    />zakaz@roofland.by</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div class="footer__subtitle">С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div class="footer__subtitle">По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="catalog/assets/scripts/script.js"></script>
+    <script src="script/index.js"></script>
+</body>
+
+</html>
